@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorLayer1"
+    android:orientation="vertical">
+
+    <!-- scrollview to prevent scroll event from passing to the underlying view -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_13">
+
+            <TextView
+                android:id="@+id/header"
+                style="@style/PageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:contentDescription="@string/home_discover_label"
+                android:text="@string/home_discover_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/filter"
+                style="@style/FilterHeaderButton"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/alt_filter_menu"
+                app:layout_constraintBottom_toBottomOf="@id/header"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/header" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                style="@style/TabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_1"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                app:tabIndicatorColor="?attr/colorTabLayoutIndicator"
+                app:tabIndicatorGravity="bottom"
+                app:tabIndicatorHeight="@dimen/dp_1"
+                app:tabPaddingEnd="@dimen/dp_16"
+                app:tabPaddingStart="@dimen/dp_16"
+                app:tabPaddingTop="@dimen/dp_21" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal" />
+
+</LinearLayout>

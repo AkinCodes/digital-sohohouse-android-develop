@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.sohohouse.seven.common.views.LoadingView
+        android:id="@+id/listLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="2dp" />
+
+    <LinearLayout
+        android:id="@+id/housepay_receipts_no_data_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_52"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/housepay_receipts_title"
+            style="@style/Header.030"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/housepay_pay_with_the_app" />
+
+        <TextView
+            android:id="@+id/housepay_receipts_subtitle"
+            style="@style/Header.018"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/housepay_receipts_will_appear_when_you_use_house_pay" />
+
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/housepay_receipts_expandable_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/black"
+        android:dividerHeight="0dp"
+        android:groupIndicator="@drawable/receipts_arrow_indicator_selector"
+        android:layoutDirection="ltr"
+        tools:itemCount="7"
+        tools:listitem="@layout/item_house_pay_receipt_header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

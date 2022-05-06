@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_61"
+    android:paddingEnd="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_55">
+
+    <TextView
+        android:id="@+id/header_house_name"
+        style="@style/Label.012"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="House Name" />
+
+    <TextView
+        android:id="@+id/header_title"
+        style="@style/Header.030"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_house_name"
+        tools:text="Get your kicks: a guide to Canada&apos;s best sneaker stores" />
+
+    <TextView
+        android:id="@+id/header_line"
+        style="@style/Body.012.LightAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_21"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_title"
+        tools:text="A new article type that will display a video in the hero content of the article, the article will work in harmony with the addtional editorial content on this page." />
+
+    <TextView
+        android:id="@+id/header_author"
+        style="@style/Label.012"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_56"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_line"
+        tools:text="As told to Charlotte Steinway" />
+
+    <TextView
+        android:id="@+id/header_date"
+        style="@style/Label.012"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_author"
+        app:layout_goneMarginTop="@dimen/dp_56"
+        tools:text="SUN, 10 MAR 2019" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

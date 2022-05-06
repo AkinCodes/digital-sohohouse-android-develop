@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="@dimen/dp_16"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/sub_header"
+        style="@style/Header.018"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/more_notification_preferences_your_events_subheader" />
+
+    <TextView
+        android:id="@+id/supporting"
+        style="@style/Body.012.LightAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sub_header"
+        tools:text="@string/more_notification_preferences_your_events_supporting" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/emailSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Body.012.LightAccent"
+        app:switchTextAppearance="@style/Body.012.LightAccent"
+        android:text="@string/more_notifications_digital_email_label"
+        android:thumbTint="@color/white"
+        android:layout_marginTop="@dimen/dp_8"
+        android:trackTint="@color/switch_track_tint_selector"
+        android:trackTintMode="src_over"
+        android:clickable="false"
+        android:focusable="false"
+        android:textColor="?attr/colorTextBody012LightAccent"
+        app:layout_constraintTop_toBottomOf="@id/supporting"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:targetApi="m" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/pushSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textColor="?attr/colorTextBody012LightAccent"
+        android:textAppearance="@style/Body.012.LightAccent"
+        android:text="@string/more_notification_preferences_push_label"
+        android:thumbTint="@color/white"
+        android:trackTint="@color/switch_track_tint_selector"
+        android:trackTintMode="src_over"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintTop_toBottomOf="@id/emailSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:targetApi="m" />
+
+    <View
+        style="@style/Divider.Iron"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/dp_4"
+        app:layout_constraintTop_toBottomOf="@id/pushSwitch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

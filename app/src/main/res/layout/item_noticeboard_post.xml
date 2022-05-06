@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_16"
+    android:background="@drawable/noticeboard_post_bg">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_avatar_kimberly_aberman" />
+
+    <TextView
+        android:id="@+id/author_name"
+        style="@style/body_02.light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/timestamp"
+        app:layout_constraintEnd_toStartOf="@+id/staff_indication"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/profile_image"
+        app:layout_constraintTop_toTopOf="@id/profile_image"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Peter Murphy" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/FaroLucky.Regular.12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/charcoal"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/profile_image"
+        app:layout_constraintEnd_toStartOf="@+id/delete_post_btn"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/author_name"
+        app:layout_constraintTop_toBottomOf="@id/author_name"
+        tools:text="2hrs ago" />
+
+    <ImageView
+        android:id="@+id/staff_indication"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_6"
+        android:src="@drawable/ic_soho_house_small_white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/author_name"
+        app:layout_constraintEnd_toStartOf="@+id/delete_post_btn"
+        app:layout_constraintStart_toEndOf="@id/author_name"
+        app:layout_constraintTop_toTopOf="@id/author_name"
+        tools:ignore="ContentDescription"
+        tools:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/delete_post_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/connect_board_delete_cta"
+        android:padding="@dimen/dp_24"
+        android:src="@drawable/ic_more_horiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?attr/colorDrawableSecondary" />
+
+    <TextView
+        android:id="@+id/message_content"
+        style="@style/body_02.light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textIsSelectable="true"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        tools:text="Hello! I’m gonna be in London for 3 days and I would love to hear any of your recommendations! Thank you Julia." />
+
+    <LinearLayout
+        android:id="@+id/post_tags_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_16"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/message_content">
+
+        <TextView
+            android:id="@+id/city_tag"
+            style="@style/PostTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            tools:text='London' />
+
+        <TextView
+            android:id="@+id/house_tag"
+            style="@style/PostTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Shoreditch House" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/current_reaction"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="@drawable/noticeboard_reaction_background"
+        android:padding="@dimen/dp_8"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:backgroundTint="@color/cod_gray"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/reactions_count"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/user_reaction_barrier"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:text="12" />
+
+    <ImageView
+        android:id="@+id/first_reaction"
+        android:layout_width="@dimen/dp_11"
+        android:layout_height="@dimen/dp_11"
+        android:layout_marginStart="@dimen/dp_7"
+        android:background="@drawable/noticeboard_reaction_background"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/reactions_count"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:backgroundTint="@color/cod_gray"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/second_reaction"
+        android:layout_width="@dimen/dp_11"
+        android:layout_height="@dimen/dp_11"
+        android:layout_marginStart="@dimen/dp_7"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/first_reaction"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/third_reaction"
+        android:layout_width="@dimen/dp_11"
+        android:layout_height="@dimen/dp_11"
+        android:layout_marginStart="@dimen/dp_7"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/second_reaction"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/fourth_reaction"
+        android:layout_width="@dimen/dp_11"
+        android:layout_height="@dimen/dp_11"
+        android:layout_marginStart="@dimen/dp_7"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/third_reaction"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/like_btn"
+        style="@style/Body.014.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/dp_12"
+        android:paddingStart="@dimen/dp_16"
+        android:text="@string/like"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/reply_btn"
+        style="@style/TextLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="?selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_tags_container"
+        tools:text="Reply" />
+
+    <View
+        android:id="@+id/reaction_list_btn"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_30"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@+id/reactions_count"
+        app:layout_constraintEnd_toEndOf="@+id/fourth_reaction"
+        app:layout_constraintStart_toEndOf="@id/user_reaction_barrier"
+        app:layout_constraintTop_toTopOf="@id/reactions_count" />
+
+    <com.sohohouse.seven.connect.noticeboard.reactions.ReactionPopupView
+        android:id="@+id/extra_reactions_view"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="30dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/user_reaction_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="current_reaction, like_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

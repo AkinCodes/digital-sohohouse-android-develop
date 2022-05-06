@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/perks_card_header_container"
+    android:paddingBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/perks_card_header_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/colorLayer2"
+        android:scaleType="centerInside"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/placeholder" />
+
+
+    <TextView
+        android:id="@+id/perks_card_title"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_4"
+        app:layout_constraintTop_toBottomOf="@+id/perks_card_header_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Club Monaco 25% off Online" />
+
+    <TextView
+        android:id="@+id/perks_card_description"
+        style="@style/Body.012.Light"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:layout_constraintTop_toBottomOf="@id/perks_card_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Perk description" />
+
+    <TextView
+        android:id="@+id/perks_card_region"
+        style="@style/Label.010"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:layout_constraintTop_toBottomOf="@id/perks_card_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAllCaps="true"
+        tools:text="Asia" />
+
+    <TextView
+        android:id="@+id/perks_card_expiry"
+        style="@style/Label.010"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:layout_constraintTop_toBottomOf="@id/perks_card_region"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Expires on 31 Aug 2020" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.sohohouse.seven.common.views.FadingImageView
+        android:id="@+id/browse_houses_fading_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.41"
+        android:background="@color/black" />
+
+    <ImageView
+        android:id="@+id/browse_houses_back_button"
+        android:layout_width="@dimen/house_board_icon_size"
+        android:layout_height="@dimen/house_board_icon_size"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_marginTop="@dimen/browse_house_horizontal_margin"
+        android:contentDescription="@string/alt_back_label"
+        android:rotation="180"
+        android:scaleType="centerCrop"
+        android:shadowColor="#80000000"
+        android:shadowDy="2"
+        android:shadowRadius="29"
+        android:src="@drawable/forward"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <com.sohohouse.seven.common.views.FadingTopEdgeRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@color/transparent"
+        android:clipToPadding="false"
+        android:ellipsize="none"
+        android:fadingEdgeLength="@dimen/xlarge"
+        android:overScrollMode="never"
+        android:requiresFadingEdge="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_center" />
+
+    <com.sohohouse.seven.common.views.LoadingView
+        android:id="@+id/activity_browse_all_house_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.sohohouse.seven.common.views.ReloadableErrorStateView
+        android:id="@+id/error_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorLayer1"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/connect_title"
+        style="@style/PageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="@string/nav_connect_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        style="@style/TabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_7"
+        android:paddingBottom="@dimen/dp_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/connect_title"
+        app:tabIndicatorColor="?attr/colorTabLayoutIndicator"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorHeight="@dimen/dp_1"
+        app:tabPaddingEnd="@dimen/dp_16"
+        app:tabPaddingStart="@dimen/dp_16"
+        app:tabPaddingTop="@dimen/dp_21" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/connect_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Body.014.Narrow.Light"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_24"
+    android:paddingEnd="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_24"
+    android:text="@string/profile_legal_disclaimer"
+    app:layout_constraintTop_toTopOf="parent" />

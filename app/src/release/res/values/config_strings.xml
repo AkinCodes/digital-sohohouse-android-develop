@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_provider_work_manager_initializer">com.sohohouse.seven.workmanager-init</string>
+</resources>

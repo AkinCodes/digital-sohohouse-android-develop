@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="100dp">
+
+            <TextView
+                android:id="@+id/screenTitle"
+                style="@style/Body.014"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/book_a_table_update_your_booking"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/go_back_cta"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_cancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="?attr/colorDrawablePrimary" />
+
+            <ImageView
+                android:id="@+id/restaurantImage"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="32dp"
+                android:contentDescription="@string/table_booking_restaurant_image"
+                android:src="@drawable/shortcut_restourant"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/screenTitle" />
+
+            <TextView
+                android:id="@+id/restaurantTitle"
+                style="@style/Body.014.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorTextHeader018"
+                android:layout_marginStart="6dp"
+                app:layout_constraintStart_toEndOf="@id/restaurantImage"
+                app:layout_constraintTop_toTopOf="@id/restaurantImage"
+                tools:text="40 Greek Street" />
+
+            <TextView
+                android:id="@+id/dateTime"
+                style="@style/Body.012"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toEndOf="@id/restaurantImage"
+                app:layout_constraintTop_toBottomOf="@id/restaurantTitle"
+                tools:text="5 Jule 2020, 6:00pm" />
+
+            <TextView
+                android:id="@+id/persons"
+                style="@style/Body.012"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                app:layout_constraintStart_toEndOf="@id/restaurantImage"
+                app:layout_constraintTop_toBottomOf="@id/dateTime"
+                tools:text="2 seats" />
+
+            <com.sohohouse.seven.book.table.TableSearchFormView
+                android:id="@+id/searchForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:includeVenue="false"
+                app:layout_constraintTop_toBottomOf="@id/restaurantImage" />
+
+            <TextView
+                android:id="@+id/availableSlotsTitle"
+                style="@style/Header.018"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="@string/book_a_table_available_slots"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/searchForm" />
+
+            <TextView
+                android:id="@+id/no_availibility_msg"
+                style="@style/Body.014"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/book_a_table_no_availibility"
+                app:layout_constraintTop_toBottomOf="@id/availableSlotsTitle" />
+
+            <TextView
+                android:id="@+id/alternative_availibility_msg"
+                style="@style/Body.014"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/book_a_table_alternative_availibility"
+                app:layout_constraintTop_toBottomOf="@id/availableSlotsTitle" />
+
+            <TextView
+                android:id="@+id/btnContactUs"
+                style="@style/TextLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text="@string/book_a_table_contact_us"
+                app:layout_constraintTop_toBottomOf="@id/no_availibility_msg" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listTimeSlots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/alternative_availibility_msg" />
+
+            <ImageView
+                android:id="@+id/openTableLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:layout_goneMarginTop="150dp"
+                android:contentDescription="@string/table_booking_opentable_logo"
+                android:src="@drawable/logo_powered_by_open_table"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/listTimeSlots" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/stateHasAvailibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="searchForm, availableSlotsTitle, listTimeSlots, openTableLogo" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/stateInitial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="searchForm, openTableLogo" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/stateNoAvailibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="searchForm, availableSlotsTitle, no_availibility_msg, btnContactUs, openTableLogo" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/stateAlternativeAvailability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="searchForm, availableSlotsTitle, alternative_availibility_msg, listTimeSlots, openTableLogo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/rootBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?attr/colorLayer1"
+        android:paddingStart="16dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="24dp">
+
+        <Button
+            android:id="@+id/btnBook"
+            style="@style/Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/book_a_table_update_booking" />
+
+    </FrameLayout>
+
+    <com.sohohouse.seven.common.views.LoadingView
+        android:id="@+id/rootLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        app:layout="@layout/component_bar_only_loading_view" />
+
+</FrameLayout>

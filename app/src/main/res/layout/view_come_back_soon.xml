@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_196"
+    android:paddingVertical="@dimen/dp_24"
+    android:elevation="@dimen/dp_2"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:backgroundTint="?colorLayer2"
+    android:background="@drawable/rounded_rect_radius4">
+
+    <TextView
+        style="@style/Body.016"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:text="@string/come_back_soon"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/comeBackConnectionsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal" />
+
+    <TextView
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/we_are_choosing_your_member_suggestions" />
+
+</LinearLayout>

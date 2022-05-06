@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_38"
+    android:layout_marginBottom="@dimen/dp_2"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header_text"
+        style="@style/Header.024"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="@string/more_notification_preferences_events_header" />
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/medium"
+    android:paddingBottom="@dimen/medium">
+
+    <ImageView
+        android:id="@+id/browse_house_image"
+        android:layout_width="match_parent"
+        android:layout_height="244dp"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginTop="@dimen/small"
+        android:layout_marginEnd="@dimen/large"
+        android:background="@drawable/rounded_corner_mask"
+        android:contentDescription="@string/home_browse_houses_label"
+        android:scaleType="centerCrop"
+        android:transitionName="@string/events_event_image_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.sohohouse.seven.common.views.HouseNameTextView
+        android:id="@+id/browse_house_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/browse_house_icon"
+        app:layout_constraintStart_toStartOf="@id/browse_house_image"
+        app:layout_constraintTop_toTopOf="@+id/browse_house_icon"
+        tools:text="Chadwick House" />
+
+    <ImageView
+        android:id="@+id/browse_house_icon"
+        android:layout_width="@dimen/large"
+        android:layout_height="@dimen/large"
+        android:layout_marginTop="@dimen/small"
+        android:src="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/browse_house_image"
+        app:layout_constraintTop_toBottomOf="@id/browse_house_image"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_soho_house" />
+
+    <View
+        android:id="@+id/last_item_spacer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/browse_house_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/onboarding_image_height"
+        android:scaleType="centerCrop"
+        android:src="@drawable/house_board_intro"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/bottom_button_height">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.sohohouse.seven.apponboarding.views.OnboardingTitleCard
+                android:id="@+id/onboarding_house_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/onboard_card_margin_top"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:background="@color/black_russian"
+                android:elevation="@dimen/dp_32"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_24"
+                android:layout_marginBottom="@dimen/onboarding_scroll_inset"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/onboarding_house_card"
+                tools:ignore="ContentDescription">
+
+
+                <FrameLayout
+                    android:id="@+id/onboarding_houseboard_post1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cod_gray">
+
+                    <include
+                        android:id="@+id/house_board_post1"
+                        layout="@layout/house_board_check_in_component"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/onboarding_houseboard_post2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@color/cod_gray">
+
+                    <include
+                        android:id="@+id/house_board_post2"
+                        layout="@layout/house_board_check_in_component"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/onboarding_houseboard_post3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@color/cod_gray">
+
+                    <include
+                        android:id="@+id/house_board_post3"
+                        layout="@layout/house_board_check_in_component"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/onboarding_house_accept_button"
+        style="@style/Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:text="@string/app_onboarding_house_board_cta" />
+
+</FrameLayout>
+

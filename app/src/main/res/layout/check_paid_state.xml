@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/checkPaidState"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dp_16"
+    tools:visibility="invisible"
+    tools:showIn="@layout/fragment_open_check">
+
+    <TextView
+        android:id="@+id/paid_state_primary"
+        style="@style/Header.022"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/housepay_check_paid_primary"
+        android:textColor="?attr/colorTextHeader018Light"
+        app:layout_constraintBottom_toTopOf="@id/paid_state_secondary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/paid_state_secondary"
+        style="@style/Body.016"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:gravity="center"
+        android:text="@string/housepay_check_paid_secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paid_state_primary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_48"
+    android:paddingBottom="@dimen/dp_48">
+
+    <include layout="@layout/item_home_content_section_header" />
+
+    <com.sohohouse.seven.common.views.SquareImageView
+        android:id="@+id/our_houses_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_18"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:contentDescription="@string/our_houses_title"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/Body.012.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_18"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:layout_constraintTop_toBottomOf="@id/our_houses_imageview"
+        tools:text="Our story began in London's Soho and we now have Houses all around the world. Each one has its own identity, but our mission has always been the same: to create a home away from home for our members" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

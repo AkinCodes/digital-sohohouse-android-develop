@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post_a_note_button"
+    style="@style/NavRowButtonStyle"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_16">
+
+    <ImageView
+        android:id="@+id/house_icon"
+        android:layout_width="@dimen/large"
+        android:layout_height="@dimen/large"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/icon_home" />
+
+    <TextView
+        android:id="@+id/house_name"
+        style="@style/Body.012.LightAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_13"
+        app:layout_constraintBottom_toTopOf="@id/house_status"
+        app:layout_constraintStart_toEndOf="@id/house_icon"
+        app:layout_constraintTop_toTopOf="@id/house_icon"
+        tools:text="House Name" />
+
+    <com.sohohouse.seven.common.views.StatusView
+        android:id="@+id/house_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingBottom="@dimen/dp_13"
+        app:layout_constraintBottom_toBottomOf="@id/house_icon"
+        app:layout_constraintStart_toEndOf="@id/house_icon"
+        app:layout_constraintTop_toBottomOf="@id/house_name"
+        tools:text="Booking Opens May 14" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

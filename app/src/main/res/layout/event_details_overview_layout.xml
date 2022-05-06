@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_20">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
+    <TextView
+        android:id="@+id/event_title_label"
+        style="@style/Header.024"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/right_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Event Title Event Title Event Title Event Title...." />
+
+    <TextView
+        android:id="@+id/event_instructor_name"
+        style="@style/Body.012.Transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_7"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/event_location_name"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/event_title_label"
+        tools:text="Hannah Marthaler"
+        tools:visibility="visible" />
+
+    <com.sohohouse.seven.common.views.HouseNameTextView
+        android:id="@+id/event_location_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/event_instructor_name"
+        app:layout_goneMarginTop="@dimen/dp_7"
+        tools:text="EVENT LOCATION" />
+
+    <com.sohohouse.seven.common.views.StatusView
+        android:id="@+id/event_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/event_location_name"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/guest_wait_list_text"
+        style="@style/Body.012.Transparent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="@dimen/small"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/leave_guest_wait_list_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/event_status"
+        tools:text="You're on the waiting list!"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/leave_guest_wait_list_button"
+        style="@style/Chip.Secondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/guest_wait_list_text"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline"
+        app:layout_constraintStart_toEndOf="@id/guest_wait_list_text"
+        app:layout_constraintTop_toTopOf="@id/guest_wait_list_text"
+        tools:text="LEAVE WAITING LIST"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/NavRowButtonStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_20"
+    android:paddingEnd="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_21"
+    tools:ignore="UseCompoundDrawables">
+
+    <TextView
+        android:id="@+id/region"
+        style="@style/TextLink.01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        tools:text="North America" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="@dimen/large"
+        android:layout_height="@dimen/large"
+        android:rotation="90"
+        android:src="@drawable/forward"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_20"
+    android:paddingTop="@dimen/dp_20"
+    android:paddingEnd="@dimen/dp_20"
+    android:paddingBottom="@dimen/dp_20">
+
+    <EditText
+        android:id="@+id/input_dialog_edittext"
+        style="@style/Header.024"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:textSize="18sp"
+        tools:hint="Type input..."
+        tools:ignore="LabelFor,UnusedAttribute" />
+</FrameLayout>

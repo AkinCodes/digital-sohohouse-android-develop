@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorBackgroundPrimary"
+    android:padding="@dimen/dp_16">
+
+    <View
+        android:id="@+id/chat_content_fragment_profile_tap_area"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintEnd_toStartOf="@+id/menu_dots"
+        app:layout_constraintStart_toEndOf="@id/back_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/alt_back_label"
+        android:elevation="@dimen/dp_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nav_dark_ar" />
+
+    <com.sohohouse.seven.common.views.AsyncImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:circleCrop="true"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintEnd_toStartOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/name"
+        app:layout_constraintStart_toEndOf="@id/back_button"
+        tools:background="@color/white" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:lines="1"
+        android:ellipsize="end"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintEnd_toStartOf="@+id/menu_dots"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Megan Thompson" />
+
+    <ImageView
+        android:id="@+id/menu_dots"
+        android:layout_width="30dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/alt_back_label"
+        android:elevation="@dimen/dp_1"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_circled_menu_dots"
+        app:tint="@color/white" />
+
+
+    <com.sohohouse.seven.connect.message.chat.content.WarningView
+        android:id="@+id/warning_send_request"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:buttonText="@string/invite"
+        app:description="@string/connect_with_member_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chat_content_fragment_profile_tap_area"
+        tools:visibility="visible" />
+
+    <com.sohohouse.seven.connect.message.chat.content.WarningView
+        android:id="@+id/warning_blocked_member"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:visibility="gone"
+        app:buttonText="@string/connect_unblock_cta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/warning_send_request"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/sendRequestHeadline"
+        style="@style/Header.030"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:text="@string/send_message_request"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/warning_blocked_member" />
+
+    <TextView
+        android:id="@+id/sendRequestDescription"
+        style="@style/Body.014"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:text="@string/send_request_description"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/sendRequestHeadline" />
+
+    <com.sohohouse.seven.common.views.VideoRecyclerView
+        android:id="@+id/list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/dp_12"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/warning_blocked_member"
+        app:layout_constraintVertical_bias="1"
+        app:stackFromEnd="true"
+        tools:itemCount="25" />
+
+    <ProgressBar
+        android:id="@+id/loader"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="top"
+        android:indeterminate="true"
+        app:layout_constraintTop_toBottomOf="@id/list" />
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:background="@drawable/bkg_chat_edit_text"
+        android:drawableTint="@color/white"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="@dimen/dp_8"
+        android:paddingStart="@dimen/dp_32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="LabelFor,RtlSymmetry" />
+
+    <ImageButton
+        android:id="@+id/attach_file"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/attach_file_description"
+        android:padding="@dimen/dp_6"
+        android:src="@drawable/plus_small"
+        app:layout_constraintBottom_toBottomOf="@id/input"
+        app:layout_constraintStart_toStartOf="@id/input"
+        app:layout_constraintTop_toTopOf="@id/input"
+        app:tint="@color/white" />
+
+    <Button
+        android:id="@+id/sendMessage"
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

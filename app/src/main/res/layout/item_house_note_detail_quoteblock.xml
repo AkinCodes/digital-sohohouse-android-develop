@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/body_pullquote"
+    style="@style/Body.014"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_48"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_12"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/body_image_caption"
+    tools:text="“Etiam rhoncus sapien vitae lorem egestas, in pulvinar diam tempor. Quisque euismod, sapien eu lacinia dictum, eros eros varius libero, nec varius purus neque in ligula.”"
+    tools:showIn="@layout/house_note_detail_body_layout" />
+

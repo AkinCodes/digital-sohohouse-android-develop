@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sohohouse.seven">
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission
+        android:name="android.permission.REQUEST_INSTALL_PACKAGES"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:banner="@string/app_name"
+        android:extractNativeLibs="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeNoActionBar"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup"
+        tools:targetApi="n"> <!-- for networkSecurityConfig attribute -->
+
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification_soho_house" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/white" />
+
+        <meta-data
+            android:name="firebase_analytics_collection_deactivated"
+            tools:node="remove" />
+
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="true"
+            tools:replace="android:value" />
+
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="true" />
+
+        <meta-data
+            android:name="com.raygun.raygun4android.apikey"
+            android:value="XSvMAPwsKJybbgWiCqhbCQ" />
+
+        <meta-data
+            android:name="google_analytics_automatic_screen_reporting_enabled"
+            android:value="false" />
+
+        <service
+            android:name="com.raygun.raygun4android.services.CrashReportingPostService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":crashreportingpostservice" />
+
+        <service
+            android:name="com.raygun.raygun4android.services.RUMPostService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":rumpostservice" />
+
+        <service
+            android:name=".branding.AppIconService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.sohohouse.seven.UPDATE_ICON" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".fcm.SohoFCMService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".splash.SplashActivity"
+            android:autoRemoveFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="click.em.sohohouse.com"
+                    android:scheme="https" />
+
+                <data
+                    android:host="sh.app"
+                    android:pathPrefix="/r"
+                    android:scheme="https" />
+
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name=".branding.launcher.DefaultLauncherAlias"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:targetActivity=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.sohohouse.com"
+                    android:pathPrefix="/member-benefits"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".branding.launcher.SohoHouseLauncherAlias"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_soho_house"
+            android:label="@string/app_name"
+            android:targetActivity=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".branding.launcher.FriendsLauncherAlias"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_friends"
+            android:label="@string/app_name"
+            android:targetActivity=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".branding.launcher.ConnectLauncherAlias"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_connect"
+            android:label="@string/app_name"
+            android:targetActivity=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".branding.launcher.GuestLauncherAlias"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:targetActivity=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".branding.launcher.StaffLauncherAlias"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_staff"
+            android:label="@string/app_name"
+            android:targetActivity=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".branding.launcher.DefaultLauncherAliasV1"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_v1"
+            android:label="@string/app_name"
+            android:targetActivity=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".branding.launcher.DefaultLauncherAliasV2"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_v2"
+            android:label="@string/app_name"
+            android:targetActivity=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".branding.launcher.FriendsLauncherAliasV1"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_friends_v1"
+            android:label="@string/app_name"
+            android:targetActivity=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity android:name=".branding.AppIconActivity" />
+
+        <activity android:name=".intro.IntroActivity" />
+
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="click.em.sohohouse.com"
+                    android:scheme="apps" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/planner"
+                    android:scheme="apps" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/attendance_status_update"
+                    android:scheme="apps" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/events"
+                    android:scheme="apps" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/home"
+                    android:scheme="apps" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/discover"
+                    android:scheme="apps" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:path="/member-benefits"
+                    android:scheme="apps" />
+
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".welcome.WelcomeActivity"
+            android:theme="@style/AppThemeNoActionBar.FullScreen" />
+
+        <activity android:name=".onboarding.benefits.OnboardingBenefitsActivity" />
+
+        <activity android:name=".apponboarding.terms.OnboardingTermsActivity" />
+        <activity android:name=".housepay.terms.HousePayTermActivity" />
+        <activity android:name=".apponboarding.data.OnboardingDataActivity" />
+        <activity android:name=".housepay.HousepayActivity" />
+        <activity
+            android:name=".authentication.AuthenticationActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".book.filter.BookFilterActivity" />
+
+        <activity
+            android:name=".book.eventdetails.EventDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleInstance">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/whats-on/details"
+                    android:scheme="apps" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".more.housepreferences.MoreHousePreferencesActivity" />
+        <activity android:name=".accountstatus.AccountStatusActivity" />
+        <activity
+            android:name=".more.contact.MoreContactActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".more.membershipdetails.MoreMembershipDetailsActivity"
+            android:theme="@style/AppThemeNoActionBar.FullBlackBackground" />
+        <activity android:name=".more.payment.MorePaymentActivity" />
+        <activity android:name=".more.payment.AddPaymentActivity" />
+        <activity
+            android:name=".houseboard.post.HouseBoardPostActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".book.eventdetails.bookingsuccess.BookingSuccessActivity" />
+        <activity
+            android:name=".book.eventdetails.eventstatus.EventStatusActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/event/status"
+                    android:scheme="apps" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".book.eventdetails.payment.BookingPaymentActivity" />
+        <activity android:name=".book.eventdetails.payment.PaymentConfirmationActivity" />
+        <activity android:name=".apponboarding.AppOnboardingActivity" />
+        <activity android:name=".more.synccalendar.SyncCalendarActivity" />
+        <activity android:name=".memberonboarding.induction.booking.InductionBookingActivity" />
+        <activity android:name=".memberonboarding.induction.confirmation.InductionConfirmationActivity" />
+
+        <activity android:name=".more.profile.crop.ProfileImageCropActivity" />
+        <activity android:name=".splash.forceupdate.ForceUpdateActivity" />
+
+        <activity android:name=".debug.DebugActivity" />
+        <activity
+            android:name=".video.VideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout" />
+        <activity
+            android:name="com.sohohouse.seven.browsehouses.BrowseAllHouseActivity"
+            android:theme="@style/AppThemeNoActionBar.TranslucentStatus" />
+        <activity android:name="com.sohohouse.seven.perks.landing.PerksLandingActivity" />
+
+        <activity
+            android:name="com.sohohouse.seven.perks.details.PerksDetailActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPattern="/member-benefits/..*"
+                    android:scheme="apps" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.sohohouse.seven.perks.filter.PerksFilterActivity" />
+        <activity android:name=".profile.edit.EditProfileActivity" />
+        <activity android:name=".more.payment.threeds.AddPayment3dsActivity" />
+
+        <activity android:name=".membership.ActiveMembershipInfoActivity" />
+        <activity android:name=".more.bookings.MyBookingsActivity" />
+        <activity android:name=".more.bookings.PastEventBookingDetailActivity" />
+
+        <activity
+            android:name=".more.bookings.detail.EventBookingDetailsActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/event/booking"
+                    android:scheme="apps" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".housenotes.detail.sitecore.HouseNoteDetailsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/notes"
+                    android:scheme="apps" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".splash.maintenance.ServerMaintenanceActivity" />
+        <activity android:name=".more.SettingsActivity" />
+        <activity android:name=".book.table.timeslots.TableTimeSlotsActivity" />
+        <activity android:name=".book.table.completebooking.TableCompleteBookingActivity" />
+        <activity android:name=".book.table.tableconfirmed.TableConfirmedActivity" />
+        <activity
+            android:name="com.sohohouse.seven.book.table.booked.BookedTableDetailsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/table_booking_details"
+                    android:scheme="apps" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".book.table.update.UpdateTableBookingActivity" />
+        <activity android:name=".authentication.VerifyAccountActivity" />
+        <activity android:name=".authentication.VerificationEmailSentActivity" />
+        <activity
+            android:name=".guests.NewGuestListActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".guests.list.GuestListIndexActivity" />
+        <activity
+            android:name=".guests.GuestListDetailsActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".perks.filter.BenefitsFilterCityActivity"
+            android:theme="@style/AppThemeNoActionBar.SlideAnimation" />
+        <activity android:name=".intro.profile.PrepopulateProfileActivity" />
+        <activity
+            android:name=".connect.noticeboard.post_details.NoticeboardPostDetailsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/posts"
+                    android:scheme="apps" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".book.digital.DigitalEventsActivity" />
+        <activity android:name=".connect.trafficlights.members.MembersInTheVenueActivity" />
+        <activity
+            android:name=".connect.mynetwork.blockedprofiles.BlockedProfilesActivity"
+            android:theme="@style/AppThemeNoActionBar.CustomBackground" />
+        <activity
+            android:name=".connect.mynetwork.MyConnectionsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/connections"
+                    android:scheme="apps" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sohohouse.seven.book.eventdetails.payment.psd2.Psd2PaymentConfirmationActivity" />
+        <activity
+            android:name=".connect.message.chat.ChatActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/message"
+                    android:scheme="apps" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/new_message_invite"
+                    android:scheme="apps" />
+
+                <data
+                    android:host="members.sohohouse.com"
+                    android:pathPrefix="/chat"
+                    android:scheme="apps" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".apponboarding.optinrecommendations.LandingOptInRecommendationsActivity" />
+        <activity android:name=".connect.match.RecommendationListActivity" />
+
+        <provider
+            android:name="androidx.work.impl.WorkManagerInitializer"
+            android:authorities="@string/app_provider_work_manager_initializer"
+            android:enabled="false"
+            android:exported="false"
+            tools:replace="android:authorities" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.sohohouse.seven.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="geo" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent>
+    </queries>
+
+</manifest>

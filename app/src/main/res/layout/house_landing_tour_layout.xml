@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_44">
+
+    <View
+        android:id="@+id/tour_border"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/houselanding_tour_border_height"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@drawable/view_tour_border_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/tour_house_icon"
+        android:layout_width="@dimen/houselanding_tour_house_image_size"
+        android:layout_height="@dimen/houselanding_tour_house_image_size"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_38"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tour_border"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_soho_house" />
+
+    <com.sohohouse.seven.common.views.HouseNameTextView
+        android:id="@+id/house_landing_house_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tour_house_icon"
+        tools:text="House Name" />
+
+    <Button
+        android:id="@+id/house_landing_tour_button"
+        style="@style/TextLink.01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_34"
+        android:text="@string/home_house_tour_cta"
+        app:layout_constraintBottom_toBottomOf="@id/tour_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/house_landing_house_name" />
+
+    <Button
+        android:id="@+id/tour_house_rules_nav"
+        style="@style/TextLink.02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_44"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="@string/home_house_rules_cta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tour_border" />
+
+    <Button
+        android:id="@+id/tour_contact_nav"
+        style="@style/TextLink.02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="@string/home_contact_house_cta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tour_house_rules_nav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

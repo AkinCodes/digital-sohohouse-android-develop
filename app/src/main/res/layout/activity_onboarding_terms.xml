@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".apponboarding.terms.OnboardingTermsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/membership_view"
+        android:layout_width="match_parent"
+        android:layout_height="280dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="?attr/drawableMembershipLogo"
+                app:layout_collapseMode="parallax"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_membership_logo_soho_house" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-6dp"
+        android:background="@drawable/bottom_sheet_background"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/more_list_bottom_padding">
+
+            <TextView
+                android:id="@+id/terms_header"
+                style="@style/Header.024"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_32"
+                tools:text="Terms and conditions for Soho House membership" />
+
+            <TextView
+                android:id="@+id/terms_text"
+                style="@style/Body.014.Narrow.Accent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_48"
+                tools:text="This Site is operated by Soho House UK Limited a company registered in England and Wales under registration number 02864389 and our registered address is 72-74 Dean Street, London W1D 35G (VAT number 752624629) (“we”, “us” and “our” being interpreted accordingly)." />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/terms_accept_button"
+        style="@style/Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:enabled="true"
+        android:text="@string/app_accept_terms_cta" />
+
+    <com.sohohouse.seven.common.views.LoadingView
+        android:id="@+id/activity_onboarding_terms_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone" />
+
+    <com.sohohouse.seven.common.views.ReloadableErrorStateView
+        android:id="@+id/error_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

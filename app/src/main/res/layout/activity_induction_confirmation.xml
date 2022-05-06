@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/content_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.sohohouse.seven.common.views.SquareImageView
+                    android:id="@+id/house_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/induction_image_height"
+                    android:layout_gravity="top"
+                    android:background="?attr/colorLayer2"
+                    android:contentDescription="@string/events_event_image_description"
+                    android:scaleType="centerInside"
+                    android:transitionName="@string/events_event_image_description"
+                    tools:src="@drawable/placeholder" />
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:paddingStart="@dimen/medium"
+                    android:paddingEnd="@dimen/medium"
+                    android:src="@drawable/ic_left_arrow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+            <TextView
+                style="@style/Header.024"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:includeFontPadding="false"
+                android:text="@string/onboarding_intro_header" />
+
+            <com.sohohouse.seven.common.views.HouseNameTextView
+                android:id="@+id/intro_header_house_name"
+                style="@style/Body.012.Transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_7"
+                tools:text="Soho Toronto" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_40"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/intro_appointment_date_title"
+                    style="@style/heading_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onboarding_intro_address_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/intro_appointment_date"
+                    style="@style/body_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/intro_appointment_date_title"
+                    tools:text="May 5, 9:00pm" />
+
+                <TextView
+                    android:id="@+id/intro_appointment_change"
+                    style="@style/TextLink.01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onboarding_intro_change_cta"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/intro_appointment_date" />
+
+                <TextView
+                    android:id="@+id/intro_appointment_pending_supporting"
+                    style="@style/body_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small"
+                    android:text="@string/onboarding_intro_pending_supporting"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/intro_appointment_date"
+                    tools:ignore="RtlSymmetry"
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/intro_appointment_address_title"
+                style="@style/heading_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:text="@string/onboarding_intro_address_label" />
+
+            <TextView
+                android:id="@+id/intro_appointment_offsite_event"
+                style="@style/heading_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/small"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:text="@string/explore_events_event_offsite_label"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/intro_appointment_address_line"
+                style="@style/body_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_9"
+                android:layout_marginEnd="@dimen/dp_16"
+                tools:text="882 Addelaide St W" />
+
+            <TextView
+                android:id="@+id/intro_appointment_maps"
+                style="@style/TextLink.02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:paddingStart="0dp"
+                android:text="@string/onboarding_intro_maps_cta"
+                tools:ignore="RtlSymmetry" />
+
+            <View
+                android:id="@+id/intro_appointment_extra_bottom_padding"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_button_height" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bottom_button"
+        style="@style/Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:text="@string/onboarding_intro_booked_done_cta" />
+
+    <com.sohohouse.seven.common.views.LoadingView
+        android:id="@+id/activity_induction_confirmation_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

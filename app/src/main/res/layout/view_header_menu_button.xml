@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:parentTag="android.widget.ViewSwitcher">
+
+    <LinearLayout
+        android:id="@+id/open_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/house_icon"
+            android:layout_width="@dimen/home_overlay_icon_size"
+            android:layout_height="@dimen/home_overlay_icon_size"
+            android:contentDescription="@string/alt_overlay_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_soho_house" />
+
+        <ImageView
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:src="@drawable/ic_chevron_down_white"
+            android:scaleType="centerInside"
+            tools:src="@drawable/ic_red_dot"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:contentDescription="@string/alt_overlay_close"
+        android:src="@drawable/small_close_circle" />
+
+</merge>

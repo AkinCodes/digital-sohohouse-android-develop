@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_16"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/rounded_rect_radius4"
+    android:backgroundTint="?attr/colorLayer0"
+    android:padding="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/check_banner_title"
+        style="@style/Body.014"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/colorTextBody012Light"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="We're sorry"
+        tools:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/check_banner_message"
+        style="@style/Body.012"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        app:layout_constraintTop_toBottomOf="@id/check_banner_title"
+        tools:text="@string/housepay_error_discount_not_applied_check_is_editing" />
+
+    <Button
+        android:id="@+id/check_banner_cta"
+        style="@style/Button.Secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:padding="@dimen/dp_0"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/check_banner_message"
+        tools:text="Try again" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="2dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="@id/description"
+        app:layout_constraintEnd_toEndOf="@id/endBarrier"
+        app:layout_constraintStart_toStartOf="@id/link"
+        app:layout_constraintTop_toTopOf="@id/link" />
+
+    <TextView
+        android:id="@+id/link"
+        style="@style/Body.014.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp_6"
+        android:elevation="2dp"
+        android:maxWidth="240dp"
+        android:paddingHorizontal="@dimen/dp_18"
+        android:paddingTop="@dimen/dp_12"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="sohohouse.com" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp_6"
+        android:elevation="2dp"
+        android:maxWidth="240dp"
+        android:paddingHorizontal="@dimen/dp_18"
+        android:paddingVertical="@dimen/dp_4"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/link"
+        app:layout_constraintTop_toBottomOf="@id/link"
+        tools:text="Soho House | Members’ Clubs" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp_6"
+        android:elevation="2dp"
+        android:maxWidth="240dp"
+        android:paddingHorizontal="@dimen/dp_18"
+        android:paddingBottom="@dimen/dp_12"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/link"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="Soho House is a members club across Europe, America, Asia, as well as rest... " />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/endBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="link, title, description" />
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textColor="?attr/colorTextBody02"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card"
+        tools:text="10/10/2021 20:20"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

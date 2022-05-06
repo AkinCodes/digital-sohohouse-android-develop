@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/dp_8"
+    tools:ignore="RtlSymmetry">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/carousel_image_size"
+        android:layout_height="@dimen/carousel_image_size"
+        android:background="?attr/colorLayer2"
+        android:contentDescription="@string/events_event_image_description"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="centerInside"
+        android:transitionName="@string/events_event_image_description"
+        tools:src="@drawable/placeholder" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:includeFontPadding="false"
+        tools:text="Nourishing the Sense Brunch" />
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:shape="rectangle">
+    <stroke
+        android:width="@dimen/dp_1"
+        android:color="?attr/colorDrawableSecondary"
+        tools:color="?attr/colorDrawableSecondary" />
+    <corners android:topRightRadius="@dimen/dp_4" android:topLeftRadius="@dimen/dp_4"/>
+</shape>

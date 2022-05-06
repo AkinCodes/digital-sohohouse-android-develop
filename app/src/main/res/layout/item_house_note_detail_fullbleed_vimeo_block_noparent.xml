@@ -1,0 +1,6 @@
+<merge xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.FrameLayout">
+
+    <include layout="@layout/item_house_note_detail_vimeo_block_content" />
+
+</merge>

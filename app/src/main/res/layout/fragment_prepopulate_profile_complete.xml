@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="@dimen/dp_24"
+        android:contentDescription="@string/alt_close_label"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?attr/colorDrawablePrimary" />
+
+    <ImageView
+        android:id="@+id/profile_img"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:contentDescription="@string/alt_more_profile_image"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/checkmark_with_bg"
+        app:layout_constraintEnd_toEndOf="@id/profile_img"
+        app:layout_constraintTop_toTopOf="@id/profile_img"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Header.018.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_26"
+        android:gravity="center"
+        android:text="@string/label_completed"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/subtitle"
+        app:layout_constraintTop_toBottomOf="@id/profile_img" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        style="@style/Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:lineSpacingExtra="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="Thanks for updating your profile, Lewis." />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

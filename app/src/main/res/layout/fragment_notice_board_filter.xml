@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/reset_filter"
+        style="@style/Body.012.Bold"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:padding="@dimen/dp_4"
+        android:text="@string/cta_reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        style="@style/TabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/reset_filter"
+        app:tabIndicatorColor="?attr/colorTabLayoutIndicator"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorHeight="@dimen/dp_1"
+        app:tabPaddingEnd="@dimen/dp_16"
+        app:tabPaddingStart="@dimen/dp_16" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@id/apply_filter"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout" />
+
+    <Button
+        android:id="@+id/apply_filter"
+        style="@style/Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:text="@string/connect_apply_filters"
+        app:layout_constraintBottom_toTopOf="@id/cancel_button" />
+
+    <TextView
+        android:id="@+id/cancel_button"
+        style="@style/TextLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/dp_8"
+        android:text="@string/cta_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

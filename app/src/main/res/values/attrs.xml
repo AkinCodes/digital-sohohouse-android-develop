@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="title" format="string" />
+    <attr name="label" format="string" />
+    <attr name="subtitle" format="string" />
+    <attr name="buttonText" format="string" />
+    <attr name="description" format="string" />
+
+    <declare-styleable name="OnboardingCardStyle">
+        <attr name="onboardingCardStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ReloadableErrorStateStyle">
+        <attr name="reloadableErrorStateStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="InAppNotificationStyle">
+        <attr name="inAppNotificationStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="StepperViewStyle">
+        <attr name="stepperViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RemindMeView">
+        <attr name="remindMeView" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="NavRowButtonStyle">
+        <attr name="navRowButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ForceUpdateView">
+        <attr name="title" />
+        <attr name="description" />
+        <attr name="primaryButton" format="string" />
+        <attr name="logoImage" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageToggle">
+        <attr name="onSrc" format="reference" />
+        <attr name="offSrc" format="reference" />
+        <attr name="onAltText" format="string" />
+        <attr name="offAltText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="EditConnectedAccountView">
+        <attr name="hint" format="string" />
+        <attr name="label" />
+    </declare-styleable>
+
+    <declare-styleable name="HouseBoardHeaderView">
+        <attr name="prideStyling" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AsyncImageView">
+        <attr name="placeholder" format="reference" />
+        <attr name="circleCrop" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ReloadableErrorStateView">
+        <attr name="android:src" />
+        <attr name="title" />
+        <attr name="subtitle" />
+        <attr name="buttonText" />
+
+    </declare-styleable>
+
+    <declare-styleable name="PageNotFoundView">
+        <attr name="title" />
+        <attr name="subtitle" />
+        <attr name="buttonText" />
+    </declare-styleable>
+
+    <declare-styleable name="SnackBarState">
+        <attr name="state_default" format="boolean" />
+        <attr name="state_positive" format="boolean" />
+        <attr name="state_negative" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TextInputError">
+        <attr name="error_enabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="BottomNavigationView">
+        <attr name="menu" format="reference" />
+        <attr name="menu_item_layout" format="reference" />
+        <attr name="max_menu" format="integer" />
+        <attr name="show_titles" format="boolean" />
+        <attr name="show_indicators" format="boolean" />
+        <attr name="color_selected" format="color" />
+        <attr name="color_not_selected" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="NavigationItem">
+        <attr name="android:id" />
+        <attr name="android:title" />
+        <attr name="android:icon" />
+        <attr name="selected" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AppVersionPreference" />
+
+    <declare-styleable name="PageIndicator">
+        <attr name="primary_color" format="color" />
+        <attr name="secondary_color" format="color" />
+        <attr name="spacing" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="PillView">
+        <attr name="label" />
+        <attr name="icon" format="reference" />
+        <attr name="icon_tint" format="reference" />
+        <attr name="activated" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadingView">
+        <attr name="layout" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TagItemView">
+        <attr name="title" />
+    </declare-styleable>
+
+    <declare-styleable name="TrafficLightButton">
+        <attr name="trafficTitle" format="string" />
+        <attr name="trafficSubtitle" format="string" />
+        <attr name="statusTint" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="TableSearchFormView">
+        <attr name="includeVenue" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FormRowView">
+        <attr name="label" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadingButton">
+        <attr name="label" />
+    </declare-styleable>
+
+    <declare-styleable name="WarningView">
+        <attr name="description" />
+        <attr name="buttonText" />
+    </declare-styleable>
+
+</resources>

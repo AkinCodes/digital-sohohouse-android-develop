@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_16"
+    android:background="@drawable/noticeboard_post_bg">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_avatar_kimberly_aberman" />
+
+    <TextView
+        android:id="@+id/author_name"
+        style="@style/body_02.light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/timestamp"
+        app:layout_constraintEnd_toStartOf="@+id/staff_indication"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/profile_image"
+        app:layout_constraintTop_toTopOf="@id/profile_image"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Peter Murphy" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/FaroLucky.Regular.12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/charcoal"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/profile_image"
+        app:layout_constraintEnd_toStartOf="@+id/delete_post_btn"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/author_name"
+        app:layout_constraintTop_toBottomOf="@id/author_name"
+        tools:text="2hrs ago" />
+
+    <ImageView
+        android:id="@+id/staff_indication"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_6"
+        android:src="@drawable/ic_soho_house_small_white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/author_name"
+        app:layout_constraintEnd_toStartOf="@+id/delete_post_btn"
+        app:layout_constraintStart_toEndOf="@id/author_name"
+        app:layout_constraintTop_toTopOf="@id/author_name"
+        tools:ignore="ContentDescription"
+        tools:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/delete_post_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/connect_board_delete_cta"
+        android:padding="@dimen/dp_24"
+        android:src="@drawable/ic_more_horiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?attr/colorDrawableSecondary" />
+
+    <TextView
+        android:id="@+id/message_content"
+        style="@style/body_02.light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:textIsSelectable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        tools:text="Hello! I’m gonna be in London for 3 days and I would love to hear any of your recommendations! Thank you Julia." />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

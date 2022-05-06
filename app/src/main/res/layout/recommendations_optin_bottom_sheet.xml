@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/opt_in_bottom_sheet_title"
+        style="@style/Header.022"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="@string/title_opt_in_suggestion"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/opt_in_bottom_sheet_message"
+        style="@style/Body.016.Dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="@string/personalised_recommendations_subtitle"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/opt_in_bottom_sheet_title" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/opt_in_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="@string/opt_in_switcher"
+        android:textColor="?attr/colorTextButtonMessage"
+        android:thumbTint="@color/white"
+        android:trackTint="@color/switch_track_tint_selector"
+        android:trackTintMode="src_over"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/opt_in_bottom_sheet_message"
+        app:switchTextAppearance="@style/SwitchTextDialog" />
+
+    <Button
+        android:id="@+id/opt_in_accept_btn"
+        style="@style/Button.Primary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_21"
+        android:text="@string/next"
+        android:textColor="?attr/colorButtonSecondaryDarkFilled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/opt_in_switch" />
+
+    <Button
+        android:id="@+id/opt_in_decline_btn"
+        style="@style/Body.014.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:background="?attr/selectableItemBackground"
+        android:paddingStart="@dimen/dp_17"
+        android:paddingEnd="@dimen/dp_24"
+        android:text="@string/cta_cancel"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="?attr/colorTextBody014LightDisabled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt_in_accept_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

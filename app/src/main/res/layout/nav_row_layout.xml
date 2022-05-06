@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/NavRowButtonStyle"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <View
+        android:id="@+id/top_divider"
+        style="@style/Divider.Iron"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:paddingEnd="@dimen/dp_7"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_divider"
+        app:layout_constraintStart_toStartOf="@+id/bottom_divider"
+        app:layout_constraintTop_toBottomOf="@+id/top_divider"
+        app:tint="?attr/colorDrawablePrimary"
+        tools:ignore="ContentDescription,RtlSymmetry"
+        tools:src="@drawable/icon_hotel" />
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/TextLink.02"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_20"
+        android:singleLine="false"
+        app:drawableTint="?attr/colorDrawablePrimary"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_divider"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toBottomOf="@+id/top_divider"
+        tools:text="List item" />
+
+    <View
+        android:id="@+id/bottom_divider"
+        style="@style/Divider.Iron"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/label" />
+</merge>

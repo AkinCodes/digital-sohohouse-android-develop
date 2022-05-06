@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/white_cirlce"/>
+    <item android:drawable="@drawable/ic_checkmark"
+        android:gravity="center"
+        android:height="@dimen/dp_8"
+        android:width="@dimen/dp_12"/>
+</layer-list>

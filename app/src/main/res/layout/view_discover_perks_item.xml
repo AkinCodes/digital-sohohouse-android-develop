@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SelectableItemBackground"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/dp_8"
+    android:paddingBottom="@dimen/dp_45"
+    tools:ignore="RtlSymmetry">
+
+    <com.sohohouse.seven.common.views.SquareImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/carousel_image_size"
+        android:layout_height="@dimen/carousel_image_size"
+        android:background="?attr/colorLayer2"
+        android:contentDescription="@string/events_event_image_description"
+        android:scaleType="centerInside"
+        android:transitionName="@string/events_event_image_description"
+        tools:src="@drawable/placeholder" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:includeFontPadding="false"
+        tools:text="Nourishing the Sense Brunch" />
+
+    <TextView
+        android:id="@+id/summary"
+        style="@style/Body.012.LightAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="2sp"
+        tools:text="May 1, 10:30am" />
+
+    <TextView
+        android:id="@+id/city_tag"
+        style="@style/Label.010"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:ellipsize="end"
+        android:lineSpacingExtra="0sp"
+        android:singleLine="true"
+        android:textAllCaps="true"
+        tools:text="ONLINE ONLY, WELLBEINGWELLBEINGWELLBEING" />
+
+</LinearLayout>

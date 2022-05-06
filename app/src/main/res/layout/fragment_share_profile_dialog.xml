@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_32">
+
+        <View
+            android:id="@+id/pill"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/share_profile_pill_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/heading_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_76"
+            android:text="@string/title_share_profile"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pill" />
+
+        <ImageView
+            android:id="@+id/qr_code"
+            android:layout_width="@dimen/dp_85"
+            android:layout_height="@dimen/dp_85"
+            android:layout_marginTop="@dimen/dp_32"
+            android:contentDescription="@string/qr_code"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:id="@+id/copy_link"
+            style="@style/Button.Long"
+            android:layout_marginTop="@dimen/dp_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qr_code"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:id="@+id/copy_link_text"
+                style="@style/Body.016.Light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="@string/copy_link" />
+
+            <ImageView
+                android:id="@+id/copy_link_icon"
+                android:layout_width="@dimen/dp_19"
+                android:layout_height="@dimen/dp_14"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/copy_link"
+                android:gravity="center|end"
+                android:src="@drawable/ic_copy_link" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/more"
+            style="@style/Button.Long"
+            android:layout_marginTop="@dimen/dp_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/copy_link"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                style="@style/Body.016.Light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="@string/more" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_19"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/more"
+                android:gravity="center|end"
+                android:src="@drawable/button_options" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

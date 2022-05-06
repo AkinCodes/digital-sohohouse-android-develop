@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <item android:state_selected="true" android:color="?attr/colorTextBannerTitle" />
+    <item android:color="?attr/colorTextHeader018" />
+</selector>

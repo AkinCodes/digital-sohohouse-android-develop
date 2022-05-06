@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/filter_date_from_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_48"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_14"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/filter_date_start_icon"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:src="@drawable/ic_planner"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/filter_date_start"
+            style="@style/body_02"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_weight="1"
+            tools:text="From" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filter_date_to_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_14"
+        app:layout_constraintTop_toBottomOf="@id/filter_date_from_container">
+
+        <ImageView
+            android:id="@+id/filter_date_end_icon"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:src="@drawable/ic_planner"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/filter_date_end"
+            style="@style/body_02"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_weight="1"
+            android:text="@string/explore_events_filter_end_date_label" />
+
+        <ImageView
+            android:id="@+id/filter_date_end_clear"
+            android:layout_width="@dimen/large"
+            android:layout_height="@dimen/large"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:contentDescription="@string/alt_explore_events_filter_end_date_clear"
+            android:src="@drawable/ic_cancel"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/filter_date_end_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/filter_date_end_icon"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</LinearLayout>

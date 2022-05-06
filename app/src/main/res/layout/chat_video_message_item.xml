@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/video_message_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="2dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp_6"
+        android:clipChildren="true"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/smallPlaceHolder"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="center"
+            android:contentDescription="@string/exo_controls_play_description"
+            android:src="@drawable/placeholder" />
+
+        <com.sohohouse.seven.common.views.AsyncImageView
+            android:id="@+id/thumbnail_image"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="240dp"
+            android:minWidth="100dp"
+            android:minHeight="160dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintCircleRadius="@dimen/dp_24" />
+
+        <ImageView
+            android:id="@+id/play_video_icon"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/black_russian"
+            android:contentDescription="@string/exo_controls_play_description"
+            android:padding="@dimen/dp_6"
+            android:paddingStart="@dimen/dp_11"
+            android:paddingEnd="@dimen/dp_8"
+            android:elevation="@dimen/dp_2"
+            android:src="@drawable/ic_play_chat"
+            android:visibility="visible" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/black_russian"
+            android:padding="@dimen/dp_6"
+            android:elevation="@dimen/dp_2"
+            android:visibility="gone" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textColor="?attr/colorTextBody02"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card"
+        tools:text="10/10/2021 20:20"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

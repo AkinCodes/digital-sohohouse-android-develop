@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@+id/body14"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_40"
+    android:layout_height="@dimen/dp_40"
+    android:gravity="center"
+    android:background="@drawable/bkg_oval"
+    android:backgroundTint="@color/white"
+    android:textColor="?colorPrimary"
+    style="@style/Body.014" />

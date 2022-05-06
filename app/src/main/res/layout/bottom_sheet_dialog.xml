@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/dp_20"
+    android:paddingTop="@dimen/dp_20"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/title"
+        tools:text="Delete post"
+        style="@style/heading_01"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        tools:text="Your message will be deleted from the noticeboard. This cannot be undone."
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/message"
+        style="@style/body_02"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/positive_btn"
+        style="@style/Button.Primary"
+        tools:text="Confirm"
+        tools:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/message" />
+
+    <TextView
+        android:id="@+id/negative_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/TextLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_20"
+        android:paddingHorizontal="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/positive_btn"
+        tools:text="Cancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

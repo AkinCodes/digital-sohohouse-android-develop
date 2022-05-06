@@ -1,0 +1,204 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="xsmall">4dp</dimen>
+    <dimen name="small">8dp</dimen>
+    <dimen name="medium">16dp</dimen>
+    <dimen name="large">24dp</dimen>
+    <dimen name="xlarge">32dp</dimen>
+    <dimen name="xxlarge">64dp</dimen>
+
+    <dimen name="components_status_size">@dimen/small</dimen>
+
+    <dimen name="components_button_padding_xsmall">@dimen/dp_8</dimen>
+
+    <!--Splash-->
+
+    <!-- Planner -->
+    <dimen name="planner_margin_bottom">48dp</dimen>
+
+    <!-- Event Cards Components-->
+    <dimen name="card_padding">@dimen/large</dimen>
+    <dimen name="full_width_card_date_top_margin">@dimen/medium</dimen>
+    <dimen name="card_title_top_margin">12dp</dimen>
+    <dimen name="card_house_name_top_margin">@dimen/small</dimen>
+    <dimen name="card_booking_status_top_margin">3dp</dimen>
+    <dimen name="feature_card_image_size">312dp</dimen>
+    <dimen name="list_item_date_margin_start">@dimen/medium</dimen>
+    <dimen name="list_item_image_size">78dp</dimen>
+    <dimen name="medium_card_image_height">216dp</dimen>
+    <dimen name="title_end_margin_to_category">7dp</dimen>
+    <dimen name="category_icon_end_margin">3dp</dimen>
+    <dimen name="events_details_symbols_size">31dp</dimen>
+
+    <!-- Bottom Navigation Components -->
+    <dimen name="design_bottom_navigation_text_size" tools:ignore="UnusedResources" tools:override="true">
+        10sp
+    </dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:ignore="UnusedResources" tools:override="true">
+        10sp
+    </dimen>
+
+
+    <!-- List Divider -->
+
+    <!-- Pinned Bottom Button -->
+    <dimen name="bottom_button_height">88dp</dimen>
+
+    <!-- Filter Components -->
+
+    <!-- Induction -->
+    <dimen name="induction_image_height">285dp</dimen>
+
+    <!-- Event Details -->
+    <dimen name="event_detail_image_height">261dp</dimen>
+
+    <!-- Booking success -->
+
+    <!-- More Screen -->
+    <dimen name="more_profile_image_size">100dp</dimen>
+    <dimen name="more_list_bottom_padding">120dp</dimen>
+    <dimen name="more_previous_bookings_bottom_padding">@dimen/dp_48</dimen>
+
+
+    <!-- Explore Screen -->
+    <dimen name="error_state_image_width">75dp</dimen>
+    <dimen name="error_state_image_height">87dp</dimen>
+    <dimen name="error_state_holder_start_end_padding">36dp</dimen>
+    <dimen name="error_state_holder_top_padding">@dimen/large</dimen>
+
+    <!-- Local house -->
+    <dimen name="house_board_icon_size">40dp</dimen>
+    <dimen name="local_house_board_vertical_margin">56dp</dimen>
+    <dimen name="house_board_textview_inset">-3dp</dimen>
+    <dimen name="home_content_corner_radius">10dp</dimen>
+
+    <!-- House board post -->
+    <dimen name="house_board_profile_image_size">60dp</dimen>
+
+    <!-- House board selection -->
+
+    <!-- House Landing-->
+    <dimen name="houselanding_tour_house_image_size">32dp</dimen>
+    <dimen name="houselanding_tour_border_height">160dp</dimen>
+
+    <!-- App Onboarding-->
+    <dimen name="onboarding_image_height">300dp</dimen>
+    <dimen name="onboarding_scroll_inset">46dp</dimen>
+    <dimen name="onboard_card_margin_top">146dp</dimen>
+
+    <!--Member Onboarding-->
+
+    <!-- House Note -->
+
+    <!-- House Note Detail-->
+    <dimen name="house_note_detail_vertical_margin">@dimen/dp_52</dimen>
+
+    <!-- More Notifications -->
+
+    <!-- Browse Houses -->
+    <dimen name="browse_house_vertical_margin">29dp</dimen>
+    <dimen name="browse_house_horizontal_margin">48dp</dimen>
+
+    <!-- Overlay -->
+    <dimen name="home_overlay_item_padding">18dp</dimen>
+    <dimen name="home_overlay_icon_size">40dp</dimen>
+
+    <!--Home Footer-->
+    <dimen name="home_footer_margin">28dp</dimen>
+
+    <!--InAppNotification Dialog-->
+
+    <!--Carousel-->
+    <dimen name="carousel_image_size">220dp</dimen>
+
+    <!--Perks card-->
+    <dimen name="perks_container_height">500dp</dimen>
+
+    <!-- Profile -->
+    <dimen name="profile_avatar_diameter">160dp</dimen>
+
+    <!-- New Component Guide Dimens -->
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_7">7dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_9">9dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_11">11dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_13">13dp</dimen>
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_17">17dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_19">19dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_21">21dp</dimen>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="dp_23">23dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_26">26dp</dimen>
+    <dimen name="dp_28">28dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_31">31dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+    <dimen name="dp_34">34dp</dimen>
+    <dimen name="dp_35">35dp</dimen>
+    <dimen name="dp_36">36dp</dimen>
+    <dimen name="dp_38">38dp</dimen>
+    <dimen name="dp_39">39dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_41">41dp</dimen>
+    <dimen name="dp_42">42dp</dimen>
+    <dimen name="dp_44">44dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+    <dimen name="dp_46">46dp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_52">52dp</dimen>
+    <dimen name="dp_53">53dp</dimen>
+    <dimen name="dp_55">55dp</dimen>
+    <dimen name="dp_56">56dp</dimen>
+    <dimen name="dp_58">58dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_61">61dp</dimen>
+    <dimen name="dp_64">64dp</dimen>
+    <dimen name="dp_66">66dp</dimen>
+    <dimen name="dp_68">68dp</dimen>
+    <dimen name="dp_74">74dp</dimen>
+    <dimen name="dp_76">76dp</dimen>
+    <dimen name="dp_78">78dp</dimen>
+    <dimen name="dp_79">79dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_85">85dp</dimen>
+    <dimen name="dp_84">84dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_196">196dp</dimen>
+
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+
+    <dimen name="card_image_size_small">78dp</dimen>
+    <dimen name="tab_layout_indicator_padding">-4dp</dimen>
+    <dimen name="bottomsheet_corner_radius">10dp</dimen>
+    <dimen name="login_input_layout_height">80dp</dimen>
+
+    <dimen name="faro_reg_lucky_12sp">12sp</dimen>
+
+    <dimen name="house_item_width">220dp</dimen>
+    <dimen name="noticeboard_filter_row_height">60dp</dimen>
+    <dimen name="noticeboard_create_post_btn_height">60dp</dimen>
+    <dimen name="loading_modal_width">200dp</dimen>
+    <dimen name="form_row_height">68dp</dimen>
+    <dimen name="bottom_navigation_height">50dp</dimen>
+    <dimen name="menu_image_size">78dp</dimen>
+    <dimen name="dp_96">96dp</dimen>
+
+</resources>

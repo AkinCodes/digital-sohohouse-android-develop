@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_40"
+    tools:ignore="Overdraw">
+
+    <ImageButton
+        android:id="@+id/booking_success_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/alt_back_label"
+        android:paddingTop="@dimen/dp_20"
+        app:tint="@color/white"
+        android:paddingBottom="@dimen/dp_20"
+        android:src="@drawable/ic_close_large"
+        android:theme="@style/Theme.AppCompat.Light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/booking_success_text"
+        style="@style/Header.024"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_17"
+        android:paddingEnd="@dimen/dp_16"
+        android:text="@string/explore_events_confirm_modal_ticketless_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/booking_success_back_btn" />
+
+    <include
+        android:id="@+id/booking_event_card_item"
+        layout="@layout/list_view_event_card_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/booking_success_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

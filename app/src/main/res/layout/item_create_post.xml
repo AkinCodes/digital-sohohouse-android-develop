@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/create_post_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/noticeboard_create_post_btn_height"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:src="@drawable/ic_new_post"
+            app:tint="?attr/colorDrawablePrimary"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/label"
+            style="@style/TextLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_18"
+            android:text="@string/create_post_cta"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/filter_row_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/noticeboard_filter_row_height" />
+
+</LinearLayout>

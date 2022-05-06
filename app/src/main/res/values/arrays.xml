@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="industries_with_non_values">
+        <item>@string/prefer_not_to_say</item>
+        <item>Architecture</item>
+        <item>Art</item>
+        <item>Beauty</item>
+        <item>Digital</item>
+        <item>Events</item>
+        <item>Fashion</item>
+        <item>Film</item>
+        <item>Finance</item>
+        <item>Food and Beverage</item>
+        <item>Graphic Design</item>
+        <item>Health and Wellness</item>
+        <item>Healthcare</item>
+        <item>Hospitality</item>
+        <item>Interior Design</item>
+        <item>Law</item>
+        <item>Marketing/Advertising/Branding</item>
+        <item>Media &amp; Entertainment</item>
+        <item>Music</item>
+        <item>Performing Arts</item>
+        <item>Philanthropy</item>
+        <item>Photography</item>
+        <item>Public Relations</item>
+        <item>Publishing</item>
+        <item>Real Estate</item>
+        <item>Retail</item>
+        <item>Technology</item>
+        <item>@string/none_of_the_above</item>
+    </string-array>
+    <string-array name="industries">
+        <item>Architecture</item>
+        <item>Art</item>
+        <item>Beauty</item>
+        <item>Digital</item>
+        <item>Events</item>
+        <item>Fashion</item>
+        <item>Film</item>
+        <item>Finance</item>
+        <item>Food and Beverage</item>
+        <item>Graphic Design</item>
+        <item>Health and Wellness</item>
+        <item>Healthcare</item>
+        <item>Hospitality</item>
+        <item>Interior Design</item>
+        <item>Law</item>
+        <item>Marketing/Advertising/Branding</item>
+        <item>Media &amp; Entertainment</item>
+        <item>Music</item>
+        <item>Performing Arts</item>
+        <item>Philanthropy</item>
+        <item>Photography</item>
+        <item>Public Relations</item>
+        <item>Publishing</item>
+        <item>Real Estate</item>
+        <item>Retail</item>
+        <item>Technology</item>
+    </string-array>
+
+    <string-array name="profile_questions">
+        <item>@string/profile_question_favourite_house</item>
+        <item>@string/profile_qurstion_favourite_drink</item>
+        <item>@string/profile_question_what_keeps_me_busy</item>
+    </string-array>
+
+</resources>

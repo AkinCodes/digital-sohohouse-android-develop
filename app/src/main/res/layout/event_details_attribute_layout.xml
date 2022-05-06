@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_28"
+    android:paddingEnd="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_20">
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/Header.018"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="PRICE" />
+
+    <TextView
+        android:id="@+id/offsite_event"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/label"
+        app:layout_constraintTop_toBottomOf="@id/label"
+        tools:text="Offsite event"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/weekdays"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/description"
+        app:layout_constraintEnd_toStartOf="@id/open_close_time"
+        app:layout_constraintStart_toStartOf="@id/offsite_event"
+        app:layout_constraintTop_toBottomOf="@id/offsite_event"
+        tools:text="Monday to Friday"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/open_close_time"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/weekdays"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/weekdays"
+        app:layout_constraintTop_toTopOf="@id/weekdays"
+        tools:text="11:00 AM to 8:00 PM"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_9"
+        android:visibility="gone"
+        android:lineSpacingExtra="5sp"
+        app:layout_constraintStart_toStartOf="@id/weekdays"
+        app:layout_constraintTop_toBottomOf="@id/weekdays"
+        tools:text="@string/events_event_image_description"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/event_booking_opening_time"
+        style="@style/body_02.light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_3"
+        app:layout_constraintBottom_toTopOf="@id/supporting_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        tools:text="Booking Opens Mon, 28 Feb, 12:00 PM"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/supporting_text"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_3"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/description"
+        app:layout_constraintTop_toBottomOf="@id/event_booking_opening_time"
+        tools:text="@string/events_event_image_description"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/phone_number"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/supporting_text"
+        app:layout_constraintTop_toBottomOf="@id/supporting_text" />
+
+    <Button
+        android:id="@+id/CTA"
+        style="@style/TextLink.01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/phone_number"
+        app:layout_constraintTop_toBottomOf="@id/phone_number"
+        tools:text="Open in Maps"
+        tools:visibility="visible" />
+
+    <Space
+        android:id="@+id/extra_bottom_padding"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_4"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/CTA"
+        app:layout_constraintTop_toBottomOf="@id/CTA"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

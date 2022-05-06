@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rounded_rect_radius4"
+    android:layout_marginEnd="@dimen/dp_12"
+    android:backgroundTint="?attr/colorLayer2"
+    android:foreground="?android:selectableItemBackground"
+    android:layout_width="140dp"
+    android:layout_height="179dp">
+
+    <ImageView
+        android:id="@+id/menuImg"
+        android:layout_width="@dimen/menu_image_size"
+        android:layout_height="@dimen/menu_image_size"
+        android:layout_marginTop="@dimen/dp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/menuName"
+        style="@style/Body.012"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_12"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_8"
+        app:layout_constraintTop_toBottomOf="@id/menuImg"
+        tools:text="Lunch menu" />
+
+    <TextView
+        android:id="@+id/viewMenuBtn"
+        style="@style/TextLink"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:text="@string/book_a_table_view_menu_short"
+        app:layout_constraintTop_toBottomOf="@id/menuName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

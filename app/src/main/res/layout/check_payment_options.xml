@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:id="@+id/checkPaymentOptionBg"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:background="@drawable/rounded_rect_radius25"
+        android:backgroundTint="?attr/colorChipFixed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/checkPayNow"
+        tools:backgroundTint="@color/black" />
+
+    <ImageView
+        android:id="@+id/checkPaymentOptionIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_13"
+        app:layout_constraintBottom_toBottomOf="@id/checkPaymentOptionBg"
+        app:layout_constraintStart_toStartOf="@id/checkPaymentOptionBg"
+        app:layout_constraintTop_toTopOf="@id/checkPaymentOptionBg"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_master_card" />
+
+    <TextView
+        android:id="@+id/checkPaymentOptionLabel"
+        style="@style/Body.014.Bold"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/dp_9"
+        android:drawablePadding="@dimen/dp_7"
+        app:layout_constraintBottom_toBottomOf="@id/checkPaymentOptionBg"
+        app:layout_constraintStart_toEndOf="@id/checkPaymentOptionIcon"
+        app:layout_constraintTop_toTopOf="@id/checkPaymentOptionBg"
+        tools:text="•••• 5678" />
+
+    <ImageView
+        android:id="@+id/checkPaymentOptionArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_7"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:src="@drawable/ic_chevron_expanded"
+        app:layout_constraintBottom_toBottomOf="@id/checkPaymentOptionBg"
+        app:layout_constraintEnd_toEndOf="@id/checkPaymentOptionBg"
+        app:layout_constraintStart_toEndOf="@id/checkPaymentOptionLabel"
+        app:layout_constraintTop_toTopOf="@id/checkPaymentOptionBg"
+        android:drawableTint="?attr/colorDrawablePrimary"
+        tools:ignore="ContentDescription" />
+
+    <com.sohohouse.seven.common.views.LoadingButton
+        android:id="@+id/checkPayNow"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/dp_6"
+        app:label="@string/housepay_pay_now"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/checkPaymentOptionBg"
+        app:layout_constraintWidth_percent=".58" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/u27DiscountDetailsClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/alt_close_label"
+            android:padding="@dimen/dp_16"
+            android:src="@drawable/ic_close_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/u27DiscountDetailsHeader"
+            style="@style/Header.022"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/u27DiscountDetailsHeader"
+            app:layout_constraintTop_toBottomOf="@id/u27DiscountDetailsClose" />
+
+        <TextView
+            android:id="@+id/u27DiscountDetailsBody"
+            style="@style/Body.016"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="@string/u27DiscountDetailsBody"
+            app:layout_constraintTop_toBottomOf="@id/u27DiscountDetailsHeader" />
+
+        <TextView
+            android:id="@+id/day1"
+            style="@style/Body.016"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="@string/housepay_u27_discount_monday_label"
+            app:layout_constraintEnd_toStartOf="@id/time1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/u27DiscountDetailsBody" />
+
+        <TextView
+            android:id="@+id/time1"
+            style="@style/Body.016"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="@string/housepay_u27_discount_all_day_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/u27DiscountDetailsBody" />
+
+        <TextView
+            android:id="@+id/day2"
+            style="@style/Body.016"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/housepay_u27_discount_tues_weds_label"
+            app:layout_constraintEnd_toStartOf="@id/time2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/day1" />
+
+        <TextView
+            android:id="@+id/time2"
+            style="@style/Body.016"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/housepay_u27_discount_after_10_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/day1" />
+
+        <TextView
+            android:id="@+id/day3"
+            style="@style/Body.016"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/housepay_u27_discount_sunday_label"
+            app:layout_constraintEnd_toStartOf="@id/time3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/day2" />
+
+        <TextView
+            android:id="@+id/time3"
+            style="@style/Body.016"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/housepay_u27_discount_after_4_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/day2" />
+
+        <TextView
+            android:id="@+id/u27DiscountDetailsFooter"
+            style="@style/Body.014"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="@string/housepay_u27_discount_details_footer"
+            app:layout_constraintTop_toBottomOf="@id/day3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

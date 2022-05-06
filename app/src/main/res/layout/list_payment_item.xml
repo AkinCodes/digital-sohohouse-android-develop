@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/payment_method_title">
+
+    <ImageView
+        android:id="@+id/list_payment_image"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginBottom="@dimen/dp_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/list_payment_number"
+        style="@style/Body.014.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_7"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:layout_constraintBottom_toTopOf="@id/list_payment_type"
+        app:layout_constraintLeft_toRightOf="@id/list_payment_image"
+        app:layout_constraintTop_toTopOf="@+id/list_payment_image"
+        tools:text="**** 8756" />
+
+    <TextView
+        android:id="@+id/list_payment_type"
+        style="@style/Label.010"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_7"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:layout_constraintBottom_toBottomOf="@+id/list_payment_image"
+        app:layout_constraintLeft_toRightOf="@id/list_payment_image"
+        app:layout_constraintTop_toBottomOf="@+id/list_payment_number"
+        tools:text="Expired" />
+
+    <ImageView
+        android:id="@+id/list_payment_button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_32"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginBottom="@dimen/dp_14"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:src="@drawable/menu_dots_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <View
+        style="@style/Divider.Iron"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

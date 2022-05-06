@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginEnd="@dimen/dp_16"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/Header.030"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/home_discover_houses_header_title" />
+
+    <TextView
+        style="@style/Body.014"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="@string/home_discover_houses_header_subtitle" />
+
+</LinearLayout>

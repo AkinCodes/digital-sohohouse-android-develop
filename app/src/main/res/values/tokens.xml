@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorMembership" format="reference|color" />
+    <attr name="drawableMembershipLogo" format="reference" />
+
+    <attr name="colorBackgroundBlur" format="reference|color" />
+    <attr name="colorPlaceholderBlur" format="reference|color" />
+    <attr name="colorBackgroundPrimary" format="reference|color" />
+    <attr name="colorBackgroundTransparent" format="reference|color" />
+
+    <attr name="colorBannerPrimary" format="reference|color" />
+    <attr name="colorButtonPrimary" format="reference|color" />
+    <attr name="colorButtonPrimaryDisabled" format="reference|color" />
+    <attr name="colorButtonPrimaryRipple" format="reference|color" />
+    <attr name="colorButtonPrimaryText" format="reference|color" />
+    <attr name="colorButtonPrimaryTextDisabled" format="reference|color" />
+    <attr name="colorButtonSecondary" format="reference|color" />
+    <attr name="colorButtonSecondaryDark" format="reference|color" />
+    <attr name="colorButtonSecondaryDarkFilled" format="reference|color" />
+    <attr name="colorButtonSecondaryDisabled" format="reference|color" />
+    <attr name="colorButtonSecondaryRipple" format="reference|color" />
+    <attr name="colorButtonSecondaryText" format="reference|color" />
+    <attr name="colorButtonSecondaryTextDisabled" format="reference|color" />
+
+    <attr name="colorChipPrimaryRipple" format="reference|color" />
+
+    <attr name="colorChipFixed" format="reference|color" />
+    <attr name="colorChipFixedRipple" format="reference|color" />
+    <attr name="colorChipFixedText" format="reference|color" />
+
+    <attr name="colorDialogAccent" format="reference|color" />
+    <attr name="colorDialogControlActivated" format="reference|color" />
+    <attr name="colorDialogControlHighlight" format="reference|color" />
+    <attr name="colorDialogTextColor" format="reference|color" />
+    <attr name="colorDialogTextColorPrimary" format="reference|color" />
+    <attr name="colorDialogTextColorPrimaryInverse" format="reference|color" />
+    <attr name="colorDialogTextColorSecondary" format="reference|color" />
+    <attr name="colorDialogTextColorSecondaryInverse" format="reference|color" />
+    <attr name="colorDialogWindowBackground" format="reference|color" />
+
+    <attr name="colorDrawablePrimary" format="reference|color" />
+    <attr name="colorDrawableSecondary" format="reference|color" />
+    <attr name="colorDrawableSecondaryDark" format="reference|color" />
+
+    <attr name="colorError" format="reference|color" />
+
+    <attr name="reactionsPopupStrokeColor" format="reference|color" />
+    <attr name="noticeboardPostBackground" format="reference|color" />
+
+    <!-- Event Status -->
+    <attr name="colorEventActiveMembersOnly" format="reference|color" />
+    <attr name="colorEventCancelled" format="reference|color" />
+    <attr name="colorEventClosed" format="reference|color" />
+    <attr name="colorEventFull" format="reference|color" />
+    <attr name="colorEventHeld" format="reference|color" />
+    <attr name="colorEventLottery" format="reference|color" />
+    <attr name="colorEventMembersOnly" format="reference|color" />
+    <attr name="colorEventOpeningSoon" format="reference|color" />
+    <attr name="colorEventOpenBooking" format="reference|color" />
+    <attr name="colorEventPast" format="reference|color" />
+    <attr name="colorEventPostponed" format="reference|color" />
+    <attr name="colorEventRSVP" format="reference|color" />
+    <attr name="colorEventWaitingList" format="reference|color" />
+    <attr name="colorEventLiveNow" format="reference|color" />
+    <attr name="colorEventLiveNowBkg" format="reference|color"/>
+
+    <!-- Event Types -->
+    <attr name="colorEventTypeCinema" format="reference|color" />
+    <attr name="colorEventTypeFitness" format="reference|color" />
+    <attr name="colorEventTypeHouseVisit" format="reference|color" />
+    <attr name="colorEventTypeMember" format="reference|color" />
+
+    <!-- Guest Invitation Status -->
+    <attr name="colorInvitation" format="reference|color" />
+    <attr name="colorInvitationPending" format="reference|color" />
+    <attr name="colorInvitationAccepted" format="reference|color" />
+    <attr name="colorInvitationRejected" format="reference|color" />
+    <attr name="colorInvitationRemoved" format="reference|color" />
+    <attr name="colorInvitationCancelled" format="reference|color" />
+
+    <attr name="colorLayer0" format="reference|color" />
+    <attr name="colorLayer1" format="reference|color" />
+    <attr name="colorLayer2" format="reference|color" />
+
+    <attr name="colorListItemBackground" format="reference|color" />
+
+    <attr name="colorTrafficLightButtonStroke" format="reference|color" />
+    <attr name="colorTrafficLightAvailable" format="reference|color" />
+    <attr name="colorTrafficLightConnectionsOnly" format="reference|color" />
+    <attr name="colorTrafficLightUnavailable" format="reference|color" />
+
+    <attr name="colorNavigationItemSelected" format="reference|color" />
+    <attr name="colorNavigationItemUnselected" format="reference|color" />
+
+    <attr name="colorPageIndicatorPrimary" format="reference|color" />
+    <attr name="colorPageIndicatorSecondary" format="reference|color" />
+
+    <attr name="colorPill" format="reference|color" />
+    <attr name="colorPillDisabled" format="reference|color" />
+    <attr name="colorPillDisabledSelected" format="reference|color" />
+    <attr name="colorPillIcon" format="reference|color" />
+    <attr name="colorPillOutline" format="reference|color" />
+    <attr name="colorPillOutlineDisabled" format="reference|color" />
+    <attr name="colorPillOutlineDisabledSelected" format="reference|color" />
+    <attr name="colorPillOutlineSelected" format="reference|color" />
+    <attr name="colorPillSelected" format="reference|color" />
+    <attr name="colorPillText" format="reference|color" />
+    <attr name="colorPillTextDisabled" format="reference|color" />
+    <attr name="colorPillTextDisabledSelected" format="reference|color" />
+    <attr name="colorPillTextSelected" format="reference|color" />
+    <attr name="colorPillHandle" format="reference|color" />
+
+    <attr name="colorPrimaryCircle" format="reference|color" />
+    <attr name="colorPrimaryCircleInverse" format="reference|color" />
+
+    <!-- Snackbar -->
+    <attr name="colorSnackbarPositive" format="reference|color" />
+    <attr name="colorSnackbarNegative" format="reference|color" />
+    <attr name="colorSnackbarDismiss" format="reference|color" />
+
+    <attr name="colorSignInError" format="reference|color" />
+    <attr name="colorHousePay" format="reference|color" />
+
+    <attr name="colorTabLayoutIndicator" format="reference|color" />
+    <attr name="colorTabLayoutUnselected" format="reference|color" />
+
+    <attr name="colorTextBannerSubtitle" format="reference|color" />
+    <attr name="colorTextBannerTitle" format="reference|color" />
+    <attr name="colorTextBody012" format="reference|color" />
+    <attr name="colorTextBody012HoloLight" format="reference|color" />
+    <attr name="colorTextBody012Light" format="reference|color" />
+    <attr name="colorTextBody012LightAccent" format="reference|color" />
+    <attr name="colorTextBody014" format="reference|color" />
+    <attr name="colorTextBody014Bold" format="reference|color" />
+    <attr name="colorTextBody02" format="reference|color" />
+    <attr name="colorTextBody014Accent" format="reference|color" />
+    <attr name="colorTextBody014Light" format="reference|color" />
+    <attr name="colorTextBody014LightAccent" format="reference|color" />
+    <attr name="colorTextBody014LightDisabled" format="reference|color" />
+    <attr name="colorTextBody016" format="reference|color" />
+    <attr name="colorTextBody016Light" format="reference|color" />
+    <attr name="colorTextBody016Hint" format="reference|color" />
+    <attr name="colorTextCarouselSubtitle" format="reference|color" />
+    <attr name="colorTextCarouselTitle" format="reference|color" />
+    <attr name="colorTextControlActivated" format="reference|color" />
+    <attr name="colorTextControlHighlight" format="reference|color" />
+    <attr name="colorTextControlNormal" format="reference|color" />
+    <attr name="colorTextHeader018" format="reference|color" />
+    <attr name="colorTextHeader018Hint" format="reference|color" />
+    <attr name="colorTextHeader018Light" format="reference|color" />
+    <attr name="colorTextHeader022" format="reference|color" />
+    <attr name="colorTextHeader024" format="reference|color" />
+    <attr name="colorTextHeader024Hint" format="reference|color" />
+    <attr name="colorTextHeader030" format="reference|color" />
+    <attr name="colorTextHouseBoardSubtitle" format="reference|color" />
+    <attr name="colorTextHouseBoardTitle" format="reference|color" />
+    <attr name="colorTextLabel010" format="reference|color" />
+    <attr name="colorTextLabel012" format="reference|color" />
+    <attr name="colorTextButtonMessage" format="reference|color" />
+
+    <attr name="colorTranslucentHeader" format="reference|color" />
+
+    <attr name="colorWebViewMenuBar" format="reference|color" />
+
+    <attr name="bottomNavIconColorWhileLoading" format="reference|color" />
+
+    <attr name="AppIconSelectedColor" format="reference|color" />
+</resources>

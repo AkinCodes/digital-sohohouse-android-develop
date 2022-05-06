@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/dp_40"
+    android:paddingHorizontal="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_4">
+
+    <TextView
+        android:id="@+id/housepay_payment_method_used_label"
+        style="@style/Body.014.Narrow.Light"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/housepay_amount_charged_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/housepay_payment_method_used" />
+
+    <TextView
+        android:id="@+id/housepay_amount_charged_label"
+        style="@style/Body.014.Narrow.Light"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/housepay_amount_charged" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

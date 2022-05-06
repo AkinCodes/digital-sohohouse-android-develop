@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_24">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/house_board_post_profile_container"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/house_board_post_profile_image"
+            android:layout_width="@dimen/house_board_profile_image_size"
+            android:layout_height="@dimen/house_board_profile_image_size"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:src="@drawable/ic_profile"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/house_board_post_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_add"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/house_board_post_profile_image"
+            app:layout_constraintEnd_toEndOf="@id/house_board_post_profile_image"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/house_board_post_user_name"
+        style="@style/body_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        app:layout_constraintTop_toTopOf="@+id/house_board_post_profile_container"
+        app:layout_constraintBottom_toBottomOf="@id/house_board_post_profile_container"
+        app:layout_constraintStart_toEndOf="@id/house_board_post_profile_container"
+        tools:text="John Smith" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

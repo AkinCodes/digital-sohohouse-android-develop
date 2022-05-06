@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/noticeboard_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_20"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/filter_strip_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/create_post_btn_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/noticeboard_create_post_btn_height"
+            android:background="@color/transparent" />
+
+        <LinearLayout
+            android:id="@+id/filter_strip_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/noticeboard_filter_row_height"
+            android:background="?attr/colorLayer1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.sohohouse.seven.common.views.PillView
+                android:id="@+id/filter_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_8"
+                app:activated="true"
+                app:icon="@drawable/ic_filter"
+                app:icon_tint="@color/black"
+                app:label="@string/cta_refine" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/filter_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fadingEdge="horizontal"
+                android:fadingEdgeLength="@dimen/dp_4"
+                android:requiresFadingEdge="horizontal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.sohohouse.seven.common.views.ReloadableErrorStateView
+        android:id="@+id/error_state_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

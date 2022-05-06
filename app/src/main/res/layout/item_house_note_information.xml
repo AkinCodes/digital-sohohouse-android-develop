@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/footer_note"
+    style="@style/Body.014"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_55"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_16"
+    app:layout_constraintBottom_toTopOf="@id/footer_credit"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:showIn="@layout/house_note_detail_footer_layout"
+    tools:text="Cras sit amet elementum ais nisl ac nunc ornare suscipit. Duis sed metus convallis, luctus est non, blandit ante. Place preorders by emailing info@laurienouchka.com." />

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:apps="http://schemas.android.com/apk/res-auto">
+
+    <item android:color="@android:color/black" apps:state_default="true" apps:state_negative="false" apps:state_positive="false" />
+
+    <item android:color="@android:color/white" apps:state_default="false" apps:state_negative="false" apps:state_positive="true" />
+
+    <item android:color="@android:color/white" apps:state_default="false" apps:state_negative="true" apps:state_positive="false" />
+
+</selector>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/region_name"
+    style="@style/Body.012.LightAccent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_24"
+    android:layout_marginTop="@dimen/dp_18"
+    android:textColor="@color/white"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:background="@color/black"
+    tools:ignore="RtlSymmetry"
+    tools:text="Some region yeet" />

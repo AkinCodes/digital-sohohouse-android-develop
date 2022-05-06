@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    We can find a colour name from the links below:
+    https://chir.ag/projects/name-that-color
+    https://www.color-blindness.com/color-name-hue
+    -->
+
+    <!-- colours by a to z -->
+    <color name="apache">#D0A755</color>
+    <color name="aqua_haze">#E2EEF0</color>
+
+    <color name="barossa">#422A3C</color>
+    <color name="black_pearl">#1F282A</color>
+    <color name="black_russian">#17181A</color>
+    <color name="black">#000000</color>
+
+    <color name="celery">#53A260</color>
+    <color name="celtic">#263A31</color>
+    <color name="charcoal">#8D8D8D</color>
+    <color name="chesnut_rose">#D06B55</color>
+    <color name="cod_gray">#121212</color>
+    <color name="corduroy">#555E5F</color>
+    <color name="cutty_sark">#536C69</color>
+
+    <color name="error">#c05458</color>
+    <color name="fuzzy_wuzyy_brown">#C25656</color>
+    <color name="transparent_fuzzy_wuzyy_brown">#66C25656</color>
+
+
+    <color name="granny_smith_apple">#98E19F</color>
+
+    <color name="heather">#BBC9D1</color>
+
+    <color name="iceberg">#C5D8DA</color>
+    <color name="iron">#CDCDCF</color>
+
+    <color name="jordy_blue">#6DADD7</color>
+
+    <color name="light_blue">#007AFF</color>
+
+    <color name="mahohany">#c43745</color>
+    <color name="manatee">#9B9C9E</color>
+    <color name="mercury">#E5E5E5</color>
+    <color name="mexican_red">#AC3E3E</color>
+    <color name="midgray">#5C5E66</color>
+    <color name="mountain_meadow">#139F86</color>
+
+    <color name="oriental_pink">#C79898</color>
+
+    <color name="cararra">#EAEAE2</color>
+    <color name="mustard_yellow">#E7A600</color>
+
+    <color name="pampas">#F0ECE5</color>
+    <color name="pattens_blue">#F0F8FA</color>
+
+    <color name="red">#FF0000</color>
+    <color name="red_orange">#F24822</color>
+
+    <color name="shipcove">#7097B3</color>
+    <color name="soft_peach">#F6EDEE</color>
+    <color name="solitude">#F7F7FA</color>
+    <color name="sunset_orange">#FF4D4D</color>
+    <color name="spring_wood">#F6F3EE</color>
+
+    <color name="soot">#535C55</color>
+
+    <color name="teal">#819A9C</color>
+    <color name="translucent_black_pearl">#1A1F282A</color>
+    <color name="translucent_cod_gray">#F5121212</color>
+    <color name="translucent_dark_surface">#E0121212</color>
+    <color name="translucent_iceberg">#E0C5D8DA</color>
+    <color name="translucent_pampas">#19F0ECE5</color>
+    <color name="translucent_white">#33FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white35">#59FFFFFF</color>
+
+    <color name="gray_blur">#B3121212</color>
+    <color name="pill">#D2D2C6</color>
+    <color name="transparent_gray">#1A555E5F</color>
+    <color name="bottomNav_icon_color_while_loading">#FFFFFF</color>
+
+</resources>

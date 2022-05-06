@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_24"
+    android:paddingBottom="@dimen/dp_6">
+
+    <include
+        android:id="@+id/detail_card_content"
+        layout="@layout/list_view_event_card_small" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

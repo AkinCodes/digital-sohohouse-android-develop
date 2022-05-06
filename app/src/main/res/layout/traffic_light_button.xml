@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/traffic_light_first_visit_btn_bkg"
+    android:minHeight="@dimen/dp_84"
+    tools:backgroundTint="@color/white"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.sohohouse.seven.common.views.AsyncImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="@dimen/dp_64"
+        android:layout_marginStart="@dimen/dp_12"
+        android:background="@drawable/bkg_oval"
+        android:contentDescription="@string/alt_more_profile_image"
+        app:circleCrop="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:backgroundTint="?colorInvitationAccepted" />
+
+    <ImageView
+        android:id="@+id/checkMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_18"
+        android:src="@drawable/ic_checkmark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/statusBackground"
+        android:layout_width="@dimen/dp_18"
+        android:layout_height="@dimen/dp_18"
+        android:layout_margin="@dimen/dp_2"
+        android:background="@drawable/bkg_oval"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/image" />
+
+    <View
+        android:id="@+id/status"
+        android:layout_width="@dimen/dp_13"
+        android:layout_height="@dimen/dp_13"
+        android:background="@drawable/bkg_oval"
+        android:backgroundTint="?colorInvitationAccepted"
+        app:layout_constraintBottom_toBottomOf="@id/statusBackground"
+        app:layout_constraintEnd_toEndOf="@id/statusBackground"
+        app:layout_constraintStart_toStartOf="@id/statusBackground"
+        app:layout_constraintTop_toTopOf="@id/statusBackground" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Body.014.Bold"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:textColor="?colorPrimary"
+        android:layout_marginTop="@dimen/dp_8"
+        app:layout_constraintBottom_toTopOf="@+id/subtitle"
+        app:layout_constraintEnd_toStartOf="@+id/checkMark"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxLines="2"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Hide my profile from members" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        style="@style/Body.014"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:textColor="?colorPrimary"
+        android:layout_marginEnd="@dimen/dp_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkMark"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:text="12 available members in this venue venue venue" />
+
+</merge>

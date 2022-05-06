@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="168dp"
+    android:layout_height="232dp"
+    android:layout_marginTop="@dimen/dp_8">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.sohohouse.seven.common.views.AsyncImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="@dimen/dp_64"
+        android:layout_marginTop="@dimen/dp_24"
+        android:background="@drawable/bkg_oval"
+        android:contentDescription="@string/alt_more_profile_image"
+        android:elevation="2dp"
+        app:circleCrop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:adjustViewBounds="true"
+        tools:src="@drawable/ic_member_placeholder_dark" />
+
+    <View
+        android:id="@+id/imageStatusBackground"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:layout_margin="@dimen/dp_2"
+        android:background="@drawable/bkg_oval"
+        android:backgroundTint="@color/white"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/image" />
+
+    <View
+        android:id="@+id/imageStatus"
+        android:layout_width="@dimen/dp_12"
+        android:layout_height="@dimen/dp_12"
+        android:background="@drawable/bkg_oval"
+        android:backgroundTint="?colorInvitationAccepted"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageStatusBackground"
+        app:layout_constraintEnd_toEndOf="@id/imageStatusBackground"
+        app:layout_constraintStart_toStartOf="@id/imageStatusBackground"
+        app:layout_constraintTop_toTopOf="@id/imageStatusBackground" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:elevation="2dp"
+        android:lines="1"
+        android:textColor="?colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:text="Phoebe Tonkin" />
+
+    <View
+        android:id="@+id/titleSkeleton"
+        android:layout_width="90dp"
+        android:layout_height="@dimen/dp_6"
+        android:alpha="0.4"
+        android:background="@drawable/rounded_corner_mask"
+        android:backgroundTint="?colorPrimary"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toTopOf="@id/title" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_2"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingHorizontal="@dimen/dp_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="Creative Consultant" />
+
+    <View
+        android:id="@+id/subtitleSkeleton1"
+        android:layout_width="108dp"
+        android:layout_height="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_2"
+        android:alpha="0.2"
+        android:background="@drawable/rounded_corner_mask"
+        android:backgroundTint="?colorPrimary"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="@id/subtitle"
+        app:layout_constraintStart_toStartOf="@id/subtitle"
+        app:layout_constraintTop_toTopOf="@id/subtitle" />
+
+    <View
+        android:id="@+id/subtitleSkeleton2"
+        android:layout_width="108dp"
+        android:layout_height="@dimen/dp_6"
+        android:alpha="0.2"
+        android:background="@drawable/rounded_corner_mask"
+        android:backgroundTint="?colorPrimary"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="@id/subtitle"
+        app:layout_constraintStart_toStartOf="@id/subtitle"
+        app:layout_constraintTop_toBottomOf="@id/subtitle" />
+
+    <Button
+        android:id="@+id/connect"
+        style="@style/Button.Secondary.Dark.Filled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text="@string/message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <View
+        android:id="@+id/messageSkeleton"
+        android:layout_width="@dimen/dp_78"
+        android:layout_height="@dimen/dp_34"
+        android:alpha="0.3"
+        android:background="@drawable/rounded_rect_radius25"
+        android:backgroundTint="?colorPrimary"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/infoGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="title, subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/skeletonGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="titleSkeleton, subtitleSkeleton1, subtitleSkeleton2, messageSkeleton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

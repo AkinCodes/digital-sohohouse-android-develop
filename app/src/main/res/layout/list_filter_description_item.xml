@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text"
+    style="@style/body_02"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/dp_8"
+    android:paddingStart="@dimen/dp_8"
+    android:paddingTop="@dimen/dp_19"
+    android:textAlignment="textStart"
+    tools:text="Select your favourite Houses and we'll show you more of what you want to see" />

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_48">
+
+    <com.sohohouse.seven.common.views.AsyncImageView
+        android:id="@+id/gallery_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@color/black_russian"
+        android:scaleType="fitCenter"
+        tools:ignore="ContentDescription"
+        tools:layout_height="400dp"
+        tools:src="@drawable/placeholder" />
+
+    <TextView
+        android:id="@+id/gallery_caption"
+        style="@style/Body.016"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:lineSpacingExtra="5sp"
+        tools:text="From left: Samarria Brevard, Duran, Soto, and Zeuner. Skateboarding teaches you a lot of self-discipline." />
+
+    <TextView
+        android:id="@+id/gallery_tag"
+        style="@style/Label.012"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        tools:text="Misan Harriman (Camilla Holmstroem)" />
+
+</LinearLayout>

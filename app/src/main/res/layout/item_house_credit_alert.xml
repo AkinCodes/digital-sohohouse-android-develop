@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_rect_radius4"
+    android:backgroundTint="?attr/colorLayer0"
+    android:padding="@dimen/dp_16"
+    android:layout_marginHorizontal="@dimen/dp_16"
+    android:layout_marginVertical="@dimen/dp_16"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/housepay_alert_text"
+        android:layout_width="0dp"
+        style="@style/Body.012"
+        tools:text="Member offers
+Member offers will be applied when you settle your tab."
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="@dimen/dp_8"
+        app:layout_constraintEnd_toStartOf="@id/housepay_alert_cta"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/housepay_alert_cta"
+        tools:text="Use credit"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="@dimen/sp_14"
+        android:paddingVertical="@dimen/dp_0"
+        android:paddingHorizontal="0dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Button.Secondary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Header.018.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/update_your_profile"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/subtitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        style="@style/Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/form_rv"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_goneMarginTop="@dimen/dp_16"
+        android:text="@string/subtitle_prepopulate_profile_form" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/form_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

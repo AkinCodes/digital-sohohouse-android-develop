@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dp_12"
+    android:paddingTop="@dimen/dp_19"
+    android:paddingEnd="@dimen/dp_12"
+    tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:contentDescription="@string/soho_label"
+        tools:src="@mipmap/ic_launcher_soho_house" />
+
+    <TextView
+        style="@style/body_02"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_weight="1"
+        android:fontFamily="@font/faro_lucky_regular"
+        android:text="@string/onboarding_welcome_dialog_change_app_icon"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+</LinearLayout>

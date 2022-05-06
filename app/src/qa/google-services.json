@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "640636956918",
+    "firebase_url": "https://soho-house-members-staging.firebaseio.com",
+    "project_id": "soho-house-members-staging",
+    "storage_bucket": "soho-house-members-staging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640636956918:android:46fe0ce4de111416",
+        "android_client_info": {
+          "package_name": "com.sohohouse.seven"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "640636956918-q0gdrrrooltha5tkjgcmu0bbtm7soei6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUF_4ONQ1bgwJncNUA3fV0eEVnFaG1u8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "640636956918-q0gdrrrooltha5tkjgcmu0bbtm7soei6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "640636956918-0s1sr9kjf05gsdkmu8ib7q89p0n894jt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sohohouse.temp.thened.staging"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640636956918:android:1476b62a96ba1387d0fcd7",
+        "android_client_info": {
+          "package_name": "com.sohohouse.seven.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "640636956918-k7kk55p6itsnrq82tji7bscbuoecprgf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sohohouse.seven.staging",
+            "certificate_hash": "e7921ac3256608b3aee7509f07f112a6136ca241"
+          }
+        },
+        {
+          "client_id": "640636956918-q0gdrrrooltha5tkjgcmu0bbtm7soei6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUF_4ONQ1bgwJncNUA3fV0eEVnFaG1u8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "640636956918-q0gdrrrooltha5tkjgcmu0bbtm7soei6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "640636956918-0s1sr9kjf05gsdkmu8ib7q89p0n894jt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sohohouse.temp.thened.staging"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

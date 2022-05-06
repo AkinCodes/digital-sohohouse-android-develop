@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@android:id/text1"
+        style="@style/heading_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/colorTabLayoutUnselected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Messages"
+        tools:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/itemCount"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/colorTextBody014LightDisabled"
+        android:translationY="-3dp"
+        app:layout_constraintStart_toEndOf="@android:id/text1"
+        app:layout_constraintTop_toTopOf="@android:id/text1"
+        tools:text="4"
+        tools:textColor="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1 @@
+package com.sohohouse.seven.connect.trafficlightsdata class UserAvailableStatus(    val id: String,    val availableStatus: AvailableStatus)

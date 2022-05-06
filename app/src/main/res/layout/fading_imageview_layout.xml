@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_russian"
+        android:contentDescription="@string/home_browse_houses_label"
+        android:scaleType="centerInside"
+        tools:src="@drawable/placeholder" />
+
+    <ImageView
+        android:id="@+id/fading_background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_russian"
+        android:contentDescription="@string/home_browse_houses_label"
+        android:scaleType="centerInside"
+        tools:src="@drawable/placeholder" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_transparency" />
+</FrameLayout>

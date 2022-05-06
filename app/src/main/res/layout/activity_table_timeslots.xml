@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <ImageView
+                android:id="@+id/tableImage"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:contentDescription="@string/table_booking_restaurant_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shortcut_restourant"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:contentDescription="@string/go_back_cta"
+                android:src="@drawable/back_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/restaurantTitle"
+                style="@style/Header.024"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tableImage"
+                app:layout_constraintEnd_toStartOf="@id/editSearchBtn"
+                android:layout_marginEnd="@dimen/dp_16"
+                tools:text="40 Greek Street" />
+
+            <Button
+                android:id="@+id/editSearchBtn"
+                style="@style/Button.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:paddingVertical="@dimen/dp_0"
+                android:textSize="10sp"
+                android:drawableEnd="@drawable/ic_chevron_expanded"
+                android:drawablePadding="@dimen/dp_4"
+                android:paddingEnd="@dimen/dp_3"
+                android:paddingStart="@dimen/dp_16"
+                android:text="@string/book_a_table_availability_edit_search"
+                android:drawableTint="?attr/colorDrawablePrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tableImage"
+                tools:ignore="RtlSymmetry,SmallSp" />
+
+            <TextView
+                android:id="@+id/viewMenuTitle"
+                style="@style/TextLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/book_a_table_view_menu"
+                android:textColor="?attr/colorTextHeader024"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/restaurantTitle" />
+
+            <TextView
+                android:id="@+id/availableSlotsTitle"
+                style="@style/Header.018"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="64dp"
+                android:text="@string/book_a_table_available_slots"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/restaurantTitle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listTimeSlots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:padding="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/availableSlotsTitle" />
+
+            <TextView
+                android:id="@+id/specialNotesTitle"
+                style="@style/Header.018"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="64dp"
+                android:text="@string/book_a_table_special_notes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/listTimeSlots" />
+
+            <TextView
+                android:id="@+id/specialNotesDescription"
+                style="@style/Body.014"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/specialNotesTitle"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in" />
+
+            <TextView
+                android:id="@+id/menusTitle"
+                style="@style/Header.018"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="64dp"
+                android:text="@string/eat_and_drink"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/specialNotesDescription" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/menusRv"
+                app:layout_constraintTop_toBottomOf="@id/menusTitle"
+                android:layout_marginTop="@dimen/dp_18"
+                android:visibility="gone"
+                android:paddingHorizontal="@dimen/dp_16"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/Header.018"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="64dp"
+                android:text="@string/book_a_table_description_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/menusRv" />
+
+            <TextView
+                android:id="@+id/descriptionText"
+                style="@style/Body.014"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in" />
+
+            <include
+                android:id="@+id/house_details"
+                layout="@layout/item_table_booking_house_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_64"
+                app:layout_constraintTop_toBottomOf="@id/descriptionText" />
+
+            <ImageView
+                android:id="@+id/openTableLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:contentDescription="@string/table_booking_opentable_logo"
+                android:paddingBottom="100dp"
+                android:src="@drawable/logo_powered_by_open_table"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/house_details" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/rootConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?attr/colorLayer1"
+        android:paddingStart="16dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="24dp">
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/book_a_table_confirm_slot" />
+
+    </FrameLayout>
+
+    <com.sohohouse.seven.common.views.LoadingView
+        android:id="@+id/rootLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        app:layout="@layout/component_bar_only_loading_view" />
+
+</FrameLayout>

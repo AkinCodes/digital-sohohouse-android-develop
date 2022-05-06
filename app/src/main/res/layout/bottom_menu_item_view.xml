@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/icon_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_weight="1"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:importantForAccessibility="no"
+    tools:background="@android:color/holo_orange_light"
+    tools:layout_height="?attr/actionBarSize">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:maxWidth="24dp"
+        android:maxHeight="24dp"
+        android:scaleType="fitCenter"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_home" />
+
+</FrameLayout>

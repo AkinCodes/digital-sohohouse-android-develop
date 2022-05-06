@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sohohouse.seven.splash.forceupdate.ForceUpdateView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/force_update_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/dp_36"
+    android:paddingEnd="@dimen/dp_36"
+    app:description="@string/app_update_supporting"
+    app:logoImage="@drawable/ic_soho_house"
+    app:primaryButton="@string/app_update_update_cta"
+    app:title="@string/app_update_header"
+    tools:context=".splash.forceupdate.ForceUpdateActivity" />

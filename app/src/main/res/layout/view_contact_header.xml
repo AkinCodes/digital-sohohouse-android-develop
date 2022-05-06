@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="@string/enquiry_supporting" />
+
+    <com.sohohouse.seven.common.views.NavRowButton
+        android:id="@+id/visit_faqs_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8" />
+
+    <View
+        android:id="@+id/white_padding"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_41" />
+
+    <View
+        android:id="@+id/no_faq_padding"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/xlarge"
+        android:visibility="gone" />
+
+</LinearLayout>

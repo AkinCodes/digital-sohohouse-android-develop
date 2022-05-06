@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/activity_table_complete_booking">
+
+    <ImageView
+        android:id="@+id/restaurantImage"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/table_booking_restaurant_image"
+        android:src="@drawable/shortcut_restourant"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/restaurantTitle"
+        style="@style/Body.014.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_6"
+        android:textColor="?attr/colorTextHeader018"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/restaurantImage"
+        app:layout_constraintTop_toTopOf="@id/restaurantImage"
+        tools:text="40 Greek Street" />
+
+    <TextView
+        android:id="@+id/restaurantAddress"
+        style="@style/Body.012"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_6"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/restaurantImage"
+        app:layout_constraintTop_toBottomOf="@id/restaurantTitle"
+        tools:text="40 Greek Street, London, W1D 4EB" />
+
+    <TextView
+        android:id="@+id/restaurantCountry"
+        style="@style/Body.012"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/restaurantImage"
+        app:layout_constraintTop_toBottomOf="@id/restaurantAddress"
+        tools:text="United Kingdom" />
+</androidx.constraintlayout.widget.ConstraintLayout>

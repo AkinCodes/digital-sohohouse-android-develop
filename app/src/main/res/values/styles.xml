@@ -1,0 +1,390 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowBackground">@color/cod_gray</item>
+        <item name="android:actionMenuTextAppearance">@style/TextLink.01</item>
+        <item name="android:datePickerDialogTheme">@style/DatePickerTheme</item>
+        <item name="onboardingCardStyle">@style/OnboardingCardStyle</item>
+        <item name="reloadableErrorStateStyle">@style/ReloadableErrorStateStyle</item>
+        <item name="navRowButtonStyle">@style/NavRowButtonStyle</item>
+        <item name="stepperViewStyle">@style/StepperViewStyle</item>
+        <item name="android:statusBarColor">@color/cod_gray</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:alertDialogTheme">@style/DialogTheme</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="bottomSheetDialogTheme">@style/BaseBottomSheetDialog</item>
+    </style>
+
+    <style name="AppThemeNoActionBar.CustomBackground" parent="AppThemeNoActionBar">
+        <item name="android:background">?attr/colorLayer2</item>
+    </style>
+
+    <style name="AppThemeNoActionBar.FullBlackBackground">
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <style name="AppThemeNoActionBar.TranslucentStatus">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="AppThemeNoActionBar.FullScreen" parent="AppThemeNoActionBar">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:windowFullscreen">true</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+
+    <style name="AppThemeNoActionBar.SlideAnimation" parent="AppThemeNoActionBar">
+        <item name="android:windowAnimationStyle">@style/SlideAnimation.Activity</item>
+    </style>
+
+    <style name="SlideAnimation.Activity" parent="android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/bottom_up</item>
+        <item name="android:activityOpenExitAnimation">@anim/no_animation</item>
+        <item name="android:activityCloseEnterAnimation">@anim/no_animation</item>
+        <item name="android:activityCloseExitAnimation">@anim/bottom_down</item>
+    </style>
+
+    <!-- set the rounded drawable as background to your bottom sheet -->
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottomsheet_bg</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomSheetEditDialog" parent="BaseBottomSheetDialog">
+        <item name="android:windowSoftInputMode">adjustResize|stateHidden</item>
+    </style>
+
+    <style name="DatePickerTheme" parent="Base.V7.Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowBackground">@color/black_russian</item>
+    </style>
+
+    <style name="FilterActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="titleTextAppearance">@style/FilterActionBarText</item>
+        <item name="background">@color/cod_gray</item>
+    </style>
+
+    <style name="FilterActionBarText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/faro_lucky_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!-- Text input field -->
+
+    <style name="PaymentTextInputField">
+        <item name="android:paddingBottom">@dimen/dp_38</item>
+        <item name="android:fontFamily">@font/faro_lucky_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="errorTextAppearance">@style/ErrorTextAppearance</item>
+        <item name="editTextAppearance">@style/EditTextAppearance</item>
+        <item name="editTextPaddingTop">@dimen/dp_24</item>
+        <item name="editTextPaddingBottom">@dimen/dp_24</item>
+    </style>
+
+    <style name="ErrorTextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/mahohany</item>
+    </style>
+
+    <style name="EditTextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="EditTextTheme" parent="BaseTheme">
+        <item name="colorControlActivated">?attr/colorDrawablePrimary</item>
+        <item name="colorControlHighlight">?attr/colorDrawablePrimary</item>
+    </style>
+
+    <!-- Event Card Title Styles -->
+
+    <style name="FullWidthEventCardTitle" parent="FaroLucky.Bold.16sp">
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="HeadlineCardTitle" parent="FaroLucky.Bold.40sp">
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- Remaining Event Card Styles -->
+    <style name="EventCardDateTime" parent="FaroLucky.Regular.10sp">
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/midgray</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="EventCardHouseName" parent="Body.012.LightAccent">
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Card Ripple Effect -->
+    <style name="SelectableItemTheme">
+        <item name="colorControlHighlight">@color/iron</item>
+    </style>
+
+    <style name="SelectableItemBackground">
+        <item name="android:theme">@style/SelectableItemTheme</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <!-- Bottom Navigation View Font -->
+
+    <style name="ProgressBarColor" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/shipcove</item>
+    </style>
+
+    <!-- Dividers -->
+    <style name="Divider">
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="Divider.Iron" parent="Divider">
+        <item name="android:background">@color/mercury</item>
+        <item name="android:alpha">0.10</item>
+    </style>
+
+    <!-- Overflow Dialog -->
+    <style name="OverflowStyle">
+        <item name="android:background">@color/translucent_black</item>
+    </style>
+
+    <style name="OnboardingCardStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:elevation">@dimen/xlarge</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginStart">@dimen/large</item>
+        <item name="android:layout_marginEnd">@dimen/large</item>
+    </style>
+
+    <style name="NavRowButtonStyle" parent="SelectableItemBackground">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/dp_16</item>
+        <item name="android:paddingEnd">@dimen/dp_16</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="StepperViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ReloadableErrorStateStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingStart">@dimen/error_state_holder_start_end_padding</item>
+        <item name="android:paddingTop">@dimen/error_state_holder_top_padding</item>
+        <item name="android:paddingEnd">@dimen/error_state_holder_start_end_padding</item>
+    </style>
+
+    <style name="FilterHeaderButton">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:src">@drawable/filter_circle</item>
+        <item name="android:tint">@color/white</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TextLink" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorTextBody014Accent</item>
+        <item name="android:fontFamily">@font/faro_lucky_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:includeFontPadding">true</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="TextLink.01">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:fontFamily">@font/faro_lucky_bold</item>
+    </style>
+
+    <style name="TextLink.02">
+        <item name="android:textSize">14sp</item>
+        <item name="android:drawablePadding">@dimen/dp_8</item>
+        <item name="android:drawableRight">@drawable/ic_right</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="TextLink.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white56</item>
+    </style>
+
+    <style name="heading_01" parent="FaroLucky.Regular">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+    </style>
+
+    <style name="house_note_h1" parent="FaroLucky.Regular">
+        <item name="android:textColor">?attr/colorTextHeader030</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+    </style>
+
+    <style name="house_note_h2" parent="FaroLucky.Regular">
+        <item name="android:textColor">?attr/colorTextHeader024</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="house_note_h3" parent="FaroLucky.Regular">
+        <item name="android:textColor">?attr/colorTextHeader018</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="heading_03" parent="FaroLucky.Regular">
+        <item name="android:textColor">?attr/colorTextCarouselTitle</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="heading_04" parent="heading_03">
+        <item name="android:textColor">?attr/colorButtonPrimaryDisabled</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="heading_03.transparent">
+        <item name="android:textColor">@color/white56</item>
+    </style>
+
+    <style name="body_01" parent="FaroLucky.Regular">
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="body_02" parent="FaroLucky.Regular">
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="body_02.light">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="body_02.bold">
+        <item name="android:fontFamily">@font/faro_lucky_bold</item>
+    </style>
+
+    <style name="body_02.bold.light">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="label_01" parent="FaroLucky.Regular">
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="label_01.transparent">
+        <item name="android:color">@color/white56</item>
+    </style>
+
+    <style name="TextInputError" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/faro_lucky_regular</item>
+        <item name="android:textColor">@color/error</item>
+    </style>
+
+    <style name="NumberPickerText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/faro_lucky_regular</item>
+        <item name="android:textColorPrimary">?attr/colorTextBody014Accent</item>
+        <item name="colorControlNormal">?attr/colorTextBody014Light</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:colorAccent">@color/white</item>
+        <item name="android:background">@color/cod_gray</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="PageTitle">
+        <item name="android:fontFamily">@font/faro_lucky_regular</item>
+        <item name="android:textColor">?attr/colorTextCarouselTitle</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppBottomSheetDialog" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetMenu</item>
+    </style>
+
+    <style name="BottomSheetMenu" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="BottomSheetCTA" parent="FaroLucky.Regular">
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="PostTag" parent="Body.012.Bold">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:paddingStart">@dimen/dp_12</item>
+        <item name="android:paddingEnd">@dimen/dp_12</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:background">@drawable/rounded_stroked_rect_radius25</item>
+    </style>
+
+    <style name="ModalDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+</resources>

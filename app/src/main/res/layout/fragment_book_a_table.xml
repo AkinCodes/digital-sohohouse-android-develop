@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="88dp">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Header.030"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book_a_table_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.sohohouse.seven.book.table.TableSearchFormView
+            android:id="@+id/searchForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_24"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <com.sohohouse.seven.common.views.LoadingButton
+            android:id="@+id/btnCheckAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:label="@string/book_a_table_check_availability"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchForm" />
+
+        <TextView
+            android:id="@+id/titleHouses"
+            style="@style/Header.018"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:text="@string/book_a_table_availability_houses"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listAlternateRestaurants" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listHouses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleHouses" />
+
+        <TextView
+            android:id="@+id/titleRestaurants"
+            style="@style/Header.018"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:text="@string/book_a_table_availability_restaurants"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listHouses" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listRestaurants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleRestaurants" />
+
+        <ImageView
+            android:id="@+id/openTableLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:contentDescription="@string/table_booking_opentable_logo"
+            android:src="@drawable/logo_powered_by_open_table"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listRestaurants" />
+
+        <TextView
+            android:id="@+id/titleSelectRestaurant"
+            style="@style/Header.030"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/book_a_table_availability_select_your_restaurant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descriptionSelectRestaurant"
+            style="@style/Body.014"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleSelectRestaurant"
+            tools:text="@string/book_a_table_availability_which_restaurant" />
+
+        <TextView
+            android:id="@+id/btnEditSearch"
+            style="@style/TextLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/book_a_table_availability_edit_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionSelectRestaurant" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listRestaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnEditSearch" />
+
+        <ImageView
+            android:id="@+id/openTableLogoRestaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:contentDescription="@string/table_booking_opentable_logo"
+            android:src="@drawable/logo_powered_by_open_table"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listRestaurant" />
+
+        <TextView
+            android:id="@+id/titleNoAvailable"
+            style="@style/Header.030"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="42dp"
+            android:gravity="center"
+            android:text="@string/book_a_table_no_available_tables_match_your_search"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnCheckAvailability" />
+
+        <TextView
+            android:id="@+id/titleNoAvailableDescription"
+            style="@style/Body.014"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="35dp"
+            android:gravity="center"
+            android:text="@string/book_a_table_no_any_tables"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleNoAvailable" />
+
+        <TextView
+            android:id="@+id/btnChangeSearch"
+            style="@style/TextLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/book_a_table_availability_change_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleNoAvailableDescription" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listAlternateRestaurants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:visibility="gone"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnContactUs" />
+
+        <TextView
+            android:id="@+id/btnContactUs"
+            style="@style/TextLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/book_a_table_contact_us"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnChangeSearch" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/noAvailibilityState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="titleNoAvailable, titleNoAvailableDescription, btnChangeSearch, btnContactUs, titleHouses, listHouses, titleRestaurants, listRestaurants, listAlternateRestaurants, openTableLogo" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/alternateRestaurantAvailabilityState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="titleNoAvailable, titleNoAvailableDescription, btnChangeSearch, listAlternateRestaurants, openTableLogo" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/searchFormState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="title, searchForm, btnCheckAvailability, titleHouses, listHouses, titleRestaurants, listRestaurants, openTableLogo" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/selectRestaurantState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="titleSelectRestaurant, descriptionSelectRestaurant, listRestaurant, openTableLogoRestaurants, btnEditSearch" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

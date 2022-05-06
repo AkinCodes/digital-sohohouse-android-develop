@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="-16dp"
+    android:paddingBottom="-16dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/house_pay_landing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imgCross"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="28dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/label_pay_for_food"
+            style="@style/heading_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/housepay_pay_for_food"
+            android:textColor="?attr/colorTextBannerTitle"
+            app:layout_constraintTop_toBottomOf="@+id/btnCancel"
+            tools:layout_editor_absoluteX="16dp"
+            tools:text="@string/housepay_pay_for_food" />
+
+        <ImageView
+            android:id="@+id/imgTick"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="25dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_checkmark"
+            app:layout_constraintLeft_toLeftOf="@+id/label_pay_for_food"
+            app:layout_constraintTop_toBottomOf="@+id/label_pay_for_food"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/house_note_h3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/housepay_see_your_tab"
+            android:textColor="?attr/colorTextBannerTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/imgTick"
+            app:layout_constraintStart_toEndOf="@+id/imgTick"
+            tools:text="@string/housepay_see_your_tab" />
+
+        <ImageView
+            android:id="@+id/imgTick2"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="14dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_checkmark"
+            app:layout_constraintLeft_toLeftOf="@+id/label_pay_for_food"
+            app:layout_constraintTop_toBottomOf="@+id/imgTick"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/house_note_h3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/housepay_settle_your_bill"
+            android:textColor="?attr/colorTextBannerTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/imgTick2"
+            app:layout_constraintStart_toEndOf="@+id/imgTick2"
+            tools:text="@string/housepay_see_your_tab" />
+
+        <ImageView
+            android:id="@+id/imgTick3"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="14dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_checkmark"
+            app:layout_constraintLeft_toLeftOf="@+id/label_pay_for_food"
+            app:layout_constraintTop_toBottomOf="@+id/imgTick2"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/house_note_h3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/housepay_quick_and_easy"
+            android:textColor="?attr/colorTextBannerTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/imgTick3"
+            app:layout_constraintStart_toEndOf="@+id/imgTick3"
+            tools:text="@string/housepay_quick_and_easy" />
+
+        <ImageView
+            android:id="@+id/imgTick4"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="14dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_checkmark"
+            app:layout_constraintLeft_toLeftOf="@+id/label_pay_for_food"
+            app:layout_constraintTop_toBottomOf="@+id/imgTick3"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/house_note_h3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/housepay_receipts_saved"
+            android:textColor="?attr/colorTextBannerTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/imgTick4"
+            app:layout_constraintStart_toEndOf="@+id/imgTick4"
+            tools:text="@string/housepay_receipts_saved" />
+
+        <Button
+            android:id="@+id/btnGetStarted"
+            style="@style/Button.Secondary.Dark.Filled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/sp_16"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="@dimen/dp_64"
+            android:text="@string/housepay_get_started"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

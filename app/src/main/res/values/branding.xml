@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- themes -->
+    <style name="BaseTheme" parent="AppThemeNoActionBar">
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:navigationBarColor">?attr/colorPrimary</item>
+
+        <item name="colorMembership">@color/black_russian</item>
+        <item name="drawableMembershipLogo">@drawable/ic_membership_logo_soho_house</item>
+
+        <item name="colorLayer0">@color/black</item>
+        <item name="colorLayer1">@color/cod_gray</item>
+        <item name="colorLayer2">@color/black_russian</item>
+
+        <item name="colorBackgroundPrimary">@color/cod_gray</item>
+        <item name="colorBackgroundTransparent">@color/translucent_dark_surface</item>
+
+        <item name="colorWebViewMenuBar">@color/cod_gray</item>
+
+        <item name="colorPageIndicatorPrimary">@color/white</item>
+        <item name="colorPageIndicatorSecondary">@color/translucent_white</item>
+
+        <item name="colorTabLayoutIndicator">@color/white</item>
+        <item name="colorTabLayoutUnselected">@color/charcoal</item>
+
+        <item name="colorNavigationItemSelected">@color/white</item>
+        <item name="colorNavigationItemUnselected">@color/charcoal</item>
+
+        <item name="colorListItemBackground">@color/black_russian</item>
+
+        <item name="colorTextHeader030">@color/white</item>
+
+
+        <item name="colorTextHeader024">@color/white</item>
+        <item name="colorTextHeader024Hint">@color/charcoal</item>
+
+        <item name="colorTextHeader022">@color/white</item>
+
+        <item name="colorTextHeader018">@color/white</item>
+        <item name="colorTextHeader018Hint">@color/charcoal</item>
+        <item name="colorTextHeader018Light">@color/white</item>
+
+        <item name="colorTextBody016">@color/charcoal</item>
+        <item name="colorTextBody016Light">@color/white</item>
+        <item name="colorTextBody016Hint">@color/white</item>
+
+        <item name="colorTextBody014">@color/charcoal</item>
+        <item name="colorTextBody014Accent">@color/white</item>
+        <item name="colorTextBody014Light">@color/white</item>
+        <item name="colorTextBody014LightAccent">@color/charcoal</item>
+        <item name="colorTextBody014LightDisabled">@color/pampas</item>
+        <item name="colorTextBody014Bold">@color/white</item>
+        <item name="colorTextBody02">@color/soot</item>
+
+
+        <item name="colorTextBody012">@color/charcoal</item>
+        <item name="colorTextBody012Light">@color/white</item>
+        <item name="colorTextBody012HoloLight">@color/charcoal</item>
+        <item name="colorTextBody012LightAccent">@color/charcoal</item>
+
+        <item name="colorTextLabel010">@color/charcoal</item>
+
+        <item name="colorTextLabel012">@color/charcoal</item>
+
+        <item name="colorTextHouseBoardTitle">@color/white</item>
+        <item name="colorTextHouseBoardSubtitle">@color/white56</item>
+
+        <item name="colorTextBannerTitle">@color/black</item>
+        <item name="colorTextBannerSubtitle">@color/black</item>
+        <item name="colorTextButtonMessage">@color/message_button_text_color</item>
+
+        <item name="colorTextCarouselTitle">@color/white</item>
+        <item name="colorTextCarouselSubtitle">@color/charcoal</item>
+
+        <item name="colorPill">@color/transparent</item>
+        <item name="colorPillSelected">@color/pampas</item>
+        <item name="colorPillDisabled">@color/transparent</item>
+        <item name="colorPillDisabledSelected">@color/charcoal</item>
+
+        <item name="colorPillText">@color/pampas</item>
+        <item name="colorPillTextSelected">@color/black</item>
+        <item name="colorPillTextDisabled">@color/charcoal</item>
+        <item name="colorPillTextDisabledSelected">@color/black</item>
+        <item name="colorPillHandle">@color/pill</item>
+
+        <item name="colorPillOutline">@color/pampas</item>
+        <item name="colorPillOutlineSelected">@color/transparent</item>
+        <item name="colorPillOutlineDisabled">@color/charcoal</item>
+        <item name="colorPillOutlineDisabledSelected">@color/transparent</item>
+
+        <item name="colorPillIcon">@color/black</item>
+        <item name="colorDrawablePrimary">@color/white</item>
+        <item name="colorDrawableSecondary">@color/charcoal</item>
+        <item name="colorDrawableSecondaryDark">@color/cod_gray</item>
+
+        <item name="colorPrimaryCircle">@color/black</item>
+        <item name="colorPrimaryCircleInverse">@color/white</item>
+
+        <item name="colorTextControlNormal">?android:attr/textColorPrimary</item>
+        <item name="colorTextControlActivated">?android:attr/colorAccent</item>
+        <item name="colorTextControlHighlight">@color/translucent_white</item>
+
+        <item name="colorTranslucentHeader">@color/translucent_dark_surface</item>
+
+        <item name="colorDialogAccent">#555555</item>
+        <item name="colorDialogControlActivated">@color/white</item>
+        <item name="colorDialogControlHighlight">#4d4e4f</item>
+        <item name="colorDialogWindowBackground">#17181a</item>
+        <item name="colorDialogTextColor">@color/white</item>
+        <item name="colorDialogTextColorPrimary">@color/white</item>
+        <item name="colorDialogTextColorPrimaryInverse">#bababb</item>
+        <item name="colorDialogTextColorSecondary">#bababb</item>
+        <item name="colorDialogTextColorSecondaryInverse">#cccccc</item>
+
+        <item name="colorBackgroundBlur">@color/translucent_cod_gray</item>
+        <item name="colorPlaceholderBlur">@color/gray_blur</item>
+
+        <item name="colorButtonPrimary">@color/pampas</item>
+        <item name="colorButtonPrimaryDisabled">@color/charcoal</item>
+        <item name="colorButtonPrimaryText">@color/black</item>
+        <item name="colorButtonPrimaryTextDisabled">@color/black</item>
+        <item name="colorButtonPrimaryRipple">@color/white56</item>
+
+        <item name="colorButtonSecondary">@color/pampas</item>
+        <item name="colorButtonSecondaryDisabled">@color/charcoal</item>
+        <item name="colorButtonSecondaryText">@color/pampas</item>
+        <item name="colorButtonSecondaryTextDisabled">@color/charcoal</item>
+        <item name="colorButtonSecondaryRipple">@color/translucent_pampas</item>
+        <item name="colorButtonSecondaryDark">@color/white</item>
+        <item name="colorButtonSecondaryDarkFilled">@color/cod_gray</item>
+
+        <item name="colorChipPrimaryRipple">@color/white56</item>
+
+        <item name="colorChipFixed">@color/black</item>
+        <item name="colorChipFixedRipple">@color/white56</item>
+        <item name="colorChipFixedText">@color/white</item>
+
+        <item name="colorBannerPrimary">@color/white</item>
+
+        <item name="colorEventTypeMember">@color/solitude</item>
+        <item name="colorEventTypeCinema">@color/soft_peach</item>
+        <item name="colorEventTypeFitness">@color/pattens_blue</item>
+        <item name="colorEventTypeHouseVisit">@color/solitude</item>
+
+        <item name="colorEventActiveMembersOnly">@color/white56</item>
+        <item name="colorEventCancelled">@color/fuzzy_wuzyy_brown</item>
+        <item name="colorEventClosed">@color/oriental_pink</item>
+        <item name="colorEventMembersOnly">@color/oriental_pink</item>
+        <item name="colorEventFull">@color/fuzzy_wuzyy_brown</item>
+        <item name="colorEventWaitingList">@color/mustard_yellow</item>
+        <item name="colorEventLottery">@color/granny_smith_apple</item>
+        <item name="colorEventOpeningSoon">@color/granny_smith_apple</item>
+        <item name="colorEventOpenBooking">@color/mountain_meadow</item>
+        <item name="colorEventPast">@color/heather</item>
+        <item name="colorEventPostponed">@color/chesnut_rose</item>
+        <item name="colorEventHeld">@color/oriental_pink</item>
+        <item name="colorEventRSVP">@color/mountain_meadow</item>
+        <item name="colorEventLiveNow">@color/fuzzy_wuzyy_brown</item>
+        <item name="colorEventLiveNowBkg">@color/transparent_fuzzy_wuzyy_brown</item>
+
+        <item name="colorInvitation">@color/charcoal</item>
+        <item name="colorInvitationPending">@color/apache</item>
+        <item name="colorInvitationAccepted">@color/mountain_meadow</item>
+        <item name="colorInvitationRejected">@color/fuzzy_wuzyy_brown</item>
+        <item name="colorInvitationRemoved">@color/heather</item>
+        <item name="colorInvitationCancelled">@color/oriental_pink</item>
+
+        <item name="colorTrafficLightButtonStroke">@color/cararra</item>
+        <item name="colorTrafficLightAvailable">@color/mountain_meadow</item>
+        <item name="colorTrafficLightConnectionsOnly">@color/mustard_yellow</item>
+        <item name="colorTrafficLightUnavailable">@color/charcoal</item>
+
+        <item name="colorSnackbarPositive">@color/mountain_meadow</item>
+        <item name="colorSnackbarNegative">@color/sunset_orange</item>
+        <item name="colorSnackbarDismiss">@color/jordy_blue</item>
+
+        <item name="colorError">@color/red_orange</item>
+        <item name="colorSignInError">@color/mexican_red</item>
+
+        <item name="reactionsPopupStrokeColor">@color/charcoal</item>
+        <item name="noticeboardPostBackground">@color/black_russian</item>
+        <item name="colorHousePay">@color/spring_wood</item>
+        <item name="bottomNavIconColorWhileLoading">@color/bottomNav_icon_color_while_loading</item>
+        <item name="AppIconSelectedColor">@color/white</item>
+    </style>
+
+    <style name="HouseTheme" parent="BaseTheme"></style>
+
+    <style name="HouseTheme.Dark" parent="HouseTheme">
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="HouseTheme.Dark.Staff" parent="HouseTheme.Dark">
+        <item name="colorMembership">@color/barossa</item>
+        <item name="drawableMembershipLogo">@drawable/ic_membership_logo_soho_house</item>
+    </style>
+
+    <style name="HouseTheme.Dark.Connect" parent="HouseTheme.Dark">
+        <item name="colorMembership">@color/celtic</item>
+        <item name="drawableMembershipLogo">@drawable/ic_membership_logo_soho_connect</item>
+    </style>
+
+    <style name="HouseTheme.Light" parent="HouseTheme">
+        <item name="colorPrimary">@color/cod_gray</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+    </style>
+
+    <style name="HouseTheme.Dark.BottomSheet" parent="@style/HouseTheme.Dark">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+
+        <item name="android:windowAnimationStyle">@style/BottomSheetAnimation</item>
+        <item name="android:navigationBarColor">?attr/colorLayer1</item>
+    </style>
+
+    <style name="FriendsTheme" parent="BaseTheme">
+        <item name="colorMembership">@color/teal</item>
+        <item name="drawableMembershipLogo">@drawable/ic_membership_logo_soho_friends</item>
+
+        <item name="colorBackgroundPrimary">@color/black_pearl</item>
+        <item name="colorBackgroundTransparent">@color/translucent_iceberg</item>
+
+        <item name="colorChipPrimaryRipple">@color/translucent_white</item>
+
+        <item name="colorChipFixed">@color/black_pearl</item>
+        <item name="colorChipFixedRipple">@color/translucent_white</item>
+        <item name="colorChipFixedText">@color/iceberg</item>
+
+        <item name="colorWebViewMenuBar">@color/iceberg</item>
+
+        <item name="colorPageIndicatorPrimary">@color/black_pearl</item>
+        <item name="colorPageIndicatorSecondary">@color/translucent_black_pearl</item>
+
+        <item name="colorNavigationItemSelected">@color/black_pearl</item>3
+        <item name="colorNavigationItemUnselected">@color/corduroy</item>
+
+        <item name="colorTabLayoutIndicator">@color/black_pearl</item>
+        <item name="colorTabLayoutUnselected">@color/charcoal</item>
+
+        <item name="colorListItemBackground">@color/aqua_haze</item>
+
+        <item name="colorTextHeader030">@color/black_pearl</item>
+
+        <item name="colorTextHeader024">@color/black</item>
+        <item name="colorTextHeader024Hint">@color/corduroy</item>
+
+        <item name="colorTextHeader022">@color/black</item>
+
+        <item name="colorTextHeader018">@color/black_pearl</item>
+        <item name="colorTextHeader018Hint">@color/corduroy</item>
+        <item name="colorTextHeader018Light">@color/iceberg</item>
+
+        <item name="colorTextBody016">@color/black_pearl</item>
+        <item name="colorTextBody016Light">@color/corduroy</item>
+        <item name="colorTextBody016Hint">@color/corduroy</item>
+
+        <item name="colorTextBody014">@color/corduroy</item>
+        <item name="colorTextBody014Accent">@color/black_pearl</item>
+        <item name="colorTextBody014Light">@color/corduroy</item>
+        <item name="colorTextBody014LightAccent">@color/black_pearl</item>
+        <item name="colorTextBody014LightDisabled">@color/charcoal</item>
+        <item name="colorTextBody014Bold">@color/black_russian</item>
+
+        <item name="colorTextBody012LightAccent">@color/black_pearl</item>
+        <item name="colorTextBody012Light">@color/corduroy</item>
+        <item name="colorTextBody012">@color/black_pearl</item>
+        <item name="colorTextLabel010">@color/corduroy</item>
+        <item name="colorTextLabel012">@color/corduroy</item>
+        <item name="colorTextBody012HoloLight">@color/aqua_haze</item>
+
+        <item name="colorTextCarouselTitle">@color/black_pearl</item>
+        <item name="colorTextCarouselSubtitle">@color/corduroy</item>
+
+        <item name="colorTextControlNormal">@color/teal</item>
+        <item name="colorTextControlActivated">@color/black_russian</item>
+        <item name="colorTextControlHighlight">@color/cutty_sark</item>
+
+        <item name="colorTextHouseBoardTitle">@color/white</item>
+        <item name="colorTextHouseBoardSubtitle">@color/white</item>
+
+        <item name="colorTextBannerTitle">@color/black_pearl</item>
+        <item name="colorTextBannerSubtitle">@color/black_pearl</item>
+        <item name="colorTextButtonMessage">@color/message_button_text_color</item>
+
+        <item name="colorPill">@color/transparent</item>
+        <item name="colorPillSelected">@color/black_pearl</item>
+        <item name="colorPillDisabled">@color/transparent</item>
+        <item name="colorPillDisabledSelected">@color/corduroy</item>
+
+        <item name="colorPillText">@color/black_pearl</item>
+        <item name="colorPillTextSelected">@color/iceberg</item>
+        <item name="colorPillTextDisabled">@color/corduroy</item>
+        <item name="colorPillTextDisabledSelected">@color/iceberg</item>
+        <item name="colorPillHandle">@color/pill</item>
+
+        <item name="colorPillOutline">@color/black_pearl</item>
+        <item name="colorPillOutlineSelected">@color/transparent</item>
+        <item name="colorPillOutlineDisabled">@color/charcoal</item>
+        <item name="colorPillOutlineDisabledSelected">@color/corduroy</item>
+
+        <item name="colorPillIcon">@color/iceberg</item>
+
+        <item name="colorDrawableSecondary">@color/cutty_sark</item>
+        <item name="colorDrawableSecondaryDark">@color/cutty_sark</item>
+        <item name="colorPrimaryCircle">@color/white</item>
+        <item name="colorPrimaryCircleInverse">@color/cutty_sark</item>
+
+        <item name="colorLayer0">@color/cutty_sark</item>
+        <item name="colorLayer1">@color/iceberg</item>
+        <item name="colorLayer2">@color/aqua_haze</item>
+
+        <item name="colorTranslucentHeader">@color/translucent_iceberg</item>
+
+        <item name="colorDialogAccent">@color/cutty_sark</item>
+        <item name="colorDialogControlActivated">@color/cutty_sark</item>
+        <item name="colorDialogControlHighlight">@color/teal</item>
+        <item name="colorDialogWindowBackground">@color/aqua_haze</item>
+        <item name="colorDialogTextColor">@color/black_russian</item>
+        <item name="colorDialogTextColorPrimary">@color/corduroy</item>
+        <item name="colorDialogTextColorPrimaryInverse">@color/aqua_haze</item>
+        <item name="colorDialogTextColorSecondary">@color/corduroy</item>
+        <item name="colorDialogTextColorSecondaryInverse">@color/iceberg</item>
+
+        <item name="colorBackgroundBlur">@color/iceberg</item>
+        <item name="colorPlaceholderBlur">@color/gray_blur</item>
+
+        <item name="colorButtonPrimary">@color/black_pearl</item>
+        <item name="colorButtonPrimaryDisabled">@color/corduroy</item>
+        <item name="colorButtonPrimaryText">@color/iceberg</item>
+        <item name="colorButtonPrimaryTextDisabled">@color/iceberg</item>
+        <item name="colorButtonPrimaryRipple">@color/translucent_white</item>
+
+        <item name="colorButtonSecondary">@color/black_pearl</item>
+        <item name="colorButtonSecondaryDisabled">@color/corduroy</item>
+        <item name="colorButtonSecondaryText">@color/black_pearl</item>
+        <item name="colorButtonSecondaryTextDisabled">@color/corduroy</item>
+        <item name="colorButtonSecondaryRipple">@color/translucent_pampas</item>
+        <item name="colorButtonSecondaryDark">@color/black_pearl</item>
+        <item name="colorButtonSecondaryDarkFilled">@color/iceberg</item>
+
+        <item name="colorBannerPrimary">@color/iceberg</item>
+
+        <item name="android:actionMenuTextColor">@color/black_pearl</item>
+
+        <item name="AppIconSelectedColor">@color/black</item>
+    </style>
+
+    <style name="FriendsTheme.Dark" parent="FriendsTheme">
+        <item name="colorPrimary">@color/cutty_sark</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+    </style>
+
+    <style name="FriendsTheme.Light" parent="FriendsTheme">
+        <item name="colorPrimary">@color/iceberg</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+    </style>
+
+
+    <style name="FriendsTheme.Dark.BottomSheet" parent="@style/FriendsTheme.Dark">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+
+        <item name="android:windowAnimationStyle">@style/BottomSheetAnimation</item>
+        <item name="android:navigationBarColor">?attr/colorLayer1</item>
+    </style>
+
+    <style name="FriendsTheme.Light.BottomSheet" parent="@style/FriendsTheme.Light">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+
+        <item name="android:windowAnimationStyle">@style/BottomSheetAnimation</item>
+        <item name="android:navigationBarColor">?attr/colorLayer1</item>
+    </style>
+
+    <style name="BottomSheetAnimation">
+        <item name="android:windowEnterAnimation">@anim/bottom_up</item>
+        <item name="android:windowExitAnimation">@anim/bottom_down</item>
+    </style>
+
+    <style name="ButtonBase" parent="Base.Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:singleLine">true</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:fontFamily">@font/faro_lucky_bold</item>
+    </style>
+
+    <style name="Button" parent="ButtonBase">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Button.Primary" parent="Button">
+        <item name="android:background">@drawable/button_primary</item>
+        <item name="android:textColor">@color/button_primary_text</item>
+        <item name="android:paddingTop">@dimen/dp_12</item>
+        <item name="android:paddingBottom">@dimen/dp_11</item>
+        <item name="android:paddingStart">@dimen/dp_24</item>
+        <item name="android:paddingEnd">@dimen/dp_24</item>
+    </style>
+
+    <style name="Button.Secondary" parent="Button">
+        <item name="android:background">@drawable/button_secondary</item>
+        <item name="android:textColor">@color/button_secondary_text</item>
+        <item name="android:paddingTop">@dimen/dp_11</item>
+        <item name="android:paddingBottom">@dimen/dp_11</item>
+        <item name="android:paddingStart">@dimen/dp_24</item>
+        <item name="android:paddingEnd">@dimen/dp_24</item>
+    </style>
+
+    <style name="Button.Third" parent="Button">
+        <item name="android:background">@drawable/button_secondary</item>
+        <item name="android:textColor">?attr/colorTextButtonMessage</item>
+        <item name="android:paddingTop">@dimen/dp_6</item>
+        <item name="android:paddingBottom">@dimen/dp_6</item>
+        <item name="android:paddingStart">@dimen/dp_14</item>
+        <item name="android:paddingEnd">@dimen/dp_14</item>
+    </style>
+
+    <style name="Button.Secondary.Dark" parent="Button.Secondary">
+        <item name="android:background">@drawable/button_secondary_dark</item>
+        <item name="android:textColor">?attr/colorButtonSecondaryDark</item>
+    </style>
+
+    <style name="Button.Secondary.Dark.Filled" parent="Button.Secondary.Dark">
+        <item name="android:background">@drawable/button_secondary_dark_filled</item>
+    </style>
+
+    <style name="Chip" parent="ButtonBase">
+        <item name="android:textSize">10sp</item>
+        <item name="android:paddingTop">@dimen/dp_6</item>
+        <item name="android:paddingBottom">@dimen/dp_6</item>
+        <item name="android:paddingStart">@dimen/dp_16</item>
+        <item name="android:paddingEnd">@dimen/dp_16</item>
+    </style>
+
+    <style name="Chip.Primary" parent="Chip">
+        <item name="android:background">@drawable/button_primary</item>
+        <item name="android:textColor">@color/button_primary_text</item>
+    </style>
+
+    <style name="Chip.Secondary" parent="Chip">
+        <item name="android:background">@drawable/button_secondary</item>
+        <item name="android:textColor">@color/button_secondary_text</item>
+    </style>
+
+    <style name="Chip.Fixed" parent="Chip">
+        <item name="android:background">@drawable/chip_fixed</item>
+        <item name="android:textColor">@color/button_secondary_text</item>
+    </style>
+
+    <style name="Header" parent="FaroLucky.Regular">
+        <item name="theme">@style/TextColorControl</item>
+    </style>
+
+    <style name="Header.030" parent="Header">
+        <item name="android:textSize">30sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">?attr/colorTextHeader030</item>
+    </style>
+
+    <style name="Header.024" parent="Header">
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:textColor">?attr/colorTextHeader024</item>
+        <item name="android:textColorHint">?attr/colorTextHeader024Hint</item>
+    </style>
+
+    <style name="Header.022" parent="Header">
+        <item name="android:textSize">22sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">?attr/colorTextHeader022</item>
+    </style>
+
+    <style name="Header.018" parent="Header">
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">0sp</item>
+        <item name="android:textColor">?attr/colorTextHeader018</item>
+        <item name="android:textColorHint">?attr/colorTextHeader018Hint</item>
+    </style>
+
+    <style name="Header.018.White" parent="Header.018">
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Header.018.Light" parent="Header.018">
+        <item name="android:textColor">?attr/colorTextHeader018Light</item>
+    </style>
+
+    <style name="Body" parent="FaroLucky.Regular">
+        <item name="theme">@style/TextColorControl</item>
+    </style>
+
+    <style name="Body.016" parent="Body">
+        <item name="android:textColor">?attr/colorTextBody016</item>
+        <item name="android:textColorHint">?attr/colorTextBody016Hint</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="Body.016.Light" parent="Body.016">
+        <item name="android:textColor">?attr/colorTextBody016Light</item>
+    </style>
+
+    <style name="Button.Long">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_48</item>
+        <item name="minHeight">@dimen/dp_40</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:layout_marginEnd">@dimen/dp_16</item>
+        <item name="android:layout_marginStart">@dimen/dp_16</item>
+        <item name="android:background">@drawable/card_view_background</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">@dimen/dp_16</item>
+        <item name="android:paddingEnd">@dimen/dp_12</item>
+    </style>
+
+    <style name="Body.016.Dialog" parent="Body">
+        <item name="android:textColor">?attr/colorTextBody016Light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+    </style>
+
+    <style name="SwitchTextDialog" parent="Body">
+        <item name="android:textColor">?attr/colorTextButtonMessage</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="Body.014" parent="Body">
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:textColor">?attr/colorTextBody014</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Body.014.Bold" parent="Body.014">
+        <item name="android:fontFamily">@font/faro_lucky_bold</item>
+        <item name="android:textColor">?attr/colorTextBody014Bold</item>
+    </style>
+
+    <style name="Body.014.Transparent" parent="Body.014">
+        <item name="android:textColor">@color/white56</item>
+    </style>
+
+    <style name="Body.014.Narrow" parent="Body.014">
+        <item name="android:lineSpacingExtra">1sp</item>
+    </style>
+
+    <style name="Body.014.Narrow.Accent" parent="Body.014.Narrow">
+        <item name="android:textColor">?attr/colorTextBody014Accent</item>
+    </style>
+
+    <style name="Body.014.Narrow.Light" parent="Body.014.Narrow.Accent">
+        <item name="android:textColor">?attr/colorTextBody014Light</item>
+    </style>
+
+    <style name="Body.012" parent="Body">
+        <item name="android:textColor">?attr/colorTextBody012</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="Body.012.Light" parent="Body.012">
+        <item name="android:textColor">?attr/colorTextBody012Light</item>
+    </style>
+
+    <style name="Body.012.LightAccent" parent="Body.012">
+        <item name="android:textColor">?attr/colorTextBody012LightAccent</item>
+    </style>
+
+    <style name="Body.012.HoloLight" parent="Body.012">
+        <item name="android:textColor">?attr/colorTextBody012HoloLight</item>
+    </style>
+
+    <style name="Body.012.Transparent" parent="Body.012">
+        <item name="android:textColor">@color/white56</item>
+    </style>
+
+    <style name="Body.012.Bold" parent="Body.012">
+        <item name="android:fontFamily">@font/faro_lucky_bold</item>
+    </style>
+
+    <style name="Label" parent="Body" />
+
+    <style name="Label.010">
+        <item name="android:textColor">?attr/colorTextLabel010</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineSpacingExtra">0sp</item>
+    </style>
+
+    <style name="Label.012">
+        <item name="android:textColor">?attr/colorTextLabel012</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="BannerTitle" parent="Body.014">
+        <item name="android:textColor">?attr/colorTextBannerTitle</item>
+    </style>
+
+    <style name="BannerSubTitle" parent="Body.012">
+        <item name="android:textColor">?attr/colorTextBannerSubtitle</item>
+    </style>
+
+    <style name="AppTextInputLayout" parent="Body.016">
+        <item name="android:textColorHint">?attr/colorTextBody016Hint</item>
+        <item name="hintTextAppearance">@style/HintTextAppearance</item>
+        <item name="errorTextAppearance">@style/TextInputError</item>
+    </style>
+
+    <style name="TextColorControl">
+        <item name="colorControlNormal">?attr/colorTextControlNormal</item>
+        <item name="colorControlActivated">?attr/colorTextControlActivated</item>
+        <item name="colorControlHighlight">?attr/colorTextControlHighlight</item>
+    </style>
+
+    <style name="HintTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/faro_lucky_regular</item>
+        <item name="android:textColor">?attr/colorTextHeader018</item>
+    </style>
+
+    <style name="HintTextAppearanceLarge" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/faro_lucky_regular</item>
+        <item name="android:textColor">?attr/colorTextHeader018</item>
+    </style>
+
+
+    <style name="TabLayout">
+        <item name="tabIndicatorColor">?attr/colorTabLayoutIndicator</item>
+        <item name="tabSelectedTextColor">?attr/colorTabLayoutIndicator</item>
+        <item name="tabTextColor">?attr/colorTabLayoutUnselected</item>
+        <item name="tabTextAppearance">@style/heading_03</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabIndicatorFullWidth">false</item>
+    </style>
+
+    <style name="Carousel.Title" parent="FaroLucky.Regular">
+        <item name="android:textColor">?attr/colorTextCarouselTitle</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="Carousel.Subtitle" parent="FaroLucky.Regular">
+        <item name="android:textColor">?attr/colorTextCarouselSubtitle</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="Carousel.Cta" parent="FaroLucky.Bold">
+        <item name="android:textColor">?attr/colorTextCarouselTitle</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">?attr/colorDialogAccent</item>
+        <item name="android:background">?attr/colorDialogWindowBackground</item>
+        <item name="android:textColorPrimary">?attr/colorDialogTextColorPrimary</item>
+        <item name="android:editTextColor">?attr/colorDialogTextColorPrimary</item>
+        <item name="android:textColor">?attr/colorDialogTextColor</item>
+    </style>
+
+    <style name="Dialog.DatePicker" parent="Dialog">
+        <!-- top header background -->
+        <item name="colorAccent">?attr/colorDialogAccent</item>
+        <!--selected Item color -->
+        <item name="colorControlActivated">?attr/colorDialogControlActivated</item>
+        <!-- highlight item color -->
+        <item name="colorControlHighlight">?attr/colorDialogControlHighlight</item>
+        <!-- calender Background color -->
+        <item name="android:windowBackground">?attr/colorDialogWindowBackground</item>
+        <!-- Ok Cancel Color -->
+        <item name="android:textColor">?attr/colorDialogTextColor</item>
+        <!-- Calender Number color arrow color (< >) -->
+        <item name="android:textColorPrimary">?attr/colorDialogTextColorPrimary</item>
+        <!-- header day, month -->
+        <item name="android:textColorPrimaryInverse">?attr/colorDialogTextColorPrimaryInverse</item>
+        <!-- Week TextColor -->
+        <item name="android:textColorSecondary">?attr/colorDialogTextColorSecondary</item>
+        <!-- header year -->
+        <item name="android:textColorSecondaryInverse">?attr/colorDialogTextColorSecondaryInverse
+        </item>
+    </style>
+
+</resources>

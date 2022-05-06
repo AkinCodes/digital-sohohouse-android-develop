@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@drawable/background_membership_card_house"
+    tools:layout_height="wrap_content"
+    tools:layout_width="match_parent"
+    tools:parentTag="android.widget.ViewSwitcher">
+
+    <LinearLayout
+        android:id="@+id/card_front"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/house_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_membership_logo_soho_house" />
+
+        <TextView
+            android:id="@+id/member_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/faro_lucky_regular"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            tools:text="Charlie Casely-Hayford" />
+
+        <TextView
+            android:id="@+id/membership_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/faro_lucky_regular"
+            android:gravity="center_horizontal"
+            android:lines="2"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            tools:text="20000 629 102" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/card_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/member_image"
+            android:layout_width="@dimen/dp_78"
+            android:layout_height="@dimen/dp_78"
+            android:scaleType="center"
+            android:padding="@dimen/dp_1"
+            android:foreground="@drawable/profile_outline"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/membership_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:elevation="8dp"
+            android:fontFamily="@font/faro_lucky_regular"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            tools:text="Every House Member" />
+
+        <TextView
+            android:id="@+id/loyalty_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/faro_lucky_regular"
+            android:gravity="center_horizontal"
+            android:lines="2"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            tools:text="XXXXX XXXXX" />
+    </LinearLayout>
+
+</merge>

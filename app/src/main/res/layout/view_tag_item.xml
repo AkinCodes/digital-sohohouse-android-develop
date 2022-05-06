@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:orientation="vertical"
+    tools:paddingHorizontal="@dimen/dp_16"
+    tools:parentTag="androidx.appcompat.widget.LinearLayoutCompat">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:drawableEndCompat="@drawable/ic_chevron_right"
+        app:layout_constraintTop_toBottomOf="@id/remaining_chars"
+        tools:text="Tag a house" />
+
+    <TextView
+        android:id="@+id/tag_text"
+        style="@style/Body.016"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tag_house" />
+
+</merge>

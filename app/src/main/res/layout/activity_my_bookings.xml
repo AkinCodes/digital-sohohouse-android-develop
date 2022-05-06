@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bookings_frag"
+        android:name="com.sohohouse.seven.more.bookings.MyBookingsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.sohohouse.seven.common.views.LoadingView
+        android:id="@+id/activity_my_bookings_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

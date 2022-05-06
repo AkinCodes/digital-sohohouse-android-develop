@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/more_list_bottom_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_16">
+
+            <ImageButton
+                android:id="@+id/close_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/alt_back_label"
+                android:src="@drawable/ic_close_large"
+                app:tint="@color/white"
+                android:theme="@style/Theme.AppCompat.Light" />
+
+            <TextView
+                style="@style/Header.024"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_17"
+                android:text="@string/active_membership_header"
+                app:layout_constraintTop_toBottomOf="@id/payment_back_btn" />
+
+            <TextView
+                style="@style/heading_03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_38"
+                android:text="@string/active_header" />
+
+            <TextView
+                style="@style/body_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:text="@string/active_supporting" />
+
+            <TextView
+                android:id="@+id/subscribe_active"
+                style="@style/TextLink.01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:paddingTop="@dimen/dp_3"
+                android:paddingBottom="@dimen/dp_3"
+                android:text="@string/active_subscribe_cta" />
+
+            <TextView
+                style="@style/heading_03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_32"
+                android:text="@string/active_plus_header" />
+
+            <TextView
+                style="@style/body_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:text="@string/active_plus_supporting1" />
+
+            <TextView
+                style="@style/body_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/active_plus_supporting2" />
+
+            <TextView
+                style="@style/body_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/active_plus_supporting3" />
+
+            <TextView
+                android:id="@+id/subscribe_active_plus"
+                style="@style/TextLink.01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:paddingTop="@dimen/dp_3"
+                android:paddingBottom="@dimen/dp_3"
+                android:text="@string/active_plus_subscribe_cta" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

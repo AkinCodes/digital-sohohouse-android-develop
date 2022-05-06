@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/component_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/crop_advice_message"
+        style="@style/Body.014"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp_24"
+        android:text="@string/crop_profile_img_advice"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <com.canhub.cropper.CropImageView
+        android:id="@+id/crop_preview_civ"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cropAspectRatioX="1"
+        app:cropAspectRatioY="1"
+        app:cropBackgroundColor="@color/black56"
+        app:cropFixAspectRatio="true"
+        app:cropMinCropResultHeightPX="328"
+        app:cropMinCropResultWidthPX="328"
+        app:layout_constraintBottom_toTopOf="@id/crop_preview_crop_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/crop_advice_message" />
+
+    <Button
+        android:id="@+id/crop_preview_crop_btn"
+        style="@style/Button.Primary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xlarge"
+        android:layout_marginTop="@dimen/medium"
+        android:layout_marginEnd="@dimen/xlarge"
+        android:layout_marginBottom="@dimen/small"
+        android:text="@string/cta_confirm"
+        app:layout_constraintBottom_toTopOf="@id/crop_preview_cancel_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Crop" />
+
+    <TextView
+        android:id="@+id/crop_preview_cancel_btn"
+        style="@style/TextLink.01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xlarge"
+        android:layout_marginTop="@dimen/small"
+        android:layout_marginEnd="@dimen/xlarge"
+        android:layout_marginBottom="@dimen/medium"
+        android:gravity="center_horizontal"
+        android:text="@string/more_change_photo_cancel_cta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.sohohouse.seven.common.views.LoadingView
+        android:id="@+id/crop_preview_lv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

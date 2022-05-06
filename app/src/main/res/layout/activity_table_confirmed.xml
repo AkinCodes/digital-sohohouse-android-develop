@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="100dp">
+
+            <TextView
+                android:id="@+id/summaryTitle"
+                style="@style/Header.030"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="70dp"
+                android:gravity="center_horizontal"
+                android:text="@string/book_a_table_your_booking_summary"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/summaryDescription"
+                style="@style/Body.014"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/book_a_table_summary_description"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/summaryTitle" />
+
+            <include
+                android:id="@+id/venue_image_and_details"
+                layout="@layout/table_booking_venue_image_with_details"
+                app:layout_constraintTop_toBottomOf="@id/summaryDescription"
+                android:layout_marginTop="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/dateTimeLabel"
+                style="@style/Body.014"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="46dp"
+                android:textColor="?attr/colorTextHeader018"
+                android:text="@string/book_a_table_date_and_time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/venue_image_and_details" />
+
+            <TextView
+                android:id="@+id/dateTime"
+                style="@style/Body.014"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dateTimeLabel"
+                tools:text="7 June 2020, 7:00pm" />
+
+
+            <TextView
+                android:id="@+id/confirmationLabel"
+                style="@style/Body.014"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textColor="?attr/colorTextHeader018"
+                android:text="@string/book_a_table_confirmation_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dateTime" />
+
+            <TextView
+                android:id="@+id/confirmation"
+                style="@style/Body.014"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirmationLabel"
+                tools:text="5413" />
+
+            <TextView
+                android:id="@+id/commentsLabel"
+                style="@style/Body.014"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textColor="?attr/colorTextHeader018"
+                android:text="@string/book_a_table_summary_additional_details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmation" />
+
+            <TextView
+                android:id="@+id/comments"
+                style="@style/Body.014"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/commentsLabel"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+            <TextView
+                android:id="@+id/numberOfSeatsLabel"
+                style="@style/Body.014"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/book_a_table_number_of_seats"
+                android:textColor="?attr/colorTextHeader018"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/comments" />
+
+            <TextView
+                android:id="@+id/numberOfSeats"
+                style="@style/Body.014"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numberOfSeatsLabel"
+                tools:text="2 seats" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/rootDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?attr/colorLayer1"
+        android:paddingStart="16dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="24dp">
+
+        <Button
+            android:id="@+id/btnDone"
+            style="@style/Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/book_a_table_summary_done" />
+
+    </FrameLayout>
+</FrameLayout>

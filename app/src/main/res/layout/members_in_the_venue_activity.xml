@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_19"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/alt_back_label"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_back_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Body.014"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/see_who_is_available"
+            app:layout_constraintBottom_toBottomOf="@id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back" />
+
+        <com.sohohouse.seven.common.views.AsyncImageView
+            android:id="@+id/image"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="@dimen/dp_28"
+            android:background="@drawable/bkg_oval"
+            android:contentDescription="@string/alt_more_profile_image"
+            app:circleCrop="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:backgroundTint="@color/charcoal" />
+
+        <View
+            android:id="@+id/imageStatusBackground"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/bkg_oval"
+            android:backgroundTint="?colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/image"
+            app:layout_constraintEnd_toEndOf="@+id/image" />
+
+        <View
+            android:id="@+id/imageStatus"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:background="@drawable/bkg_oval"
+            android:backgroundTint="?colorInvitationAccepted"
+            app:layout_constraintBottom_toBottomOf="@id/imageStatusBackground"
+            app:layout_constraintEnd_toEndOf="@id/imageStatusBackground"
+            app:layout_constraintStart_toStartOf="@id/imageStatusBackground"
+            app:layout_constraintTop_toTopOf="@id/imageStatusBackground" />
+
+        <TextView
+            android:id="@+id/statusTitle"
+            style="@style/Body.016"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/I_am_unavailable"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/Body.014"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusTitle" />
+
+        <TextView
+            android:id="@+id/updateStatus"
+            style="@style/Body.014.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="@string/update_status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_32"
+            app:layout_constraintTop_toBottomOf="@+id/updateStatus" />
+
+        <TextView
+            android:id="@+id/emptyTitle"
+            style="@style/Header.024"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_24"
+            android:gravity="center"
+            android:text="@string/you_re_the_first_here"
+            android:textSize="30sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/updateStatus" />
+
+        <TextView
+            android:id="@+id/emptySubtitle"
+            style="@style/Body.016"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_12"
+            android:gravity="center"
+            android:text="@string/we_ll_let_you_know_when_other_members_arrive"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emptyTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

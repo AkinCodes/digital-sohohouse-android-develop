@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Header.022"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12 Members" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        style="@style/Body.014"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintEnd_toStartOf="@id/leave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:text="In Little Beach House Barcelona" />
+
+    <TextView
+        android:id="@+id/leave"
+        style="@style/Body.014.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/leave_location"
+        app:layout_constraintBottom_toBottomOf="@id/subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/subtitle" />
+
+    <com.sohohouse.seven.common.views.AsyncImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="@dimen/dp_64"
+        android:background="@drawable/bkg_oval"
+        app:circleCrop="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholder="@drawable/img_house_image_placeholder"
+        tools:src="@drawable/img_house_image_placeholder" />
+
+    <View
+        android:id="@+id/statusBackground"
+        android:layout_width="@dimen/dp_18"
+        android:layout_height="@dimen/dp_18"
+        android:layout_margin="@dimen/dp_2"
+        android:background="@drawable/bkg_oval"
+        android:backgroundTint="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/image" />
+
+    <View
+        android:id="@+id/status"
+        android:layout_width="@dimen/dp_13"
+        android:layout_height="@dimen/dp_13"
+        android:background="@drawable/bkg_oval"
+        android:backgroundTint="?colorInvitationAccepted"
+        app:layout_constraintBottom_toBottomOf="@id/statusBackground"
+        app:layout_constraintEnd_toEndOf="@id/statusBackground"
+        app:layout_constraintStart_toStartOf="@id/statusBackground"
+        app:layout_constraintTop_toTopOf="@id/statusBackground" />
+
+    <LinearLayout
+        android:id="@+id/connectionsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_24"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

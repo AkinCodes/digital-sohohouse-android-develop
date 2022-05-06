@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/exo_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_0"
+        android:text="@string/more_content_play_cta"
+        app:layout_constraintBottom_toTopOf="@id/exo_progress"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/exo_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_0"
+        android:text="@string/common_pause"
+        app:layout_constraintBottom_toTopOf="@id/exo_progress"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.exoplayer2.ui.DefaultTimeBar
+        android:id="@+id/exo_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_40"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:pointerIcon="none"
+        app:bar_height="@dimen/dp_1"
+        app:played_color="@color/exo_white"
+        app:buffered_color="@color/white35"
+        app:unplayed_color="@color/white35"
+        app:scrubber_color="#0000"
+        tools:targetApi="n" />
+
+    <TextView
+        android:id="@+id/exo_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_0"
+        android:text="@string/common_pause"
+        app:layout_constraintBottom_toTopOf="@id/exo_progress"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

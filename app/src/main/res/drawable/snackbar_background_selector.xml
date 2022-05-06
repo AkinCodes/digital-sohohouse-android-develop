@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:apps="http://schemas.android.com/apk/res-auto">
+
+    <item android:drawable="@drawable/snackbar_background_default" apps:state_default="true" apps:state_negative="false" apps:state_positive="false" />
+
+    <item android:drawable="@drawable/snackbar_background_positive" apps:state_default="false" apps:state_negative="false" apps:state_positive="true" />
+
+    <item android:drawable="@drawable/snackbar_background_negative" apps:state_default="false" apps:state_negative="true" apps:state_positive="false" />
+
+</selector>

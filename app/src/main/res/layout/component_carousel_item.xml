@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SelectableItemBackground"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/dp_8"
+    tools:ignore="RtlSymmetry">
+
+    <com.sohohouse.seven.common.views.AsyncImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/carousel_image_size"
+        android:layout_height="@dimen/carousel_image_size"
+        android:background="?attr/colorLayer2"
+        android:contentDescription="@string/events_event_image_description"
+        android:scaleType="centerCrop"
+        android:transitionName="@string/events_event_image_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/placeholder" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/body_02"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:includeFontPadding="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:text="Nourishing the Sense Brunch" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        style="@style/Body.012.Transparent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:includeFontPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="May 1, 10:30am" />
+
+    <com.sohohouse.seven.common.views.HouseNameTextView
+        android:id="@+id/caption"
+        style="@style/Body.012.Transparent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle"
+        tools:text="Soho House Toronto" />
+
+    <com.sohohouse.seven.common.views.StatusView
+        android:id="@+id/status_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/caption"
+        tools:text="Booking Opens May 14" />
+
+    <TextView
+        android:id="@+id/booking_status"
+        style="@style/label_01.transparent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/caption"
+        tools:text="You're on the waiting list!"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

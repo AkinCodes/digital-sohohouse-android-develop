@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/question_layout"
+    style="@style/AppTextInputLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="60dp"
+    android:paddingHorizontal="@dimen/dp_16"
+    android:paddingVertical="@dimen/dp_16"
+    android:layout_marginHorizontal="@dimen/dp_16"
+    tools:hint="My favourite Soho House is ...">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/answer_input"
+        style="@style/Body.016"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="@integer/profile_answer_max_chars"
+        android:paddingTop="@dimen/dp_8"
+        tools:text="Shoredtich House" />
+</com.google.android.material.textfield.TextInputLayout>

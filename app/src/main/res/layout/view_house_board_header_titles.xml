@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        tools:orientation="horizontal"
+        tools:parentTag="android.widget.LinearLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_titles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toStartOf="@id/header_menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title_shadow"
+                style="@style/Body.014.Narrow.Accent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="?attr/colorTextHouseBoardSubtitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Good Afternoon" />
+
+            <TextView
+                android:id="@+id/title_view"
+                style="@style/Body.014.Narrow.Accent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="?attr/colorTextHouseBoardSubtitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Good Afternoon" />
+
+            <TextView
+                android:id="@+id/emoji_view"
+                style="@style/Body.014.Narrow.Accent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="?attr/colorTextHouseBoardSubtitle"
+                app:layout_constraintBottom_toBottomOf="@id/title_view"
+                app:layout_constraintStart_toEndOf="@id/title_view"
+                app:layout_constraintTop_toTopOf="@id/title_view"
+                tools:text="," />
+
+            <androidx.legacy.widget.Space
+                android:id="@+id/margin_spacer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/dp_6"
+                app:layout_constraintBottom_toBottomOf="@+id/title_view"
+                app:layout_constraintLeft_toLeftOf="@id/title_view"
+                app:layout_constraintRight_toRightOf="@id/title_view" />
+
+            <TextView
+                android:id="@+id/subtitle_view"
+                style="@style/Header.018"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/margin_spacer"
+                tools:text="Dario" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.sohohouse.seven.common.views.toolbar.HeaderMenuButtonView
+            android:id="@+id/header_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/header_titles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/banners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false" />
+
+    <!--    <include layout="@layout/view_holder_banner" />-->
+
+</LinearLayout>

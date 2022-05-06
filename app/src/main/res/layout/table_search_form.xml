@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="com.sohohouse.seven.book.table.TableSearchFormView">
+
+    <com.sohohouse.seven.common.views.FormRowView
+        android:id="@+id/venue"
+        app:label="@string/book_a_table_select_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.sohohouse.seven.common.views.FormRowView
+        android:id="@+id/date"
+        app:label="@string/book_a_table_select_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.sohohouse.seven.common.views.FormRowView
+        android:id="@+id/time"
+        app:label="@string/book_a_table_select_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.sohohouse.seven.common.views.FormRowView
+        android:id="@+id/seats"
+        app:label="@string/book_a_table_select_seats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</merge>

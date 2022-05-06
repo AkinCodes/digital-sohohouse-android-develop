@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/intro_header_house_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/induction_image_height"
+            android:scaleType="centerInside"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="?android:attr/actionBarSize"
+            android:paddingStart="@dimen/medium"
+            android:paddingEnd="@dimen/medium"
+            android:src="@drawable/ic_left_arrow"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/Header.024"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="@string/onboarding_intro_header" />
+
+    <com.sohohouse.seven.common.views.HouseNameTextView
+        android:id="@+id/intro_header_house_name"
+        style="@style/Body.012.Transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_marginEnd="@dimen/dp_16"
+        tools:text="Soho Toronto" />
+
+    <TextView
+        android:id="@+id/intro_header_supporting"
+        style="@style/body_02.light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="@string/onboarding_intro_supporting" />
+
+</LinearLayout>

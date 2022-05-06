@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profile_image_cropper_navigation"
+    app:startDestination="@id/cropEditFragment">
+    <fragment
+        android:id="@+id/cropEditFragment"
+        android:name="com.sohohouse.seven.more.profile.crop.edit.CropEditFragment"
+        android:label="CropEditFragment">
+        <action
+            android:id="@+id/navigate_from_cropEditFragment_to_CropPreviewFragment"
+            app:destination="@id/CropPreviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CropPreviewFragment"
+        android:name="com.sohohouse.seven.more.profile.crop.preview.CropPreviewFragment"
+        android:label="CropPreviewFragment">
+        <argument
+            android:name="croppedImage"
+            android:defaultValue="@null"
+            app:argType="android.graphics.Bitmap"
+            app:nullable="true" />
+    </fragment>
+</navigation>

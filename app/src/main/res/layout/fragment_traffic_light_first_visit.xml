@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/heading_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_24"
+        android:gravity="center"
+        tools:text="@string/traffic_list_first_visit_title"
+        android:textColor="?colorPrimary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/Body.016"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_24"
+        android:gravity="center"
+        android:paddingVertical="@dimen/dp_10"
+        android:text="@string/traffic_lights_description"
+        android:textColor="?colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <com.sohohouse.seven.connect.trafficlights.TrafficLightButton
+        android:id="@+id/unavailableButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_84"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_24"
+        android:background="@drawable/traffic_light_first_visit_btn_bkg"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:statusTint="?colorTrafficLightUnavailable"
+        app:trafficSubtitle="@string/not_available_title"
+        app:trafficTitle="@string/not_available_subtitle" />
+
+    <com.sohohouse.seven.connect.trafficlights.TrafficLightButton
+        android:id="@+id/connectionsOnlyButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_84"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@drawable/traffic_light_first_visit_btn_bkg"
+        app:layout_constraintTop_toBottomOf="@id/unavailableButton"
+        app:statusTint="?colorTrafficLightConnectionsOnly"
+        app:trafficSubtitle="@string/connections_only_subtitle"
+        app:trafficTitle="@string/connections_only_title" />
+
+    <com.sohohouse.seven.connect.trafficlights.TrafficLightButton
+        android:id="@+id/availableButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_84"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@drawable/traffic_light_first_visit_btn_bkg"
+        app:layout_constraintTop_toBottomOf="@id/connectionsOnlyButton"
+        app:statusTint="?colorTrafficLightAvailable"
+        app:trafficSubtitle="@string/available_title"
+        app:trafficTitle="@string/available_subtitle" />
+
+    <Button
+        android:id="@+id/confirm"
+        style="@style/Button.Secondary.Dark.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:text="@string/confirm_my_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/availableButton" />
+
+    <TextView
+        android:id="@+id/cancel"
+        style="@style/TextLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:padding="@dimen/dp_16"
+        android:text="@string/cta_cancel"
+        android:textColor="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/confirm" />
+
+    <com.sohohouse.seven.connect.trafficlights.SingleSelectableGroup
+        android:id="@+id/selectableGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="unavailableButton, connectionsOnlyButton, availableButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

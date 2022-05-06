@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:src="@drawable/ic_close_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="?attr/colorDrawablePrimary"
+        android:padding="@dimen/dp_8"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:contentDescription="@string/alt_close_label"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/header"
+        style="@style/PageTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/label_select_location"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TabLayout"
+        app:tabIndicatorColor="?attr/colorTabLayoutIndicator"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorHeight="@dimen/dp_1"
+        app:tabPaddingEnd="@dimen/dp_16"
+        app:tabPaddingStart="@dimen/dp_16"
+        app:tabPaddingTop="@dimen/dp_21"
+        android:layout_marginTop="@dimen/dp_12"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabs" />
+
+    <Button
+        android:id="@+id/confirm_selection"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:text="@string/cta_confirm_selection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Button.Primary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

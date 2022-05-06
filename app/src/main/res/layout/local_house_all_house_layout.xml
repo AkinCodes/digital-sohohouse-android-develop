@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/local_house_all_houses_bg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/browse_the_houses_img"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/local_house_all_houses_header"
+        style="@style/HeadlineCardTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/browse_house_vertical_margin"
+        android:layout_marginEnd="@dimen/browse_house_vertical_margin"
+        android:gravity="center"
+        android:text="@string/home_our_spaces_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/local_house_all_houses_caption"
+        style="@style/FaroLucky.Bold.12sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/browse_house_vertical_margin"
+        android:layout_marginTop="@dimen/small"
+        android:layout_marginEnd="@dimen/browse_house_vertical_margin"
+        android:fontFamily="@font/faro_lucky_regular"
+        android:gravity="center"
+        android:text="@string/home_view_all_houses_cta"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/local_house_all_houses_header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

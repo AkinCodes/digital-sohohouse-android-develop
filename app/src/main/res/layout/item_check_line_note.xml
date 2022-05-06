@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Body.014"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="?attr/colorTextBody012Light"
+    tools:text="Service change and tips are distributed to our teams"
+    android:paddingHorizontal="@dimen/dp_16"
+    android:paddingVertical="@dimen/dp_8" />

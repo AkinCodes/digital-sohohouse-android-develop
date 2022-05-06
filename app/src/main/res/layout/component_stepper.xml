@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="FrameLayout">
+
+    <Button
+        android:id="@+id/stepper_submit_button_large"
+        style="@style/Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        tools:text="@string/explore_events_event_invite_cta" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stepper_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorLayer2"
+        android:elevation="@dimen/small">
+
+        <TextView
+            android:id="@+id/stepper_text"
+            style="@style/Body.014"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="How many tickets would you like?" />
+
+        <Button
+            android:id="@+id/stepper_submit_button_small"
+            style="@style/Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_16"
+            app:layout_constraintBottom_toBottomOf="@id/stepper_control_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/stepper_control_container"
+            app:layout_constraintTop_toTopOf="@id/stepper_control_container"
+            tools:text="@string/explore_events_event_invite_cta" />
+
+        <LinearLayout
+            android:id="@+id/stepper_control_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:background="@drawable/stepper_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stepper_text">
+
+            <ImageView
+                android:id="@+id/stepper_minus_button"
+                android:layout_width="@dimen/events_details_symbols_size"
+                android:layout_height="@dimen/events_details_symbols_size"
+                android:layout_marginStart="@dimen/small"
+                android:contentDescription="@string/alt_events_event_remove_label"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/dp_10"
+                android:src="@drawable/icon_minus_small"
+                app:tint="?attr/colorDrawablePrimary" />
+
+            <TextView
+                android:id="@+id/stepper_quantity"
+                style="@style/Header.018"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_7"
+                tools:text="2" />
+
+            <ImageView
+                android:id="@+id/stepper_plus_button"
+                android:layout_width="@dimen/events_details_symbols_size"
+                android:layout_height="@dimen/events_details_symbols_size"
+                android:layout_marginEnd="@dimen/small"
+                android:contentDescription="@string/alt_events_event_add_label"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="0dp"
+                android:src="@drawable/plus_small"
+                app:tint="?attr/colorDrawablePrimary" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

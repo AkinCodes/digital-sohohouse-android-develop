@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/autocomplete_suggestion_tv"
+        android:layout_width="match_parent"
+        style="@style/Header.018"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_32"
+        android:paddingEnd="@dimen/dp_32"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8"
+        tools:text="Suggestion" />
+
+</FrameLayout>

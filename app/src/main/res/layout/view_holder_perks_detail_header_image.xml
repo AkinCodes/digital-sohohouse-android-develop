@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sohohouse.seven.common.views.SquareImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:contentDescription="@string/house_notes_collapse_header"
+    android:scaleType="centerInside"
+    tools:background="@color/iceberg"
+    tools:src="@drawable/placeholder" />

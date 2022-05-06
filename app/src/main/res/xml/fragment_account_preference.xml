@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.sohohouse.seven.common.views.preferences.ProfilePreference
+        android:key="pref_account_profile"
+        android:layout="@layout/preference_account_profile"
+        android:persistent="false"
+        android:summary="Occupation, Location"
+        android:title="My Name" />
+
+    <Preference
+        android:key="pref_account_profile_image"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="Profile Image"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_profile_name"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="Profile Name"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_profile_occupation"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="Profile Occupation"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_profile_location"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="Profile Location"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_my_network"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/account_my_connections"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_membership"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/more_membership_cta"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_guest_invitations"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/label_guest_invitations"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_house_pay"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/label_house_pay"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_perks"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/perks_all_cta"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_payment"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/more_payment_cta"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_bookings"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/label_my_bookings"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_favourite_houses"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/more_house_settings_cta"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_settings"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/settings_cta"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_sync_calendar"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/more_calendar_cta"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_contact_us"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/more_contact_cta"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_terms_and_policies"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/more_terms_and_policies_cta"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_faq"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/more_faq_cta"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_faq_friends"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/more_faq_cta"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="pref_account_logout"
+        android:layout="@layout/app_preference"
+        android:persistent="false"
+        android:title="@string/more_logout_cta"
+        app:isPreferenceVisible="false" />
+
+    <com.sohohouse.seven.common.views.preferences.AppVersionPreference
+        android:key="pref_account_app_version"
+        android:layout="@layout/preference_account_app_version"
+        android:persistent="false"
+        android:title="@string/more_app_version_label"
+        app:isPreferenceVisible="false" />
+
+</PreferenceScreen>

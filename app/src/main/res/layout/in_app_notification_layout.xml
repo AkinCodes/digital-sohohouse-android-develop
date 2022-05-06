@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notification_dialog_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_russian"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_20">
+
+    <ImageView
+        android:id="@+id/notification_dialog_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/placeholder"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/notification_dialog_headline"
+        style="@style/Header.024"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_26"
+        android:layout_marginStart="@dimen/dp_48"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@font/faro_lucky_regular"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        tools:text="@string/booking_open_header" />
+
+    <TextView
+        android:id="@+id/notification_dialog_title"
+        style="@style/body_02.light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_14"
+        android:lineSpacingExtra="4sp"
+        android:textAlignment="center"
+        tools:text="Cannes Lions: Future Face of Creativity" />
+
+    <TextView
+        android:id="@+id/notification_dialog_date"
+        style="@style/Body.012.Transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_1"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notification_dialog_title"
+        tools:text="MAY 1, 8:00 PM" />
+
+    <TextView
+        android:id="@+id/notification_dialog_caption"
+        style="@style/Body.012.Transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="8sp"
+        android:textAlignment="center"
+        tools:text="SOHO HOUSE NEW YORK" />
+
+    <TextView
+        android:id="@+id/notification_dialog_body"
+        style="@style/Body.012"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:visibility="gone"
+        tools:text="Stay up to date on all thats going on at your house. You can update your notification preferences at any time in your settings"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/notification_dialog_primary_button"
+        style="@style/Button.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:minWidth="144dp"
+        tools:text="@string/booking_open_view_cta" />
+
+    <TextView
+        android:id="@+id/notification_dialog_secondary_button"
+        style="@style/TextLink.01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="144dp"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_28"
+        android:paddingEnd="@dimen/dp_20"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        tools:text="@string/booking_open_dismiss_cta" />
+
+</LinearLayout>

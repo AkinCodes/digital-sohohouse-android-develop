@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filter_container"
+    style="@style/SelectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingStart="@dimen/card_padding"
+    android:paddingTop="@dimen/large"
+    android:paddingEnd="@dimen/card_padding"
+    android:paddingBottom="25dp">
+
+    <View
+        android:id="@+id/top_divider"
+        style="@style/Divider.Iron"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/large" />
+
+    <ImageView
+        android:id="@+id/left_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_divider"
+        android:src="@drawable/filter"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/filter_label"
+        style="@style/FaroLucky.Regular.10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_divider"
+        android:layout_below="@id/top_divider"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_toEndOf="@id/left_icon"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        tools:text="@string/explore_events_filter_label" />
+
+    <ImageView
+        android:id="@+id/right_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_divider"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/forward"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/bottom_divider"
+        style="@style/Divider.Iron"
+        android:layout_width="match_parent"
+        android:layout_below="@id/left_icon"
+        android:layout_marginTop="@dimen/large" />
+</RelativeLayout>

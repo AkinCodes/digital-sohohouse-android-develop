@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sohohouse.seven.main.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorLayer0"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <com.sohohouse.seven.common.views.toolbar.HouseBoardHeaderView
+            android:id="@+id/home_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_14"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_14"
+            android:paddingBottom="@dimen/dp_12" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/house_board_fragment"
+        android:name="com.sohohouse.seven.home.houseboard.HouseBoardFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="@string/house_board_fragment_tag"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    <FrameLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorLayer0"
+        app:layout_behavior="com.sohohouse.seven.common.behaviors.BottomSheetBehavior"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.sohohouse.seven.common.views.LoadingView
+            android:id="@+id/content_view_loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorLayer0"
+            app:layout="@layout/component_simple_loading_view" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_navigation_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/topOfBottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:blurOverlayColor="?attr/colorBackgroundBlur"
+            app:layout_constraintBottom_toTopOf="@id/bottom_navigation_view" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="top"
+            android:indeterminate="true"
+            app:layout_constraintBottom_toTopOf="@id/bottom_navigation_view" />
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blur_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            app:blurOverlayColor="?attr/colorBackgroundBlur"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.sohohouse.seven.common.views.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_view"
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="@dimen/bottom_navigation_height"
+            android:layout_gravity="bottom"
+            android:background="@color/transparent"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <View
+            android:id="@+id/unread_message_indication"
+            android:layout_width="@dimen/dp_6"
+            android:layout_height="@dimen/dp_6"
+            android:background="@drawable/circle_small_white"
+            android:backgroundTint="@color/red_orange"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/bottom_navigation_view"
+            app:layout_constraintEnd_toEndOf="@id/bottom_navigation_view"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_navigation_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

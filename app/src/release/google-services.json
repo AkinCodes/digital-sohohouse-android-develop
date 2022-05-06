@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "500597056812",
+    "firebase_url": "https://soho-house-members.firebaseio.com",
+    "project_id": "soho-house-members",
+    "storage_bucket": "soho-house-members.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500597056812:android:46fe0ce4de111416",
+        "android_client_info": {
+          "package_name": "com.sohohouse.seven"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500597056812-1ourdl9e2doqi1f23tu4v871f8iiahi2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sohohouse.seven",
+            "certificate_hash": "50650f4aa9b24189a5fce970888b9f32765ac83d"
+          }
+        },
+        {
+          "client_id": "500597056812-12t9v442rkqn4qdg4m8t2jv3nlsisgrm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7T3QPyDy6mTnDh_-NxmKQCMHk13ziMrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500597056812-12t9v442rkqn4qdg4m8t2jv3nlsisgrm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "500597056812-h24pa6appenmf21ddf8f771lo2vhghfe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sohohouse.houseseven",
+                "app_store_id": "670256744"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

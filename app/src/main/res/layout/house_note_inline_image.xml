@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/item_house_note_details_grid_image">
+
+    <ImageView
+        android:id="@+id/house_note_image_item"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/small"
+        android:adjustViewBounds="true"
+        android:background="?attr/colorLayer2"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/placeholder" />
+
+    <TextView
+        android:id="@+id/house_note_image_caption_item"
+        style="@style/Label.012"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="6sp"
+        android:textColor="@color/white56"
+        app:layout_constraintTop_toBottomOf="@id/house_note_image_item"
+        tools:text="From left: Samarria Brevard, Duran, Soto, and Zeuner. Skateboarding teaches you a lot of self-discipline." />
+</androidx.constraintlayout.widget.ConstraintLayout>

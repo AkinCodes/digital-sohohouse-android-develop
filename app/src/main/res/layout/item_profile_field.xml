@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_12"
+    android:paddingLeft="@dimen/medium"
+    android:paddingRight="@dimen/medium"
+    android:paddingBottom="@dimen/dp_12">
+
+    <TextView
+        android:id="@+id/profile_field_label"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Occupation" />
+
+    <TextView
+        android:id="@+id/profile_field_value"
+        style="@style/Body.014.Narrow.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_3"
+        app:layout_constraintTop_toBottomOf="@id/profile_field_label"
+        tools:text="Developer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dp_16"
+    android:paddingVertical="@dimen/dp_8">
+
+    <ImageView
+        android:id="@+id/suggested_user_avatar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/avatars" />
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/bluer_foreground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:blurOverlayColor="?attr/colorPlaceholderBlur"
+        app:layout_constraintBottom_toBottomOf="@id/suggested_user_avatar"
+        app:layout_constraintEnd_toEndOf="@id/suggested_user_avatar"
+        app:layout_constraintStart_toStartOf="@id/suggested_user_avatar"
+        app:layout_constraintTop_toTopOf="@id/suggested_user_avatar" />
+
+    <TextView
+        android:id="@+id/suggested_user_name"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/take_a_chance"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/suggested_user_avatar"
+        app:layout_constraintTop_toTopOf="@id/suggested_user_avatar" />
+
+    <TextView
+        android:id="@+id/suggested_user_about"
+        style="@style/Body.014.Transparent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/tap_to_discover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/suggested_user_name"
+        app:layout_constraintTop_toBottomOf="@id/suggested_user_name" />
+
+    <TextView
+        android:id="@+id/suggestion_reason"
+        style="@style/Body.014"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="@string/both_in_same_city"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/suggested_user_name"
+        app:layout_constraintTop_toBottomOf="@id/suggested_user_about"
+        app:layout_constraintVertical_bias="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

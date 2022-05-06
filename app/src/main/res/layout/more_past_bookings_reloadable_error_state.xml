@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/error_state_holder_start_end_padding"
+    android:paddingBottom="@dimen/large"
+    android:paddingEnd="@dimen/error_state_holder_start_end_padding">
+
+    <include
+        android:id="@+id/included_error_layout"
+        layout="@layout/reloadable_error_state_layout" />
+
+</LinearLayout>

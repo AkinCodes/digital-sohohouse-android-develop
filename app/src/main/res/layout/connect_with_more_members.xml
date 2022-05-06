@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:padding="@dimen/dp_12"
+        android:layout_margin="@dimen/dp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/alt_close_label" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_36"
+        android:src="@drawable/img_connect_with_more_members"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/dp_24"
+        app:layout_constraintEnd_toEndOf="@id/imageView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/meetMembers"
+        style="@style/Button.Secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:paddingStart="@dimen/dp_12"
+        android:paddingEnd="@dimen/dp_12"
+        android:text="@string/meet_members"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@id/space"
+        tools:ignore="SmallSp" />
+
+    <Space
+        android:id="@+id/chatSkeleton1Start"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/chatSkeleton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_31"
+        android:src="@drawable/ic_black_chat_skeleton"
+        app:layout_constraintStart_toStartOf="@id/chatSkeleton1Start"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chat_skeleton_white_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chatSkeleton1"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/chatSkeleton2End"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_12"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/chatSkeleton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chat_skeleton_white_2"
+        app:layout_constraintEnd_toStartOf="@id/chatSkeleton2End"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/chatSkeleton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginStart="@dimen/dp_42"
+        android:src="@drawable/ic_chat_skeleton_white_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatSkeleton1"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/chatSkeleton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chat_skeleton_black_1"
+        app:layout_constraintEnd_toStartOf="@+id/chatSkeleton2"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/chatSkeleton3"
+        tools:ignore="ContentDescription" />
+
+    <Space
+        android:id="@+id/chatSkeleton5Start"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/dp_24"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/chatSkeleton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:src="@drawable/ic_chat_skeleton_black_1"
+        app:layout_constraintStart_toStartOf="@id/chatSkeleton5Start"
+        app:layout_constraintTop_toBottomOf="@+id/chatSkeleton3"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/chatSkeleton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_28"
+        android:src="@drawable/ic_chat_skeleton_white_2"
+        app:layout_constraintStart_toEndOf="@+id/chatSkeleton5"
+        app:layout_constraintTop_toTopOf="@+id/chatSkeleton5"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/chatSkeleton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chat_skeleton_white_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chatSkeleton5"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:src="@drawable/ic_chat_skeleton_white"
+        app:layout_constraintEnd_toStartOf="@+id/chatSkeleton6"
+        app:layout_constraintStart_toEndOf="@+id/chatSkeleton5"
+        app:layout_constraintTop_toBottomOf="@+id/chatSkeleton5"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chat_skeleton_black_2"
+        app:layout_constraintEnd_toStartOf="@+id/chatSkeleton7"
+        app:layout_constraintStart_toEndOf="@+id/chatSkeleton6"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/headline"
+        style="@style/Header.022"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias="0.3"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:text="@string/connect_with_more_members"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        style="@style/Body.016.Dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="@string/connect_more_members_subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/headline"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

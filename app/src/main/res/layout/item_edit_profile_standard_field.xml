@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_16">
+
+    <ImageView
+        android:id="@+id/profile_field_filled_indicator"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:src="@drawable/profile_field_filled_indicator"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_profile_field_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edit_profile_field_label"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/edit_profile_field_label"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/edit_profile_field_add_btn"
+        app:layout_constraintStart_toEndOf="@id/profile_field_filled_indicator"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="0dp"
+        tools:text="Occupation" />
+
+    <TextView
+        android:id="@+id/edit_profile_field_value"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/text_body_020_light"
+        android:textColorHint="@color/text_body_020_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/edit_profile_field_dropdown_arrow"
+        app:layout_constraintStart_toEndOf="@id/profile_field_filled_indicator"
+        app:layout_constraintTop_toBottomOf="@id/edit_profile_field_label"
+        app:layout_goneMarginStart="0dp"
+        tools:text="Developer" />
+
+    <ImageView
+        android:id="@+id/edit_profile_field_add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/edit_profile_field_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit_profile_field_label"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/edit_profile_field_dropdown_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chevron_down"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/edit_profile_field_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit_profile_field_value"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/edit_profile_field_error"
+        style="@style/FaroLucky.Regular.12sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_2"
+        android:textColor="?attr/colorError"
+        app:layout_constraintEnd_toEndOf="@id/edit_profile_field_value"
+        app:layout_constraintStart_toStartOf="@id/edit_profile_field_value"
+        app:layout_constraintTop_toBottomOf="@id/edit_profile_field_value"
+        tools:text="ERROR" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

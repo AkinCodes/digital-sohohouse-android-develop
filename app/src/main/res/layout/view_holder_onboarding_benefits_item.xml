@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:layout_margin="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/item_title"
+        style="@style/Header.018"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Houses" />
+
+    <TextView
+        android:id="@+id/item_subtitle"
+        style="@style/Body.014"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        tools:text="Access to Soho Houses around the world. The only exception is Little Beach House Malibu, which needs an additional Malibu Plus membership." />
+
+</LinearLayout>

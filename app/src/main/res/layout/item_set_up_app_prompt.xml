@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:background="@drawable/item_background_round"
+    android:foreground="?attr/selectableItemBackground"
+    android:minHeight="220dp"
+    android:paddingStart="@dimen/dp_32"
+    android:paddingEnd="@dimen/dp_32">
+
+    <ImageView
+        android:id="@+id/set_up_app_prompt_item_img"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:background="@drawable/branding_circle"
+        android:contentDescription="@string/alt_more_profile_image"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/set_up_app_prompt_item_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:src="@drawable/ic_add_white_24dp" />
+
+    <TextView
+        android:id="@+id/set_up_app_prompt_item_title"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:maxLines="1"
+        app:autoSizeMaxTextSize="18sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/set_up_app_prompt_item_subtext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/set_up_app_prompt_item_img"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Tell us about you" />
+
+    <TextView
+        android:id="@+id/set_up_app_prompt_item_subtext"
+        style="@style/Body.012.Light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:gravity="center"
+        android:maxLines="2"
+        app:autoSizeMaxTextSize="12sp"
+        app:autoSizeMinTextSize="8sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/set_up_app_prompt_item_title"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Help your fellow members get to know you" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

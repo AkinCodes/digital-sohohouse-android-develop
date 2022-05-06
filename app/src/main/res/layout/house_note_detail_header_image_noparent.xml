@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.FrameLayout">
+
+    <com.sohohouse.seven.common.views.SquareImageView
+        android:id="@+id/header_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorLayer2"
+        android:contentDescription="@string/house_notes_collapse_header"
+        android:scaleType="centerInside"
+        tools:src="@drawable/placeholder" />
+
+</merge>

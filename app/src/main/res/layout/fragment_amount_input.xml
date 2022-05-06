@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_32">
+
+    <TextView
+        android:id="@+id/amount_input_title"
+        style="@style/Header.022"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Custom tip" />
+
+    <TextView
+        android:id="@+id/amount_input_primary"
+        style="@style/Header.030"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_32"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@id/amount_input_plus"
+        app:layout_constraintStart_toEndOf="@id/amount_input_minus"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_title"
+        tools:text="£0.00" />
+
+    <TextView
+        android:id="@+id/amount_input_secondary"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@id/amount_input_plus"
+        app:layout_constraintStart_toEndOf="@id/amount_input_minus"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_primary"
+        tools:text="Remaining crtedit: £0.00" />
+
+    <TextView
+        android:id="@+id/amount_input_error"
+        style="@style/Body.014"
+        android:textColor="@color/mahohany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_2"
+        app:layout_goneMarginTop="0dp"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_secondary"
+        tools:text="You've reached the total amount for your bill" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/amount_input_display_top_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="amount_input_primary,amount_input_secondary" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/amount_input_display_bottom_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="amount_input_primary,amount_input_secondary" />
+
+    <ImageView
+        android:id="@+id/amount_input_minus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/label_minus"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_minus_small"
+        app:layout_constraintEnd_toEndOf="@id/amount_input_one"
+        app:layout_constraintStart_toStartOf="@id/amount_input_one"
+        app:layout_constraintBottom_toBottomOf="@id/amount_input_display_bottom_barrier"
+        app:layout_constraintTop_toTopOf="@id/amount_input_display_top_barrier"
+        app:tint="?attr/colorDrawablePrimary"
+        tools:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/amount_input_plus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/label_plus"
+        android:src="@drawable/plus_small"
+        app:layout_constraintBottom_toBottomOf="@id/amount_input_display_bottom_barrier"
+        app:layout_constraintTop_toTopOf="@id/amount_input_display_top_barrier"
+        app:layout_constraintEnd_toEndOf="@id/amount_input_three"
+        app:layout_constraintStart_toStartOf="@id/amount_input_three"
+        app:tint="?attr/colorDrawablePrimary"
+        tools:tint="@color/white" />
+
+
+    <TextView
+        android:id="@+id/amount_input_one"
+        style="@style/Header.030"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/dp_32"
+        android:gravity="center"
+        android:text="@string/amount_input_one"
+        app:layout_constraintEnd_toStartOf="@id/amount_input_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_display_bottom_barrier" />
+
+    <TextView
+        android:id="@+id/amount_input_two"
+        style="@style/Header.030"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/dp_32"
+        android:gravity="center"
+        android:text="@string/amount_input_two"
+        app:layout_constraintEnd_toStartOf="@id/amount_input_three"
+        app:layout_constraintStart_toEndOf="@id/amount_input_one"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_display_bottom_barrier" />
+
+    <TextView
+        android:id="@+id/amount_input_three"
+        style="@style/Header.030"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/dp_32"
+        android:gravity="center"
+        android:text="@string/amount_input_three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/amount_input_two"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_display_bottom_barrier" />
+
+    <TextView
+        android:id="@+id/amount_input_four"
+        style="@style/Header.030"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/amount_input_four"
+        app:layout_constraintEnd_toStartOf="@id/amount_input_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_one" />
+
+    <TextView
+        android:id="@+id/amount_input_five"
+        style="@style/Header.030"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/amount_input_five"
+        app:layout_constraintEnd_toStartOf="@id/amount_input_six"
+        app:layout_constraintStart_toEndOf="@id/amount_input_four"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_two" />
+
+    <TextView
+        android:id="@+id/amount_input_six"
+        style="@style/Header.030"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/amount_input_six"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/amount_input_five"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_three" />
+
+    <TextView
+        android:id="@+id/amount_input_seven"
+        style="@style/Header.030"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/amount_input_seven"
+        app:layout_constraintEnd_toStartOf="@id/amount_input_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_four" />
+
+    <TextView
+        android:id="@+id/amount_input_eight"
+        style="@style/Header.030"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/amount_input_eight"
+        app:layout_constraintEnd_toStartOf="@id/amount_input_six"
+        app:layout_constraintStart_toEndOf="@id/amount_input_four"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_five" />
+
+    <TextView
+        android:id="@+id/amount_input_nine"
+        style="@style/Header.030"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/amount_input_nine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/amount_input_five"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_six" />
+
+    <TextView
+        android:id="@+id/amount_input_dot"
+        style="@style/Header.030"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/amount_input_dot"
+        app:layout_constraintEnd_toStartOf="@id/amount_input_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_seven" />
+
+    <TextView
+        android:id="@+id/amount_input_zero"
+        style="@style/Header.030"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/amount_input_zero"
+        app:layout_constraintEnd_toStartOf="@id/amount_input_six"
+        app:layout_constraintStart_toEndOf="@id/amount_input_four"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_eight" />
+
+    <TextView
+        android:id="@+id/amount_input_backspace"
+        style="@style/Header.030"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/amount_input_backspace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/amount_input_five"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_nine" />
+
+    <Button
+        android:id="@+id/amount_input_confirm"
+        style="@style/Button.Primary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_32"
+        android:text="@string/confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amount_input_zero"
+        tools:textColor="@color/black" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

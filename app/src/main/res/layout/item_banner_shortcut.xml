@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="102dp"
+    android:layout_height="wrap_content"
+    android:paddingEnd="10dp"
+    android:paddingStart="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/circleImage"
+        android:src="@drawable/shortcut_book_a_gym"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:contentDescription="@string/alt_circle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Body.012.Light"
+        android:gravity="top|center_horizontal"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:lines="2"
+        app:layout_constraintTop_toBottomOf="@+id/circleImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:ellipsize="end"
+        tools:text="@string/shortcut_benefits" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

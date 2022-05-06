@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="InvalidPackage" severity="error">
+        <ignore regexp="okio.*jar" />
+        <ignore regexp=".*retrofit.*" />
+        <ignore regexp=".*rhino.*" />
+        <ignore regexp="FailOnTimeout" />
+        <ignore regexp="JndiDANEFetcherFactory" />
+        <ignore regexp="X509LDAPCertStoreSpi" />
+        <ignore regexp="org.jacoco.agent.rt.*" />
+    </issue>
+
+    <!-- All below are issues that have been brought to informational (so they are visible, but don't break the build)-->
+    <issue id="OldTargetApi" severity="informational" />
+
+    <issue id="ButtonCase" severity="informational" />
+
+    <issue id="UnusedResources" severity="informational">
+        <ignore path="res/values/strings_gen.xml" />
+        <ignore path="res/values-ca/strings_gen.xml" />
+        <ignore path="res/values-dr/strings_gen.xml" />
+        <ignore path="res/values-tr/strings_gen.xml" />
+        <ignore path="res/values-es/strings_gen.xml" />
+    </issue>
+
+    <issue id="PrivateResource" severity="informational">
+        <ignore path="res/values/strings_gen.xml" />
+        <ignore path="res/values-ca/strings_gen.xml" />
+        <ignore path="res/values-dr/strings_gen.xml" />
+        <ignore path="res/values-tr/strings_gen.xml" />
+        <ignore path="res/values-es/strings_gen.xml" />
+    </issue>
+
+    <issue id="GradleDependency" severity="informational" />
+
+    <issue id="VectorPath" severity="informational" />
+    <issue id="PluralsCandidate" severity="informational" />
+    <issue id="SmallSp" severity="informational" />
+    <issue id="Range" severity="informational"/>
+
+</lint>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="UseCompoundDrawables">
+
+    <com.sohohouse.seven.common.views.SquareImageView
+        android:id="@+id/house_note_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorLayer2"
+        android:contentDescription="@string/alt_content_image_label"
+        android:scaleType="centerInside"
+        android:transitionName="@string/alt_content_image_label"
+        tools:src="@drawable/placeholder" />
+
+    <TextView
+        android:id="@+id/house_note_title"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        tools:text="Your road trip down Spain's Catalan coast, mapped out" />
+
+</LinearLayout>

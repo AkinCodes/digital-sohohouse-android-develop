@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_switcher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorMembership"
+    tools:ignore="Overdraw">
+
+    <ImageView
+        android:id="@+id/soho_house"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:contentDescription="@string/alt_splash_logo"
+        android:src="?attr/drawableMembershipLogo"
+        tools:src="@drawable/ic_soho_house_logo" />
+
+    <com.sohohouse.seven.common.views.ReloadableErrorStateView
+        android:id="@+id/error_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        apps:buttonText="Try again"
+        apps:subtitle="Check your network connection and try again when you're back online"
+        apps:title="You're offline" />
+
+</ViewSwitcher>

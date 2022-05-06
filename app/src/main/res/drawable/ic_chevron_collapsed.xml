@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="ic_collapsed"
+    android:width="18dp"
+    android:height="18dp"
+    android:viewportWidth="18"
+    android:viewportHeight="18">
+
+    <group
+        android:name="arrow_down"
+        android:pivotX="9"
+        android:pivotY="9">
+        <path
+            android:fillColor="#FFFFFF"
+            android:fillType="evenOdd"
+            android:pathData="M12.5,7.6641l-3.5041,3.3359l-3.4959,-3.3359l0.6999,-0.6641l2.8001,2.6612l2.7896,-2.6612z"
+            android:strokeWidth="1"
+            android:strokeColor="#00000000" />
+    </group>
+</vector>

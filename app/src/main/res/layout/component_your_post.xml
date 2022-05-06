@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_20">
+
+    <TextView
+        android:id="@+id/your_post"
+        style="@style/body_02.light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/connect_board_post_your_note_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/house_board_post_edit_text"
+        style="@style/heading_03.transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/house_board_textview_inset"
+        android:layout_marginEnd="@dimen/house_board_textview_inset"
+        android:gravity="top|start"
+        android:hint="@string/connect_board_post_your_note_placeholder"
+        android:imeOptions="actionDone"
+        android:lines="6"
+        android:maxLength="200"
+        android:scrollHorizontally="false"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/your_post"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/max_characters"
+        style="@style/Body.014.Transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/connect_board_post_character_limit_label"
+        app:layout_constraintTop_toBottomOf="@id/house_board_post_edit_text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

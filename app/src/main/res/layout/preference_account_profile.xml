@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:minHeight="?attr/listPreferredItemHeightLarge"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_36"
+    android:paddingBottom="@dimen/dp_20">
+
+    <ImageView
+        android:id="@+id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="@dimen/more_profile_image_size"
+        android:layout_height="@dimen/more_profile_image_size"
+        android:layout_gravity="center"
+        android:contentDescription="@string/alt_more_profile_image"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/Body.016"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:paddingTop="@dimen/dp_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/staff_indication"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:textAlignment="center"
+        tools:text="SFFactory Test User" />
+
+    <ImageView
+        android:id="@+id/staff_indication"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_6"
+        android:src="@drawable/ic_soho_house_small_white"
+        app:layout_constraintTop_toTopOf="@id/name"
+        app:layout_constraintBottom_toBottomOf="@id/name"
+        app:layout_constraintStart_toEndOf="@id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/pronouns"
+        style="@style/Body.014.Transparent"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_8"
+        android:textAlignment="center"
+        tools:text="SFFactory Test User" />
+
+    <TextView
+        android:id="@+id/occupation"
+        style="@style/Body.016"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_16"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/pronouns"
+        app:layout_goneMarginTop="@dimen/dp_2"
+        tools:text="Developer" />
+
+    <Button
+        android:id="@+id/button_view_profile"
+        style="@style/Button.Third"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:background="@drawable/button_primary"
+        android:gravity="center"
+        android:minWidth="@dimen/dp_100"
+        android:minHeight="@dimen/dp_30"
+        android:text="@string/view_profile_cta"
+        android:textColor="?attr/colorButtonPrimaryTextDisabled"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/occupation" />
+
+    <Button
+        android:id="@+id/button_share"
+        style="@style/Button.Third"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:gravity="center"
+        android:minWidth="@dimen/dp_100"
+        android:minHeight="@dimen/dp_30"
+        android:text="@string/cta_share"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/occupation" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

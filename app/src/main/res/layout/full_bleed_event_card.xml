@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SelectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <com.sohohouse.seven.common.views.SquareImageView
+        android:id="@+id/full_bleed_event_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorLayer2"
+        android:contentDescription="@string/events_event_image_description"
+        android:scaleType="centerInside"
+        android:transitionName="@string/events_event_image_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/placeholder" />
+
+    <TextView
+        android:id="@+id/full_bleed_event_title_label"
+        style="@style/body_02.bold.light"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:layout_constraintEnd_toStartOf="@id/full_bleed_event_category_icon"
+        app:layout_constraintStart_toEndOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/full_bleed_event_image"
+        tools:text="Nourishing the Sense Brunch" />
+
+    <ImageView
+        android:id="@+id/full_bleed_event_category_icon"
+        android:layout_width="@dimen/large"
+        android:layout_height="@dimen/large"
+        android:layout_marginEnd="@dimen/category_icon_end_margin"
+        android:contentDescription="@string/alt_explore_events_filter_category_icon"
+        app:layout_constraintEnd_toStartOf="@id/end_guideline"
+        app:layout_constraintTop_toTopOf="@id/full_bleed_event_title_label"
+        tools:background="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/full_bleed_event_date_and_time_label"
+        style="@style/Body.012.LightAccent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_2"
+        app:layout_constraintEnd_toStartOf="@id/end_guideline"
+        app:layout_constraintStart_toEndOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/full_bleed_event_title_label"
+        tools:text="May 1, 10:30am" />
+
+    <com.sohohouse.seven.common.views.HouseNameTextView
+        android:id="@+id/full_bleed_event_location_name"
+        style="@style/Body.012.LightAccent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/full_bleed_event_title_label"
+        android:layout_marginTop="@dimen/dp_2"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/end_guideline"
+        app:layout_constraintStart_toEndOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/full_bleed_event_date_and_time_label"
+        tools:text="Soho House Toronto" />
+
+    <TextView
+        android:id="@+id/full_bleed_event_booking_status"
+        style="@style/FaroLucky.Regular.12sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/full_bleed_event_location_name"
+        android:layout_marginTop="@dimen/dp_2"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@id/end_guideline"
+        app:layout_constraintStart_toEndOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/full_bleed_event_location_name"
+        tools:text="You're on the waiting list!"
+        tools:visibility="visible" />
+
+    <com.sohohouse.seven.common.views.StatusView
+        android:id="@+id/full_bleed_event_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/full_bleed_event_location_name"
+        android:layout_marginTop="@dimen/card_booking_status_top_margin"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@id/end_guideline"
+        app:layout_constraintStart_toEndOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/full_bleed_event_location_name"
+        tools:text="Booking Opens May 14"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_16" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_24"
+    android:layout_marginEnd="@dimen/dp_16"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/city_tag"
+        style="@style/Label.012"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="2sp"
+        android:textAllCaps="true"
+        tools:text="House Name" />
+
+    <TextView
+        android:id="@+id/header_title"
+        style="@style/Header.030"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:lineSpacingExtra="2sp"
+        tools:text="Get your kicks: a guide to Canada&apos;s best sneaker stores" />
+
+    <TextView
+        android:id="@+id/header_line"
+        style="@style/Body.012.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:gravity="center"
+        android:lineSpacingExtra="2sp"
+        tools:text="A new article type that will display a video in the hero content of the article, the article will work in harmony with the addtional editorial content on this page." />
+
+    <TextView
+        android:id="@+id/header_date"
+        style="@style/Label.012"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_48"
+        android:layout_marginBottom="@dimen/dp_17"
+        android:gravity="center"
+        android:lineSpacingExtra="2sp"
+        tools:text="Expires Thur, Dec 31, 2020" />
+
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/component_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".more.privacy.policy.MorePrivacyPolicyActivity">
+
+            <TextView
+                android:id="@+id/supporting_text"
+                style="@style/FaroLucky.Regular.14sp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/more_privacy_supporting"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/terms_and_conditions"
+                style="@style/FaroLucky.Regular.14sp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxlarge"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/large"
+                android:paddingEnd="@dimen/large"
+                android:text="@string/more_privacy_terms_cta"
+                app:drawableEndCompat="@drawable/forward" />
+
+            <View
+                style="@style/Divider.Iron"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/large" />
+
+            <TextView
+                android:id="@+id/faqs"
+                style="@style/FaroLucky.Regular.14sp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxlarge"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/large"
+                android:paddingEnd="@dimen/large"
+                android:text="@string/more_faq_title"
+                app:drawableEndCompat="@drawable/forward" />
+
+            <View
+                android:id="@+id/tnc_divider"
+                style="@style/Divider.Iron"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/large" />
+
+            <TextView
+                android:id="@+id/privacy_details"
+                style="@style/FaroLucky.Regular.14sp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxlarge"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/large"
+                android:paddingEnd="@dimen/large"
+                android:text="@string/more_privacy_privacy_cta"
+                app:drawableEndCompat="@drawable/forward" />
+
+            <View
+                android:id="@+id/pd_divider"
+                style="@style/Divider.Iron"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/large" />
+
+            <TextView
+                android:id="@+id/delete_data"
+                style="@style/FaroLucky.Regular.14sp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/large"
+                android:layout_marginTop="@dimen/xlarge"
+                android:paddingStart="@dimen/large"
+                android:paddingEnd="@dimen/large"
+                android:text="@string/more_privacy_delete_data_header" />
+
+            <TextView
+                android:id="@+id/delete_data_supporting"
+                style="@style/FaroLucky.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/large"
+                android:paddingStart="@dimen/large"
+                android:paddingEnd="@dimen/large"
+                android:text="@string/more_privacy_delete_data_supporting"
+                android:textColor="@color/midgray" />
+
+            <Button
+                android:id="@+id/delete_data_contact_us"
+                style="@style/TextLink.01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/large"
+                android:paddingTop="@dimen/xsmall"
+                android:paddingEnd="@dimen/large"
+                android:paddingBottom="@dimen/xsmall"
+                android:text="@string/more_privacy_delete_data_contact_cta" />
+
+            <View
+                android:id="@+id/dd_divider"
+                style="@style/Divider.Iron"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/large"
+                android:layout_marginTop="@dimen/medium" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

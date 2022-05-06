@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <ripple android:color="?android:colorControlHighlight">
+            <item android:id="@android:id/mask">
+                <shape android:shape="rectangle">
+                    <solid android:color="?attr/colorButtonSecondaryRipple" />
+                    <corners android:radius="8000dp" />
+                </shape>
+            </item>
+
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:bottomLeftRadius="@dimen/dp_5" android:topLeftRadius="@dimen/dp_5" />
+                    <solid android:color="@color/midgray" />
+                </shape>
+            </item>
+        </ripple>
+    </item>
+
+</selector>

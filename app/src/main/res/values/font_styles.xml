@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+
+    <style name="FaroLucky">
+        <item name="android:color">@color/white</item>
+    </style>
+
+    <style name="FaroLucky.Regular">
+        <item name="android:fontFamily">@font/faro_lucky_regular</item>
+    </style>
+
+    <style name="FaroLucky.Regular.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="FaroLucky.Regular.16sp">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="FaroLucky.Regular.18sp">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="FaroLucky.Regular.24sp">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="FaroLucky.Regular.12sp">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="FaroLucky.Regular.34sp">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="FaroLucky.Regular.10sp">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="FaroLucky.Bold">
+        <item name="android:fontFamily">@font/faro_lucky_bold</item>
+    </style>
+
+    <style name="FaroLucky.Bold.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="FaroLucky.Bold.24sp">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="FaroLucky.Bold.16sp">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="FaroLucky.Bold.12sp">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="FaroLucky.Bold.40sp">
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="FaroLucky.Bold.34sp">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="FaroLucky.Bold.18sp">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="FaroLucky.Display">
+        <item name="android:fontFamily">@font/faro_lucky_display</item>
+    </style>
+
+    <style name="FaroLucky.Light">
+        <item name="android:fontFamily">@font/faro_lucky_light</item>
+    </style>
+</resources>

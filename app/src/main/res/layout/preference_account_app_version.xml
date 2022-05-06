@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/title"
+    style="@style/Body.012.LightAccent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fadingEdge="horizontal"
+    android:gravity="start|center_vertical"
+    android:minHeight="?attr/listPreferredItemHeightSmall"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_34"
+    android:singleLine="true" />

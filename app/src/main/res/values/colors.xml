@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Text Colors -->
+    <color name="white45">#73ffffff</color>
+    <color name="black56">#8f000000</color>
+    <color name="white56">#8fffffff</color>
+
+    <!-- FullScreenOverflowView in MorePaymentActivity -->
+    <color name="translucent_black">#80000000</color>
+
+    <!-- NOT IN USE -->
+    <!-- BrowseAllHouseActivity -->
+    <color name="dark_transparency">#142C303A</color>
+    <!-- PerksLandingActivity -->
+    <color name="steel25">#40c4c4c4</color>
+    <color name="noticeboard_grey">#212121</color>
+
+    <color name="message_button_text_color">#FDFBF9</color>
+
+</resources>

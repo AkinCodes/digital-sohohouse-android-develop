@@ -1,0 +1,1 @@
+package com.sohohouse.seven.connect.trafficlightsimport com.sohohouse.seven.connect.VenueMemberclass VenueMembers(    venueMembers: MutableList<VenueMember>,    var estimatedTotal: Int,    var nextPage: Int,    val venueID: String? = null) : MutableList<VenueMember> by venueMembers

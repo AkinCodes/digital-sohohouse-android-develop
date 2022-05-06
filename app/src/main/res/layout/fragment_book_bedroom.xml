@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Header.030"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="@string/discover_bedrooms_stay_with_us" />
+
+        <TextView
+            style="@style/Body.014"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="@string/discover_bedrooms_description" />
+
+        <com.sohohouse.seven.common.views.SquareImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_48"
+            android:layout_marginBottom="@dimen/dp_79"
+            android:src="@drawable/discover_bedrooms" />
+
+        <Button
+            android:id="@+id/browse_cta"
+            style="@style/Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:text="@string/discover_bedrooms_browse_cta" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

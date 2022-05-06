@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/medium"
+    android:paddingRight="@dimen/medium">
+
+    <com.sohohouse.seven.common.views.AsyncImageView
+        android:id="@+id/profile_avatar"
+        android:layout_width="@dimen/profile_avatar_diameter"
+        android:layout_height="@dimen/profile_avatar_diameter"
+        android:contentDescription="@string/alt_more_profile_image"
+        android:layout_marginTop="@dimen/dp_24"
+        android:scaleType="centerCrop"
+        app:circleCrop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/profile_name"
+        style="@style/Header.030"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/profile_avatar"
+        tools:text="Peter Murphy" />
+
+    <TextView
+        android:id="@+id/profile_pronouns"
+        style="@style/Body.014.Transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_4"
+        app:layout_constraintTop_toBottomOf="@id/profile_name"
+        tools:text="he · him" />
+
+    <TextView
+        android:id="@+id/profile_occupation"
+        style="@style/Body.014.Narrow.Accent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_2"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/profile_pronouns"
+        tools:text="App Developer" />
+
+    <TextView
+        android:id="@+id/profile_city"
+        style="@style/Body.014"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/profile_occupation"
+        app:layout_goneMarginTop="@dimen/dp_2"
+        tools:text="London, UK" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

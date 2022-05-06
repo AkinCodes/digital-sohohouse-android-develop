@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/Header.018"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/book_a_table_house_details" />
+
+    <TextView
+        android:id="@+id/venue_hours"
+        style="@style/Body.014"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        tools:text="Mon: 0900 - 0200\nTues: 0900 - 0200\nWed: 0900 - 0200\nThurs: 0900 - 0200\nFri: 0900 - 0200\nSat: 0900 - 0200\nSun: 0900 - 0200" />
+
+    <TextView
+        android:id="@+id/venue_phone_no"
+        style="@style/TextLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        tools:text="07765877347" />
+
+    <TextView
+        android:id="@+id/venue_address"
+        style="@style/Body.014"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        tools:text="Ebor Street, Shoreditch" />
+
+    <TextView
+        android:id="@+id/venue_map_link"
+        style="@style/TextLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="@string/book_a_table_open_in_maps" />
+
+</LinearLayout>

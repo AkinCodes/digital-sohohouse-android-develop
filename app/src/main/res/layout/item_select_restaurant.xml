@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:background="?android:selectableItemBackground"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:contentDescription="@string/table_booking_restaurant_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/Body.014.Bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textColor="?attr/colorTextHeader024"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constrainedWidth="true"
+        tools:text="Back Deck - Schoreditch House" />
+
+    <TextView
+        android:id="@+id/address"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:lines="1"
+        android:ellipsize="end"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        tools:text="Ebor Street, London, E1 6AW" />
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/Body.014"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:lines="1"
+        android:ellipsize="end"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/address"
+        tools:text="Weds, 7th Jun 11pm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
